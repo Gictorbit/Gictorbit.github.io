@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on gictor.ir</title>
+    <link>http://gictor.ir/en/showcase/projects/</link>
+    <description>Recent content in Projects on gictor.ir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
+    <webMaster>gictorbit@gmail.com (victor)</webMaster>
+    <copyright>©{year} | license </copyright>
+    <lastBuildDate>Tue, 28 Jan 2020 16:49:45 +0330</lastBuildDate>
+    
+        <atom:link href="http://gictor.ir/en/showcase/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>cpaneltop</title>
+        <link>http://gictor.ir/en/showcase/projects/cpaneltop/</link>
+        <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/en/showcase/projects/cpaneltop/</guid>
+        <description></description>
+      </item>
+      
+    
+  </channel>
+</rss>

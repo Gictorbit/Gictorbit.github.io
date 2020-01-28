@@ -1,0 +1,127 @@
+[
+{
+	"uri": "http://gictor.ir/en/showcase/projects/cpaneltop/",
+	"title": "cpaneltop",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "CpanelTop is a python script for monitor cpanel host resource usage",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/series/",
+	"title": "Series",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/showcase/projects/",
+	"title": "Projects",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/showcase/",
+	"title": "Showcase",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/tutorial/",
+	"title": "Tutorial",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/archive/",
+	"title": "Archive",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/",
+	"title": "gictor.ir",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/posts/",
+	"title": "Posts",
+	"tags": ["index"],
+	"categories": [],
+	"series": [],
+	"description": "Post page",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/tags/privacy/",
+	"title": "privacy",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/posts/rich/",
+	"title": "Rich",
+	"tags": ["shortcodes", "privacy"],
+	"categories": [],
+	"series": [],
+	"description": "A brief description of Hugo Shortcodes",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/tags/shortcodes/",
+	"title": "shortcodes",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/tags/",
+	"title": "Tags",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "Tags Page",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/about/",
+	"title": "About",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "Hugo, the world’s fastest framework for building websites",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/en/categories/",
+	"title": "categories",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "categories page",
+	"content": ""
+}]

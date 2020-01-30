@@ -54,17 +54,8 @@
 	"content": ""
 },
 {
-	"uri": "http://gictor.ir/fa/tags/privacy/",
-	"title": "privacy",
-	"tags": [],
-	"categories": [],
-	"series": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://gictor.ir/fa/tags/shortcodes/",
-	"title": "shortcodes",
+	"uri": "http://gictor.ir/fa/tags/python/",
+	"title": "python",
 	"tags": [],
 	"categories": [],
 	"series": [],
@@ -81,13 +72,31 @@
 	"content": ""
 },
 {
-	"uri": "http://gictor.ir/fa/posts/etc/rich/",
-	"title": "تست",
-	"tags": ["shortcodes", "privacy"],
+	"uri": "http://gictor.ir/fa/categories/",
+	"title": "دسته بندی ها",
+	"tags": [],
 	"categories": [],
 	"series": [],
-	"description": "A brief description of Hugo Shortcodes",
-	"content": "تست\nتست\n"
+	"description": "دسته بندی ها",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/fa/posts/etc/unlimited-google-drive/",
+	"title": "دورزدن محدودیت حجم google drive",
+	"tags": ["گوگل درایو", "python", "پایتون"],
+	"categories": [],
+	"series": [],
+	"description": "ذحیره نامحدود فایل ها در حساب گوگل",
+	"content": "مقدمه گوگل درایو یکی دیگر از سرویس های پر کاربرد گوگل هست که با داشتن حساب گوگل می تونید از اون برای ذخیره فایل های خود در اینترنت استفاده کنید اما به صورت پیشفرض هر حساب فقط 15 گیگابایت فضای ذخیره سازی رایگان داره و برای حجم بیشتر باید هزینه پرداخت کنید اما با یک روش جالب میشه این محدودیت رو دور زد در ادامه این روش رو توضیح میدم\nUDS (Unlimited Drive Storage) این روش با استفاده از یک اسکریپت پایتون به نام uds انجام میشه این اسکریپت در واقع فایل های شما رو در قالب داکیومنت یا فایل متنی در سرویس google doc ذخیره میکنه. چیزی که این پست رو جالب میکنه طرز کار این اسکریپت هست که در ادامه میبینیم\nامکانات uds  آپلود فایل ها در گوگل درایو بدون استفاده از 15‍ گیگابایت فضای حساب دانلود فایل های آپلود شده از حساب  منطق  سرویس گوگل داکیومنت برای فایل های متنی که شما ذخیره میکنید فضایی از گوگل درایو کم نمی کند تجزیه فایل های باینری به فایل های متنی با روش کد گذاری base 64 حجم فایل های کد گذاری شده همیشه بیشتر از حجم فایل اصلی هست سرویس گوگل داکیومنت میتونه برای هر فایل متنی میلیون ها کاراکتر ذخیره کنه که حدودا معادل 710 کیلو بایت داده کدگذاری شده با base 64‍ هست  راه اندازی و احراز هویت قبل از اجرای دستورات از نصب بودن git و python در سیستم عامل مطمئن بشید خب برای استفاده از این اسکریپت باید این ریپوزیتوری رو با استفاده از دستور زیر از گیت هاب clone کنیم.\n1  git clone https://github.com/stewartmcgown/uds.git   بعد از اون باید کتابخانه های مورد نیاز رو به کمک فایل requirements.txt موجود در فولدر برنامه نصب کنیم\n1  pip3 install -r requirements.txt   فعال کردن api حساب گوگل برای اینکه برنامه بتونه به گوگل درایو ما دسترسی داشته باشه باید api حساب ما رو داشته باشه برای این کار باید Google\u0026rsquo;s API page رو باز کنیم\nو روی Enable the Drive api کلیک کنید\nبعد از اون ، باید فایل کانفیگ رو که با فرمت json هست دانلود کنیم و در فولدر برنامه با نام client_secret.json ذخیره کنیم\nچون ما در ایران هستیم و سرویس های گوگل تحریم هستن باید از vpn‍ استفاده کنیم راه اندازی اولیه حالا با یکی از دستورات زیر باید برنامه رو برای راه اندازی اولیه اجرا کنیم\nbash bash  1  ./uds.py     1  python3 uds.py       'use strict'; var containerId = JSON.parse(\"\\\"7ee5e343d572678b\\\"\"); var containerElem = document.getElementById(containerId); var codetabLinks = null; var codetabContents = null; var ids = []; if (containerElem) { codetabLinks = containerElem.querySelectorAll('.codetab__link'); codetabContents = containerElem.querySelectorAll('.codetab__content'); } for (var i = 0; i 0) { codetabContents[0].style.display = 'block'; } \nدستورات UDS برای کار با برنامه و ذخیره و دانلود فایل ها باید از آرگومان ها استفاده کنیم\nآپلود فایل برای آپلود فایل باید از دستور push-- استفاده کنیم برای مثال:\n1  ./uds.py --push Ubuntu.Desktop.16.04.iso   Ubuntu.Desktop.16.04.iso will required 543 Docs to store. Created parent folder with ID 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8 Successfully Uploaded Ubuntu.Desktop.16.04.iso: [██████████████████████████████] 100% لیست فایل ها برای دیدن لیست فایل های آپلود شده و موجود در درایو باید از دستور list-- استفاده کنیم برای مثال:\n1  ./uds.py --list   Name Size Encoded ID ------------------------ ----- --------- --------------------------------- Ubuntu.Desktop.16.04.iso 810 MB 1.1 GB 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8 Ubuntu.Desktop.18.10.iso 1.1 GB 1.3 GB 1RzzVfN9goHMTkM1Hf1FUWUVS_2R3GK7D و برای جستجو در نام فایل ها باید کلمه مورد نظر رو به دستور لیست پاس بدیم:\n1  ./uds.py --list \u0026#34;18\u0026#34;   Name Size Encoded ID ------------------------ ----- --------- --------------------------------- Ubuntu.Desktop.18.10.iso 1.1 GB 1.3 GB 1RzzVfN9goHMTkM1Hf1FUWUVS_2R3GK7D دانلود فایل برای دانلود فایل باید از دستور pull-- استفاده کنیم برای مثال:\n1  ./uds.py --pull 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8   Downloaded Ubuntu.Desktop.16.04.iso: [██████████████████████████████] 100% به طور پیشفرض فایل های دانلود شده در فولدر برنامه و دایرکتوری downloads ذخیره میشن\nحذف فایل برای حذف فایل باید از دستور delete-- استفاده کنیم برای مثال:\n1  ./uds.py --delete 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8   Deleted 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8 منبع: UDS : Unlimited Drive Storage   "
+},
+{
+	"uri": "http://gictor.ir/fa/tags/%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86/",
+	"title": "پایتون",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "http://gictor.ir/fa/posts/",
@@ -99,6 +108,24 @@
 	"content": ""
 },
 {
+	"uri": "http://gictor.ir/fa/categories/%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%DB%8C/",
+	"title": "کاربردی",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/fa/tags/%DA%AF%D9%88%DA%AF%D9%84-%D8%AF%D8%B1%D8%A7%DB%8C%D9%88/",
+	"title": "گوگل درایو",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://gictor.ir/fa/about/",
 	"title": "درباره",
 	"tags": [],
@@ -106,13 +133,4 @@
 	"series": [],
 	"description": "درباره",
 	"content": "گیکتور (gictor) از ادغام دو اسم ویکتور (victor) و گیک (geek) به وجود اومده . اسم مستعار و مورد علاقه من ویکتور است که در لغت به معنای پیروز هست. در حال حاضر که این متن رو می نویسم دانشجوی کارشناسی مهندسی کامپیوتر نرم افزار هستم\nهم چنین علاقه زیادی به کامپیوتر و برنامه نویسی دارم و زمان زیادی صرف یادگیری و کار با این موجود بامزه می کنم و از اونجایی که به این افراد گیک می گویند این نام رو در کنار ویکتور گزاشتم و در نهایت به گیکتور رسیدم\nهدف از ساختن این وبلاگ برای من این هست که مطالب جالب دنیای کامپیوتر رو با بقیه افراد در سطح تخصصی و کاربردی به اشتراک بگذارم همچنین وقتی بخواهم چیزی رو دقیق تر یاد بگیرم سعی میکنم در باره آن بنویسم و در مقاله ای اون رو به خواننده یاد بدم در نتیجه آن موقع خودم بیشتر یاد می گیرم و یادگیری کامپیوتر و دنیای اون برای من خیلی لذت بخشه\nاز اونجایی که به دنیای آزاد متن باز (open source) و گنو/لینوکس (Gnu/Linux) علاقه مندم مطالب این وبلاگ رو با مجوز های آزاد منتشر می کنم\nتا اینجا اسکریپت نویسی رو با پایتون و بش اسکریپت ، شی گرایی رو با جاوا و سرعت و سادگی رو با C حس کردم\n"
-},
-{
-	"uri": "http://gictor.ir/fa/categories/",
-	"title": "دسته بندی ها",
-	"tags": [],
-	"categories": [],
-	"series": [],
-	"description": "دسته بندی ها",
-	"content": ""
 }]

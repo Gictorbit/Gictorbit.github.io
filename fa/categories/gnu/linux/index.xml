@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>پست ها on gictor.ir</title>
-    <link>http://gictor.ir/fa/posts/</link>
-    <description>Recent content in پست ها on gictor.ir</description>
+    <title>Gnu/Linux on gictor.ir</title>
+    <link>http://gictor.ir/fa/categories/gnu/linux/</link>
+    <description>Recent content in Gnu/Linux on gictor.ir</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
     <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
@@ -11,7 +11,7 @@
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Fri, 31 Jan 2020 20:30:53 +0330</lastBuildDate>
     
-        <atom:link href="http://gictor.ir/fa/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://gictor.ir/fa/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -23,15 +23,6 @@
         <author>gictorbit@gmail.com (victor)</author>
         <guid>http://gictor.ir/fa/posts/gnulinux/steghide/</guid>
         <description>استگانوگرافی یا ‍Steganography یک کلمه یونانی و به معنای پنهان نگاری هست این علم باستانی امروزه با ورود به عصر تکنولوژی با وجود پیدایش الگوریتم های رمزنگاری و اهمیت امنیت اطلاعات گویا همچنان توجهات رو به خودش جلب کرده ویژگی جالب اون این هست که بعد از رمز نگاری داده، هنوز داده شما معنا دارد و شما با یک مشت عدد و حروف نا مفهوم روبرو نیستید برای اطلاعات بیشتر اینجا رو کلیک کنید.</description>
-      </item>
-      
-      <item>
-        <title>دورزدن محدودیت حجم google drive</title>
-        <link>http://gictor.ir/fa/posts/etc/unlimited-google-drive/</link>
-        <pubDate>Sun, 26 Jan 2020 19:45:41 +0330</pubDate>
-        <author>gictorbit@gmail.com (victor)</author>
-        <guid>http://gictor.ir/fa/posts/etc/unlimited-google-drive/</guid>
-        <description>مقدمه گوگل درایو یکی دیگر از سرویس های پر کاربرد گوگل هست که با داشتن حساب گوگل می تونید از اون برای ذخیره فایل های خود در اینترنت استفاده کنید اما به صورت پیشفرض هر حساب فقط 15 گیگابایت فضای ذخیره سازی رایگان داره و برای حجم بیشتر باید هزینه پرداخت کنید اما با یک روش جالب میشه این محدودیت رو دور زد در ادامه این روش رو توضیح میدم</description>
       </item>
       
     

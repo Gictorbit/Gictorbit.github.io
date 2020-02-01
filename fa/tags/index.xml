@@ -9,7 +9,7 @@
     <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
-    <lastBuildDate>Sun, 26 Jan 2020 19:45:41 +0330</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jan 2020 20:30:53 +0330</lastBuildDate>
     
         <atom:link href="http://gictor.ir/fa/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,20 +17,38 @@
     
       
       <item>
+        <title>steghide</title>
+        <link>http://gictor.ir/fa/tags/steghide/</link>
+        <pubDate>Fri, 31 Jan 2020 20:30:53 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/fa/tags/steghide/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>استگانوگرافی</title>
+        <link>http://gictor.ir/fa/tags/%D8%A7%D8%B3%D8%AA%DA%AF%D8%A7%D9%86%D9%88%DA%AF%D8%B1%D8%A7%D9%81%DB%8C/</link>
+        <pubDate>Fri, 31 Jan 2020 20:30:53 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/fa/tags/%D8%A7%D8%B3%D8%AA%DA%AF%D8%A7%D9%86%D9%88%DA%AF%D8%B1%D8%A7%D9%81%DB%8C/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>مخفی کردن داده در تصویر</title>
+        <link>http://gictor.ir/fa/tags/%D9%85%D8%AE%D9%81%DB%8C-%DA%A9%D8%B1%D8%AF%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D8%AF%D8%B1-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1/</link>
+        <pubDate>Fri, 31 Jan 2020 20:30:53 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/fa/tags/%D9%85%D8%AE%D9%81%DB%8C-%DA%A9%D8%B1%D8%AF%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D8%AF%D8%B1-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1/</guid>
+        <description></description>
+      </item>
+      
+      <item>
         <title>python</title>
         <link>http://gictor.ir/fa/tags/python/</link>
         <pubDate>Sun, 26 Jan 2020 19:45:41 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
         <guid>http://gictor.ir/fa/tags/python/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>پایتون</title>
-        <link>http://gictor.ir/fa/tags/%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86/</link>
-        <pubDate>Sun, 26 Jan 2020 19:45:41 +0330</pubDate>
-        <author>gictorbit@gmail.com (victor)</author>
-        <guid>http://gictor.ir/fa/tags/%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86/</guid>
         <description></description>
       </item>
       

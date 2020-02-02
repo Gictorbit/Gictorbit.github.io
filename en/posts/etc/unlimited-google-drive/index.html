@@ -943,7 +943,7 @@
 <meta property="twitter:title" content="Unlimited Drive Storage">
 <meta property="twitter:description" content="bypass google drive storage limit">
 
-<meta name="generator" content="Hugo 0.63.0" />
+<meta name="generator" content="Hugo 0.63.2" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="http://gictor.ir/en/posts/etc/unlimited-google-drive/">
@@ -2330,6 +2330,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var text, clip = new ClipboardJS('.anchor');
     var headers = singleContentsElem.querySelectorAll("h1, h2, h3, h4");
 
+    
+    var languagedir = JSON.parse("\"ltr\"");
+
     headers ? 
     headers.forEach(function (elem) {
       var url = encodeURI(document.location.origin + document.location.pathname);
@@ -2343,10 +2346,15 @@ document.addEventListener('DOMContentLoaded', function () {
       var newElemInner = document.createElement('span');
       newElemInner.style.fontSize = '1rem';
       newElemInner.style.position = 'absolute';
-      newElemInner.style.right = '-2rem';
       newElemInner.style.top = '50%';
       newElemInner.style.transform = 'translateY(-50%)';
       newElemInner.innerText = "🔗";
+
+      if (languagedir === "rtl") {
+        newElemInner.style.left = '-2rem';
+      } else {
+        newElemInner.style.right = '-2rem';
+      }
 
       newElemOuter.append(newElemInner);
       elem.append(newElemOuter);

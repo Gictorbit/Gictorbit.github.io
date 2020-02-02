@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://gictor.ir/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/categories/gnu/linux/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/steghide/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/%D8%A7%D8%B3%D8%AA%DA%AF%D8%A7%D9%86%D9%88%DA%AF%D8%B1%D8%A7%D9%81%DB%8C/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/categories/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/%D9%85%D8%AE%D9%81%DB%8C-%DA%A9%D8%B1%D8%AF%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D8%AF%D8%B1-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/posts/gnulinux/steghide/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/posts/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/categories/%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%DB%8C/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/series/</loc>
+    <lastmod>2020-01-28T21:10:17+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/showcase/projects/</loc>
+    <lastmod>2020-01-28T16:49:41+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/showcase/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/showcase/projects/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/showcase/</loc>
+    <lastmod>2020-01-28T16:43:20+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/showcase/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/showcase/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tutorial/</loc>
+    <lastmod>2020-01-28T15:53:58+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/tutorial/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/tutorial/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/archive/</loc>
+    <lastmod>2020-01-27T22:57:26+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/archive/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/python/</loc>
+    <lastmod>2020-01-26T19:45:41+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/tags/python/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/posts/etc/unlimited-google-drive/</loc>
+    <lastmod>2020-01-26T19:45:41+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/posts/etc/unlimited-google-drive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/posts/etc/unlimited-google-drive/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/%DA%AF%D9%88%DA%AF%D9%84-%D8%AF%D8%B1%D8%A7%DB%8C%D9%88/</loc>
+    <lastmod>2020-01-26T19:45:41+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/about/</loc>
+    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/about/"
+                />
+  </url>
+  
+</urlset>

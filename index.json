@@ -1,0 +1,172 @@
+[
+{
+	"uri": "http://gictor.ir/",
+	"title": "",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/categories/gnu/linux/",
+	"title": "Gnu/Linux",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/tags/steghide/",
+	"title": "steghide",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/tags/%D8%A7%D8%B3%D8%AA%DA%AF%D8%A7%D9%86%D9%88%DA%AF%D8%B1%D8%A7%D9%81%DB%8C/",
+	"title": "استگانوگرافی",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/tags/",
+	"title": "برچسب ها",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "برچسب ها",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/categories/",
+	"title": "دسته بندی ها",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "دسته بندی ها",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/tags/%D9%85%D8%AE%D9%81%DB%8C-%DA%A9%D8%B1%D8%AF%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D8%AF%D8%B1-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1/",
+	"title": "مخفی کردن داده در تصویر",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/posts/gnulinux/steghide/",
+	"title": "مخفی کردن داده ها در تصویر و صوت",
+	"tags": ["مخفی کردن داده در تصویر", "استگانوگرافی", "steghide"],
+	"categories": [],
+	"series": [],
+	"description": "استگانوگرافی با استفاده از ابزار steghide",
+	"content": "استگانوگرافی یا ‍Steganography یک کلمه یونانی و به معنای پنهان نگاری هست این علم باستانی با ورود به عصر تکنولوژی با وجود پیدایش الگوریتم های رمزنگاری و اهمیت امنیت اطلاعات همچنان توجهات رو به خودش جلب کرد ویژگی جالب اون این هست که بعد از رمز نگاری داده، هنوز داده شما معنا دارد و شما با یک مشت عدد و حروف نا مفهوم روبرو نیستید برای اطلاعات بیشتر اینجا رو کلیک کنید.\nsteghide در سال 2003 یک ابزار اوپن سورس با لایسنس GPL بر پایه همین ایده ارائه شد این ابزار می تونه دیتای شما رو داخل پیکسل های یک تصویر یا داخل یک فایل صوتی ذخیره کنه دقت کنید اینجا منظور متا دیتا نیست!\nفرض کنید شما در حال دیدن تصویری هستید که حاوی اطلاعات رمز شده هست یا صدایی رو می شنوید که حاوی پسوردهای شماست مبحث جالبی هستش :)\nاما چطور از این ابزار استفاده کنیم؟ من این ابزار رو داخل توزیع های گنو/لینوکسی تست کردم و در این پست هم روی آرچ لینوکس از اون استفاده می کنیم برای اطلاعات بیشتر به این لینک مراجعه کنید http://steghide.sourceforge.net\nنصب و راه اندازی برای نصب steghide روی گنو لینوکس می تونیم پکیجش رو از مخازن رسمی دانلود کنیم بسته به توزیعی که استفاده می کنیم دستور نصب میتونه متفاوت باشه در آرچ لینوکس با دستور زیر بسته رو نصب می کنیم\nArch debian  sudo pacman -S steghide   sudo apt-get install steghide     'use strict'; var containerId = JSON.parse(\"\\\"bc36b374320d1717\\\"\"); var containerElem = document.getElementById(containerId); var codetabLinks = null; var codetabContents = null; var ids = []; if (containerElem) { codetabLinks = containerElem.querySelectorAll('.codetab__link'); codetabContents = containerElem.querySelectorAll('.codetab__content'); } for (var i = 0; i 0) { codetabContents[0].style.display = 'block'; } \nبرای دانلود سورس کد یا پکیج برنامه روی download کلیک کنید، همچنین اگر کاربر ویندوز هستید میتونید نسخه GUI برنامه رو نصب کنید\ndownload   steghideui  \nمنطق نرم افزار steghide اول از همه فایل ها رو فشرده می کند و بعد از رمزنگاری با الگوریتم AES که یک الگوریتم رمزنگاری متقارن هست (برای رمزنگاری و رمزگشایی از یک کلید استفاده میکند) درستی مراحل رو چک می کند ولی این نرم افزار محدودیت هایی هم داره که در ادامه اشاره می کنم\nمحدودیت ها  شما می تونید انواع فرمت های فایل رو مخفی کنید اما فایلی که برای پوشش اطلاعات استفاده میکنید (cover file) محدودیت دارد و باید یکی از فرمت های زیر باشه\n[JPEG,BMP,AU,WAV] حجم فایل پوششی باید بزرگتر از فایلی باشه که میخواهید مخفی کنید و باید واقعی باشه (صرفا یک فایل خام با حجم زیاد نباشه) ما نمی تونیم یک فایل بزرگ مثلا 200 مگابایتی رو در یک عکس مخفی کنیم و ایده خوبی نیست شما کجا یک عکس با حجم 200 مگابایت دیدید؟ اگرچه فایل های WAV می توانند حجم های بزرگی داشته باشند بنابراین برای فایل های بزرگتر گزینه مناسب تری هستند  دستورات steghide برای مخفی کردن و آشکار کردن اطلاعات ما از دو دسته دستوراتembed و extract استفاده میکنیم\nمخفی کردن داده ها (embed) فرض کنید من یک فایل password.txt دارم و میخوام اون رو در یک فایل صوتی با پسوند WAV پنهان کنم (همانطور که قبلا گفتم فرمت فایل جاساز هرچیزی میتونه باشه)\nبرای این کار از دستور زیر استفاده می کنیم\n1 2 3 4 5  steghide embed -ef password.txt -cf music.wav Enter passphrase: Re-Enter passphrase: embedding \u0026#34;avatar.jpg\u0026#34; in \u0026#34;IMG_2020.jpg\u0026#34;... done    پارامتر cf- مختصر فایل پوششی (cover file) است پارامتر ef- مختصر فایل جاسازی شده (embed file) است\nبعد از اجرای دستور بالا باید پسورد دلخواه رو وارد کنید و در نهایت فایل پوششی شما پنهان نگاری و فایل password.txt در فایل wav مخفی خواهد شد   باید مسیر فایل های خودتون رو به عنوان آرگومان به پارامتر ها پاس بدید بنابراین از معتبر بودن مسیر فایل ها مطمئن بشید  مثال: مخفی کردن فایل متنی در فایل تصویری\n1  steghide embed -ef password.txt -cf Manic.jpg   مخفی کردن فایل تصویری در فایل تصویری دیگر\n1  steghide embed -ef avatar.png -cf Manic.jpg   آشکار سازی داده پنهان شده (extract) حال فرض کنید ما یک فایل تصویری پنهان نگاری شده Manic.jpg داریم و میخواهیم فایل اصلی که ‍‍password.txt هست رو استخراج کنیم برای این کار باید از دستور زیر استفاده کنیم\n1 2 3 4  steghide extract -sf Manic.jpg Enter passphrase: wrote extracted data to \u0026#34;password.txt\u0026#34;.   بعد از اجرای دستور باید پسوردی که قبلا برای مخفی کردن فایل استفاده کردیم رو وارد کنیم و بعد از اون فایل مخفی شده استخراج میشه و در دایرکتوری فعلی نوشته میشه\nچک کردن فایل برای بررسی کردن این که آیا یک فایل پنهان نگاری شده یا نه می تونیم از دستور زیر استفاده کنیم\n1  steghide info Manic.jpg   تا اینجا تقریبا همه دستورات مهم رو دیدیم برای این که مطلب طولانی نشه از توضیح دادن پارامتر های دیگر این ابزار صرف نظر میکنم اما شما می تونید برای استفاده از قابلیت های دیگر از طریق دستور زیر به راهنمای این ابزار دسترسی داشته باشید\n1  man steghide   "
+},
+{
+	"uri": "http://gictor.ir/posts/",
+	"title": "پست ها",
+	"tags": ["index"],
+	"categories": [],
+	"series": [],
+	"description": "پست ها",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/categories/%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%DB%8C/",
+	"title": "کاربردی",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/series/",
+	"title": "سری مطالب",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/showcase/projects/",
+	"title": "پروژه ها",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "پروژه ها",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/showcase/",
+	"title": "پروژه ها",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "پروژه ها",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/tutorial/",
+	"title": "آموزش ها",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "آموزش ها",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/archive/",
+	"title": "آرشیو",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "آرشیو",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/tags/python/",
+	"title": "python",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/posts/etc/unlimited-google-drive/",
+	"title": "دورزدن محدودیت حجم google drive",
+	"tags": ["گوگل درایو", "python"],
+	"categories": [],
+	"series": [],
+	"description": "ذخیره نامحدود فایل ها در حساب گوگل",
+	"content": "مقدمه گوگل درایو یکی دیگر از سرویس های پر کاربرد گوگل هست که با داشتن حساب گوگل می تونید از اون برای ذخیره فایل های خود در اینترنت استفاده کنید اما به صورت پیشفرض هر حساب فقط 15 گیگابایت فضای ذخیره سازی رایگان داره و برای حجم بیشتر باید هزینه پرداخت کنید اما با یک روش جالب میشه این محدودیت رو دور زد در ادامه این روش رو توضیح میدم\nUDS (Unlimited Drive Storage) این روش با استفاده از یک اسکریپت پایتون به نام uds انجام میشه این اسکریپت در واقع فایل های شما رو در قالب داکیومنت یا فایل متنی در سرویس google doc ذخیره میکنه. چیزی که این پست رو جالب میکنه طرز کار این اسکریپت هست که در ادامه میبینیم\nامکانات uds  آپلود فایل ها در گوگل درایو بدون استفاده از 15‍ گیگابایت فضای حساب دانلود فایل های آپلود شده از حساب  منطق  سرویس گوگل داکیومنت برای فایل های متنی که شما ذخیره میکنید فضایی از گوگل درایو کم نمی کند تجزیه فایل های باینری به فایل های متنی با روش کد گذاری base 64 حجم فایل های کد گذاری شده همیشه بیشتر از حجم فایل اصلی هست سرویس گوگل داکیومنت میتونه برای هر فایل متنی میلیون ها کاراکتر ذخیره کنه که حدودا معادل 710 کیلو بایت داده کدگذاری شده با base 64‍ هست  راه اندازی و احراز هویت قبل از اجرای دستورات از نصب بودن git و python در سیستم عامل مطمئن بشید خب برای استفاده از این اسکریپت باید این ریپوزیتوری رو با استفاده از دستور زیر از گیت هاب clone کنیم.\n1  git clone https://github.com/stewartmcgown/uds.git   بعد از اون باید کتابخانه های مورد نیاز رو به کمک فایل requirements.txt موجود در فولدر برنامه نصب کنیم\n1  pip3 install -r requirements.txt   فعال کردن api حساب گوگل برای اینکه برنامه بتونه به گوگل درایو ما دسترسی داشته باشه باید api حساب ما رو داشته باشه برای این کار باید Google\u0026rsquo;s API page رو باز کنیم\nو روی Enable the Drive api کلیک کنید\nبعد از اون ، باید فایل کانفیگ رو که با فرمت json هست دانلود کنیم و در فولدر برنامه با نام client_secret.json ذخیره کنیم\nچون ما در ایران هستیم و سرویس های گوگل تحریم هستن باید از vpn‍ استفاده کنیم راه اندازی اولیه حالا با یکی از دستورات زیر باید برنامه رو برای راه اندازی اولیه اجرا کنیم\nbash bash  1  ./uds.py     1  python3 uds.py       'use strict'; var containerId = JSON.parse(\"\\\"7ee5e343d572678b\\\"\"); var containerElem = document.getElementById(containerId); var codetabLinks = null; var codetabContents = null; var ids = []; if (containerElem) { codetabLinks = containerElem.querySelectorAll('.codetab__link'); codetabContents = containerElem.querySelectorAll('.codetab__content'); } for (var i = 0; i 0) { codetabContents[0].style.display = 'block'; } \nدستورات UDS برای کار با برنامه و ذخیره و دانلود فایل ها باید از آرگومان ها استفاده کنیم\nآپلود فایل برای آپلود فایل باید از دستور push-- استفاده کنیم برای مثال:\n1  ./uds.py --push Ubuntu.Desktop.16.04.iso   Ubuntu.Desktop.16.04.iso will required 543 Docs to store. Created parent folder with ID 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8 Successfully Uploaded Ubuntu.Desktop.16.04.iso: [██████████████████████████████] 100% لیست فایل ها برای دیدن لیست فایل های آپلود شده و موجود در درایو باید از دستور list-- استفاده کنیم برای مثال:\n1  ./uds.py --list   Name Size Encoded ID ------------------------ ----- --------- --------------------------------- Ubuntu.Desktop.16.04.iso 810 MB 1.1 GB 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8 Ubuntu.Desktop.18.10.iso 1.1 GB 1.3 GB 1RzzVfN9goHMTkM1Hf1FUWUVS_2R3GK7D و برای جستجو در نام فایل ها باید کلمه مورد نظر رو به دستور لیست پاس بدیم:\n1  ./uds.py --list \u0026#34;18\u0026#34;   Name Size Encoded ID ------------------------ ----- --------- --------------------------------- Ubuntu.Desktop.18.10.iso 1.1 GB 1.3 GB 1RzzVfN9goHMTkM1Hf1FUWUVS_2R3GK7D دانلود فایل برای دانلود فایل باید از دستور pull-- استفاده کنیم برای مثال:\n1  ./uds.py --pull 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8   Downloaded Ubuntu.Desktop.16.04.iso: [██████████████████████████████] 100% به طور پیشفرض فایل های دانلود شده در فولدر برنامه و دایرکتوری downloads ذخیره میشن\nحذف فایل برای حذف فایل باید از دستور delete-- استفاده کنیم برای مثال:\n1  ./uds.py --delete 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8   Deleted 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8 منبع: UDS : Unlimited Drive Storage   "
+},
+{
+	"uri": "http://gictor.ir/tags/%DA%AF%D9%88%DA%AF%D9%84-%D8%AF%D8%B1%D8%A7%DB%8C%D9%88/",
+	"title": "گوگل درایو",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://gictor.ir/about/",
+	"title": "درباره",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "درباره",
+	"content": "گیکتور (gictor) از ادغام دو اسم ویکتور (victor) و گیک (geek) به وجود اومده . اسم مستعار و مورد علاقه من ویکتور است که در لغت به معنای پیروز هست. در حال حاضر که این متن رو می نویسم دانشجوی کارشناسی مهندسی کامپیوتر نرم افزار هستم\nهم چنین علاقه زیادی به کامپیوتر و برنامه نویسی دارم و زمان زیادی صرف یادگیری و کار با این موجود بامزه می کنم و از اونجایی که به این افراد گیک می گویند این نام رو در کنار ویکتور گزاشتم و در نهایت به گیکتور رسیدم\nهدف از ساختن این وبلاگ برای من این هست که مطالب جالب دنیای کامپیوتر رو با بقیه افراد در سطح تخصصی و کاربردی به اشتراک بگذارم همچنین وقتی بخواهم چیزی رو دقیق تر یاد بگیرم سعی میکنم در باره آن بنویسم و در مقاله ای اون رو به خواننده یاد بدم در نتیجه آن موقع خودم بیشتر یاد می گیرم و یادگیری کامپیوتر و دنیای اون برای من خیلی لذت بخشه\nاز اونجایی که به دنیای آزاد متن باز (open source) و گنو/لینوکس (Gnu/Linux) علاقه مندم مطالب این وبلاگ رو با مجوز های آزاد منتشر می کنم\nتا اینجا اسکریپت نویسی رو با پایتون و بش اسکریپت ، شی گرایی رو با جاوا و سرعت و سادگی رو با C حس کردم\n"
+}]

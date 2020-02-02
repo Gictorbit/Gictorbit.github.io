@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>آرشیو on gictor.ir</title>
+    <link>http://gictor.ir/archive/</link>
+    <description>Recent content in آرشیو on gictor.ir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fa</language>
+    <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
+    <webMaster>gictorbit@gmail.com (victor)</webMaster>
+    <copyright>©{year} | license </copyright>
+    <lastBuildDate>Mon, 27 Jan 2020 22:57:26 +0330</lastBuildDate>
+    
+        <atom:link href="http://gictor.ir/archive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+    
+  </channel>
+</rss>

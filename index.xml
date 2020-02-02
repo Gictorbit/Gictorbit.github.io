@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gictor.ir</title>
+    <link>http://gictor.ir/</link>
+    <description>Recent content on gictor.ir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fa</language>
+    <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
+    <webMaster>gictorbit@gmail.com (victor)</webMaster>
+    <copyright>©{year} | license </copyright>
+    <lastBuildDate>Fri, 31 Jan 2020 20:30:53 +0330</lastBuildDate>
+    
+        <atom:link href="http://gictor.ir/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>مخفی کردن داده ها در تصویر و صوت</title>
+        <link>http://gictor.ir/posts/gnulinux/steghide/</link>
+        <pubDate>Fri, 31 Jan 2020 20:30:53 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/posts/gnulinux/steghide/</guid>
+        <description>استگانوگرافی یا ‍Steganography یک کلمه یونانی و به معنای پنهان نگاری هست این علم باستانی با ورود به عصر تکنولوژی با وجود پیدایش الگوریتم های رمزنگاری و اهمیت امنیت اطلاعات همچنان توجهات رو به خودش جلب کرد ویژگی جالب اون این هست که بعد از رمز نگاری داده، هنوز داده شما معنا دارد و شما با یک مشت عدد و حروف نا مفهوم روبرو نیستید برای اطلاعات بیشتر اینجا رو کلیک کنید.</description>
+      </item>
+      
+      <item>
+        <title>دورزدن محدودیت حجم google drive</title>
+        <link>http://gictor.ir/posts/etc/unlimited-google-drive/</link>
+        <pubDate>Sun, 26 Jan 2020 19:45:41 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/posts/etc/unlimited-google-drive/</guid>
+        <description>مقدمه گوگل درایو یکی دیگر از سرویس های پر کاربرد گوگل هست که با داشتن حساب گوگل می تونید از اون برای ذخیره فایل های خود در اینترنت استفاده کنید اما به صورت پیشفرض هر حساب فقط 15 گیگابایت فضای ذخیره سازی رایگان داره و برای حجم بیشتر باید هزینه پرداخت کنید اما با یک روش جالب میشه این محدودیت رو دور زد در ادامه این روش رو توضیح میدم</description>
+      </item>
+      
+      <item>
+        <title>درباره</title>
+        <link>http://gictor.ir/about/</link>
+        <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/about/</guid>
+        <description>گیکتور (gictor) از ادغام دو اسم ویکتور (victor) و گیک (geek) به وجود اومده . اسم مستعار و مورد علاقه من ویکتور است که در لغت به معنای پیروز هست. در حال حاضر که این متن رو می نویسم دانشجوی کارشناسی مهندسی کامپیوتر نرم افزار هستم
+هم چنین علاقه زیادی به کامپیوتر و برنامه نویسی دارم و زمان زیادی صرف یادگیری و کار با این موجود بامزه می کنم و از اونجایی که به این افراد گیک می گویند این نام رو در کنار ویکتور گزاشتم و در نهایت به گیکتور رسیدم</description>
+      </item>
+      
+    
+  </channel>
+</rss>

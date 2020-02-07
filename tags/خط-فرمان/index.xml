@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>خط فرمان on gictor.ir</title>
+    <link>http://gictor.ir/tags/%D8%AE%D8%B7-%D9%81%D8%B1%D9%85%D8%A7%D9%86/</link>
+    <description>Recent content in خط فرمان on gictor.ir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fa</language>
+    <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
+    <webMaster>gictorbit@gmail.com (victor)</webMaster>
+    <copyright>©{year} | license </copyright>
+    <lastBuildDate>Fri, 31 Jan 2020 20:13:37 +0330</lastBuildDate>
+    
+        <atom:link href="http://gictor.ir/tags/%D8%AE%D8%B7-%D9%81%D8%B1%D9%85%D8%A7%D9%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>اشتراک گذاری فایل ها در ترمینال</title>
+        <link>http://gictor.ir/posts/gnulinux/share-from-terminal/</link>
+        <pubDate>Fri, 31 Jan 2020 20:13:37 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/posts/gnulinux/share-from-terminal/</guid>
+        <description>شاید برای شما هم اتفاق افتاده باشه که وسط کار کردن در ترمینال خودتون به فایلی برخورد کنید و بخواهید اون رو با دیگران به اشتراک بذارید یک روش مرسوم این هست که مرورگر رو باز کنید و با استفاده از یک سایت اشتراک گذاری فایل یا سرویس های معروف مثل دراپ باکس یا گوگل درایو و&amp;hellip; فایل خودتون رو آپلود کنید یا در کم دردسر ترین حالت با شبکه های اجتماعی اون فایل رو به اشتراک بگذارید اما یک روش ساده تر و سریع تر هم وجود داره که در ادامه اون رو بررسی میکنیم</description>
+      </item>
+      
+    
+  </channel>
+</rss>

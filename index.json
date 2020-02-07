@@ -9,15 +9,6 @@
 	"content": ""
 },
 {
-	"uri": "http://gictor.ir/categories/gnu/linux/",
-	"title": "Gnu/Linux",
-	"tags": [],
-	"categories": [],
-	"series": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "http://gictor.ir/tags/steghide/",
 	"title": "steghide",
 	"tags": [],
@@ -90,6 +81,15 @@
 	"content": ""
 },
 {
+	"uri": "http://gictor.ir/categories/%DA%AF%D9%86%D9%88/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/",
+	"title": "گنو/لینوکس",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://gictor.ir/tags/transfer.sh/",
 	"title": "transfer.sh",
 	"tags": [],
@@ -110,15 +110,15 @@
 {
 	"uri": "http://gictor.ir/posts/gnulinux/share-from-terminal/",
 	"title": "اشتراک گذاری فایل ها در ترمینال",
-	"tags": ["transfer.sh", "اشتراک گذاری فایل ها", "لینوکس", "کامندلاین"],
+	"tags": ["transfer.sh", "اشتراک گذاری فایل ها", "لینوکس", "خط فرمان"],
 	"categories": [],
 	"series": [],
 	"description": "اشتراک گذاری فایل ها با transfer.sh",
 	"content": "شاید برای شما هم اتفاق افتاده باشه که وسط کار کردن در ترمینال خودتون به فایلی برخورد کنید و بخواهید اون رو با دیگران به اشتراک بذارید یک روش مرسوم این هست که مرورگر رو باز کنید و با استفاده از یک سایت اشتراک گذاری فایل یا سرویس های معروف مثل دراپ باکس یا گوگل درایو و\u0026hellip; فایل خودتون رو آپلود کنید یا در کم دردسر ترین حالت با شبکه های اجتماعی اون فایل رو به اشتراک بگذارید اما یک روش ساده تر و سریع تر هم وجود داره که در ادامه اون رو بررسی میکنیم\ntransfer.sh این راه حل سریع و ساده برای اشتراک گذاری فایل ها از کامند لاین یا ترمینال استفاده از transfer.sh هست فقط کافیه فایلی که میخواهید رو با دستورات زیر آپلود کنید و در نتیجه لینک اشتراک گذاری فایل به عنوان خروجی چاپ میشه\nقابلیت ها  دسترسی از خط فرمان رایگان بودن آپلود فایل تا حجم 10GB ذخیره فایل ها تا 14 روز رمزنگاری فایل ها  آپلود فایل با curl یک ابزار معروف برای انتقال دیتا بین سرور و کلاینت با پروتکل های مختلف curl هست میتونیم برای آپلود فایل ازش استفاده کنیم\nقبل از هرچیز از نصب بودن curl در سیستم عامل خود مطمئن باشید 1  \u0026gt; curl --upload-file ./hello.txt https://transfer.sh/hello.txt   https://transfer.sh/66nb8/hello.txt با اجرای دستور بالا در صورت موفقیت آمیز بودن لینک دانلود به عنوان خروجی دستور نمایش داده میشه\n پارامتر upload-file-- برای آپلود فایل در curl استفاده میشه آرگومان hello.txt/. در واقع مسیر فایلی هست که قصد اشتراک گذاری اون رو داریم و باید حتما وجود داشته باشه آرگومان سوم لینک سروری هست که میخواهیم فایل رو داخلش آپلود کنیم که در مثال ما https://transfer.sh هست اما باید در ادامه اسم فایل رو که hello.txt هست اضافه کنیم  تعریف alias اما همینطور که واضحه تایپ کردن این هم خودش میتونه وقت گیر باشه و شاید موقع آپلود دستور دقیق برای آپلود فایل یادمون نیاد برای همین میتونیم برای این دستور یک Alias تعریف کنیم که کار مارو خیلی آسان خواهد کرد برای این کار تکه کد زیر رو کپی کنید و در انتهای فایل zshrc. یا bashrc. اضافه کنید\nاین دو فایل در شاخه /home/$USER شما هستند و بسته به اینکه zsh دارید یا bash باید یکی از این فایل ها رو ویرایش کنید transfer() { if [ $# -eq 0 ]; then echo -e \u0026quot;No arguments specified. Usage:\\necho transfer /tmp/test.md\\ncat /tmp/test.md | transfer test.md\u0026quot;; return 1; fi tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename \u0026quot;$1\u0026quot; | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file \u0026quot;$1\u0026quot; \u0026quot;https://transfer.sh/$basefile\u0026quot; \u0026gt;\u0026gt; $tmpfile; else curl --progress-bar --upload-file \u0026quot;-\u0026quot; \u0026quot;https://transfer.sh/$1\u0026quot; \u0026gt;\u0026gt; $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } بعد از اضافه کردن قطعه کد بالا می تونید با دستور transfer فایل های خودتون رو به سادگی آپلود کنید برای مثال:\n1  transfer hello.txt   دانلود فایل ها برای دانلود فایل در ترمینال هم می تونید با دستور زیر از curl استفاده کنید :\n1  curl https://transfer.sh/66nb8/hello.txt -o hello.txt    آرگومان اول لینک اشتراک گذاری فایل آپلود شده هست پارامتر o-مختصر output است و باید اسم فایل خروجی رو برای دانلود و ذخیره به اون پاس بدیم که در مثال ما hello.txt هست  برای دیدن مثال ها و اطلاعات بیشتر به وبسایت transfer.sh مراجعه کنید  "
 },
 {
-	"uri": "http://gictor.ir/tags/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/",
-	"title": "لینوکس",
+	"uri": "http://gictor.ir/tags/%D8%AE%D8%B7-%D9%81%D8%B1%D9%85%D8%A7%D9%86/",
+	"title": "خط فرمان",
 	"tags": [],
 	"categories": [],
 	"series": [],
@@ -126,8 +126,8 @@
 	"content": ""
 },
 {
-	"uri": "http://gictor.ir/tags/%DA%A9%D8%A7%D9%85%D9%86%D8%AF%D9%84%D8%A7%DB%8C%D9%86/",
-	"title": "کامندلاین",
+	"uri": "http://gictor.ir/tags/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/",
+	"title": "لینوکس",
 	"tags": [],
 	"categories": [],
 	"series": [],

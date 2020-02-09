@@ -498,17 +498,19 @@
     var enableSearchHighlight = JSON.parse("true");
     
     var searchResultPosition = JSON.parse("null");
+    
+    var sectionType = JSON.parse("\"posts\"");
 
     var fuse = null;
 
-    function initFuse() {
+    (function initFuse() {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', permalink + "index.json");
       xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
       xhr.onload = function () {
         if (xhr.status === 200) {
           fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: ['title', 'description', 'content'],
+            keys: sectionType.includes('publication') ? ['title', 'description', 'content'] : ['title', 'abstract'],
             includeMatches: enableSearchHighlight,
             shouldSort: true,
             threshold: 0.4,
@@ -517,13 +519,14 @@
             maxPatternLength: 32,
             minMatchCharLength: 1,
           });
+          window.fuse = fuse;
         }
         else {
           console.error('[' + xhr.status + ']Error:', xhr.statusText);
         }
       };
       xhr.send();
-    }
+    })();
 
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
@@ -839,21 +842,16 @@
       return content;
     };
 
-    initFuse();
-
     var searchElem = document.getElementById('search');
     var searchMobile = document.getElementById('search-mobile');
+    var searchResultsContainer = document.getElementById('search-results');
 
-    searchElem ? 
+    searchElem ?
     searchElem.addEventListener('input', function(e) {
-      if (!e.target.value) {
-        document.getElementById('search-results').setAttribute('class', 'dropdown');
+      if (!e.target.value | window.innerWidth < 770) {
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
         searchResult ? searchResult.setAttribute('data-display', 'none') : null;
         summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
-        return null;
-      }
-
-      if (window.innerWidth < 770) {
         return null;
       }
 
@@ -872,6 +870,13 @@
         } else {
           renderSearchResultsSide(searchText, results);
         }
+        
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function(item) {
+          item.addEventListener('mousedown', function(e) {
+            e.target.click();
+          });
+        }) : null;
       }
     }) : null;
 
@@ -880,9 +885,7 @@
       if (window.innerWidth < 770) {
         return null;
       }
-      setTimeout(function () {
-        document.getElementById('search-results').setAttribute('class', 'dropdown');
-      }, 100);
+      searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
     }) : null;
 
     searchElem ? 
@@ -891,7 +894,7 @@
         return null;
       }
       if (!e.target.value) {
-        document.getElementById('search-results').setAttribute('class', 'dropdown');
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
         return null;
       }
 
@@ -910,18 +913,15 @@
         } else {
           renderSearchResultsSide(searchText, results);
         }
+
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function (item) {
+          item.addEventListener('mousedown', function (e) {
+            e.target.click();
+          });
+        }) : null;
       }
     }) : null;
-    
-    function indexInParent(node) {
-      var children = node.parentNode.childNodes;
-      var num = 0;
-      for (var i = 0; i < children.length; i++) {
-        if (children[i] == node) return num;
-        if (children[i].nodeType == 1) num++;
-      }
-      return -1;
-    }
 
     var searchMenuElem = document.getElementById("search-menu");
     var activeItem = document.querySelector('#search-menu .dropdown-item.is-active');
@@ -1094,16 +1094,16 @@
       var ul = document.createElement('ul');
       
       if (!searchText) {
-        searchResult.setAttribute('data-display', 'none');
-        summaryContainer.setAttribute('data-display', 'block');
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
       } else if (results) {
         if (results && results.length) {
           results.forEach(function (result) {
             makeLi(ul, result);
           });
 
-          searchResult.setAttribute('data-display', 'block');
-          summaryContainer.setAttribute('data-display', 'none');
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
         }
       }
 
@@ -1116,16 +1116,16 @@
       var ul = document.createElement('ul');
 
       if (!searchText) {
-        searchResult.setAttribute('data-display', 'none');
-        summaryContainer.setAttribute('data-display', 'block');
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
       } else if (results) {
         if (results && results.length) {
           results.forEach(function (result) {
             makeHighlightLi(ul, result);
           });
 
-          searchResult.setAttribute('data-display', 'block');
-          summaryContainer.setAttribute('data-display', 'none');
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
         }
       }
 
@@ -1476,48 +1476,27 @@ if (!doNotTrack) {
     
   </span>
 </div>
-      <div class="single__tags caption">
+      
+<div class="single__tags caption">
 
   
     🏷️
   
   
-  <li>
-    <a href="/tags/transfer.sh" class="single__tag" title="transfer.sh">
-      #transfer.sh
-    </a>
-  </li>
-    
+    <li><a href="http://gictor.ir/tags/transfer.sh/" class="single__tag" title="transfer.sh">#transfer.sh</a></li>
+  
 
   
   
-  <li>
-    <a href="/tags/%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C-%D9%81%D8%A7%DB%8C%D9%84-%D9%87%D8%A7" class="single__tag" title="اشتراک گذاری فایل ها">
-      #اشتراک گذاری فایل ها
-    </a>
-  </li>
-    
 
   
   
-  <li>
-    <a href="/tags/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3" class="single__tag" title="لینوکس">
-      #لینوکس
-    </a>
-  </li>
-    
 
   
   
-  <li>
-    <a href="/tags/%D8%AE%D8%B7-%D9%81%D8%B1%D9%85%D8%A7%D9%86" class="single__tag" title="خط فرمان">
-      #خط فرمان
-    </a>
-  </li>
-    
 
 </div>
-    </div>    
+    </div>
     <article class="single__contents" data-dir="rtl">
       
       <p><img src="/images/post-image/2020/transfer.jpg" alt="share files with transfer.sh" /><br />
@@ -1585,6 +1564,54 @@ tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename &quot;$1
 </div>
 
     </article>
+    <script>
+  'use strict';
+  
+  function wrap(el, wrapper) {
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+  }
+
+  (function () {
+    var singleContentsElem = document.querySelector('.single__contents');
+    singleContentsElem ? 
+    singleContentsElem.querySelectorAll('pre > code').forEach(function(elem) {
+      var dataLang = elem.getAttribute('data-lang');
+      var dataLangWrapper = document.createElement('div');
+      var code = null;
+      var codeTitle = null;
+
+      if (dataLang && dataLang.includes(':')) {
+        code = dataLang.split(':')[0];
+        codeTitle = dataLang.split(':')[1];
+
+        dataLangWrapper.className = 'language-' + code;
+        dataLangWrapper.setAttribute('data-lang', codeTitle);
+
+        elem.className = 'language-' + code;
+        elem.setAttribute('data-lang', codeTitle);
+        elem.setAttribute('id', codeTitle);
+      } else if (!dataLang) {
+        dataLangWrapper.setAttribute('data-lang', 'Code');
+        dataLangWrapper.className = 'language-code';
+      }
+
+      if (!dataLang || codeTitle) {
+        wrap(elem.parentNode, dataLangWrapper);
+      }
+
+    }) : null;
+  })();
+
+  var langCodeElem = document.querySelectorAll('.language-code');
+  langCodeElem ? langCodeElem.forEach(function (elem) {
+    var newElem = document.createElement('span');
+    newElem.className = 'copy-to-clipboard';
+    newElem.setAttribute('title', 'Copy to clipboard');
+    elem.append(newElem);
+  }) : null;
+  
+</script>
     
 <div class="donation">
   <div class="donation__message">
@@ -2248,34 +2275,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var singleContentsElem = document.querySelector('.single__contents');
 
     
-    function wrap(el, wrapper) {
-      el.parentNode.insertBefore(wrapper, el);
-      wrapper.appendChild(el);
-    }
-
-    (function () {
-      singleContentsElem.querySelectorAll('pre > code').forEach(function(elem) {
-        var dataLang = elem.getAttribute('data-lang');
-        if (!dataLang) {
-          var dataLangWrapper = document.createElement('div');
-          dataLangWrapper.setAttribute('data-lang', 'Code');
-          dataLangWrapper.className = 'language-code';
-          wrap(elem.parentNode, dataLangWrapper);
-        }
-      });
-    })();
-
-    var langCodeElem = document.querySelectorAll('.language-code');
-    langCodeElem ? langCodeElem.forEach(function (elem) {
-      var newElem = document.createElement('span');
-      newElem.className = 'copy-to-clipboard';
-      newElem.setAttribute('title', 'Copy to clipboard');
-      elem.append(newElem);
-    }) : null;
-    
-
-
-    
     
     
     var enableBusuanzi = JSON.parse("false");
@@ -2495,6 +2494,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var clipInit = false;
     var preChromaElem = document.querySelectorAll('pre.chroma');
     var langCodeElem = document.querySelectorAll('.language-code');
+    var dolorCodeElem = document.querySelectorAll('div.language-\\$');
+    var gtCodeElem = document.querySelectorAll('div.language-\\>');
+
     var makeClipboard = function(elem) {
       var code = elem,
         text = elem.textContent;
@@ -2555,6 +2557,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    var makeSymbolClipboard = function(elem) {
+      var clipboardSpan = document.createElement('span');
+      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
+      clipboardSpan.setAttribute('title', 'Copy to clipboard');
+      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
+    }
+
     preChromaElem ? 
     preChromaElem.forEach(function(elem) {
       elem.querySelectorAll('code').forEach(function(codeElem) {
@@ -2567,6 +2576,41 @@ document.addEventListener('DOMContentLoaded', function () {
       elem.querySelectorAll('code').forEach(function (codeElem) {
         makeClipboard(codeElem);
       });
+    }) : null;
+
+    dolorCodeElem ? 
+    dolorCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+
+    gtCodeElem ?
+    gtCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+    
+
+
+    
+    dolorCodeElem ?
+    dolorCodeElem.forEach(function(elem) {
+      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+      lnts ? 
+      lnts.forEach(function(lnt) {
+        lnt.innerHTML = '$<br/>';
+      }) : null;
+    }) : null;
+
+    gtCodeElem ?
+    gtCodeElem.forEach(function(elem) {
+      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+      lnts ? 
+      lnts.forEach(function(lnt) {
+        lnt.innerHTML = '><br/>';
+      }) : null;
     }) : null;
     
 

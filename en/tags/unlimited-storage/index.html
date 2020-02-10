@@ -3,7 +3,7 @@
 
 <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>unlimited storage – gictor.ir</title>
     
@@ -1221,6 +1221,7 @@
 </script>
 
     
+  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -1234,7 +1235,7 @@ if (!doNotTrack) {
 }
 </script>
 
-
+  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -1245,6 +1246,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
 
 
 
@@ -1428,7 +1432,8 @@ if (!doNotTrack) {
 
 <main class="main inner" data-sidebar-position="right">
   <div class="list__main lm">
-    <nav class="breadcrumb" aria-label="breadcrumbs">
+    <nav class="breadcrumb hide" aria-label="breadcrumbs">
+  <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
   <ol>
     
   
@@ -1839,6 +1844,10 @@ if (!doNotTrack) {
 
     <hr />
 
+    <div class="basicflex">
+        
+    </div>
+
     <div class="footer__poweredby">
         
                 
@@ -1855,11 +1864,13 @@ if (!doNotTrack) {
         
 
         
+        
     </div> 
 </footer>
         </div>
         
-<div class="wrapper__right" dir="ltr">
+<div class="wrapper__right hide" dir="ltr">
+  <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
   
 </div>
 

@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://gictor.ir/</loc>
-    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,17 +19,12 @@
   
   <url>
     <loc>http://gictor.ir/tags/steghide/</loc>
-    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gictor.ir/tags/%D8%A7%D8%B3%D8%AA%DA%AF%D8%A7%D9%86%D9%88%DA%AF%D8%B1%D8%A7%D9%81%DB%8C/</loc>
-    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
   </url>
   
   <url>
     <loc>http://gictor.ir/tags/</loc>
-    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -44,7 +39,7 @@
   
   <url>
     <loc>http://gictor.ir/categories/</loc>
-    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -58,18 +53,23 @@
   </url>
   
   <url>
-    <loc>http://gictor.ir/tags/%D9%85%D8%AE%D9%81%DB%8C-%DA%A9%D8%B1%D8%AF%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D8%AF%D8%B1-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1/</loc>
-    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <loc>http://gictor.ir/tags/%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc/</loc>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
   </url>
   
   <url>
-    <loc>http://gictor.ir/posts/gnulinux/steghide/</loc>
-    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <loc>http://gictor.ir/tags/%D9%86%D8%B5%D8%A8-%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc-%D8%AF%D8%B1-%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</loc>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/posts/gnulinux/photoshop/</loc>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
   </url>
   
   <url>
     <loc>http://gictor.ir/posts/</loc>
-    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -84,11 +84,26 @@
   
   <url>
     <loc>http://gictor.ir/categories/%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%DB%8C/</loc>
-    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
   </url>
   
   <url>
     <loc>http://gictor.ir/categories/%DA%AF%D9%86%D9%88/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</loc>
+    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/%D8%A7%D8%B3%D8%AA%DA%AF%D8%A7%D9%86%D9%88%DA%AF%D8%B1%D8%A7%D9%81%DB%8C/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/%D9%85%D8%AE%D9%81%DB%8C-%DA%A9%D8%B1%D8%AF%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D8%AF%D8%B1-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1/</loc>
+    <lastmod>2020-01-31T20:30:53+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/posts/gnulinux/steghide/</loc>
     <lastmod>2020-01-31T20:30:53+03:30</lastmod>
   </url>
   

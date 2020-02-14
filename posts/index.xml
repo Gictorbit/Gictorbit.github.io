@@ -9,13 +9,22 @@
     <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
-    <lastBuildDate>Fri, 31 Jan 2020 20:30:53 +0330</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2020 22:15:50 +0330</lastBuildDate>
     
         <atom:link href="http://gictor.ir/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>نصب فتوشاپ cc در گنو لینوکس</title>
+        <link>http://gictor.ir/posts/gnulinux/photoshop/</link>
+        <pubDate>Fri, 14 Feb 2020 22:15:50 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/posts/gnulinux/photoshop/</guid>
+        <description>مقدمه از آنجایی که فتوشاپ یکی از ابزار های قدرتمند ویرایش تصویر هست و افراد زیادی با اون سرو کار دارن و یکی از چیزهایی که بعد از مهاجرت به گنولینوکس باهاش مواجه می شوید نبودن این ابزار برای این سیستم عامل هست اگر چه جایگیزین های خیلی خوب و متن باز مثل Gimp وجود دارند و چه بهتر اگر بتونید از این ابزار ها به جای فتوشاپ در گنو لینوکس استفاده کنید.</description>
+      </item>
       
       <item>
         <title>مخفی کردن داده ها در تصویر و صوت</title>

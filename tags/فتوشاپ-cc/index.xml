@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>steghide on gictor.ir</title>
-    <link>http://gictor.ir/tags/steghide/</link>
-    <description>Recent content in steghide on gictor.ir</description>
+    <title>فتوشاپ cc on gictor.ir</title>
+    <link>http://gictor.ir/tags/%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc/</link>
+    <description>Recent content in فتوشاپ cc on gictor.ir</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
     <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
@@ -11,7 +11,7 @@
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Fri, 14 Feb 2020 22:15:50 +0330</lastBuildDate>
     
-        <atom:link href="http://gictor.ir/tags/steghide/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://gictor.ir/tags/%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,6 @@
         <author>gictorbit@gmail.com (victor)</author>
         <guid>http://gictor.ir/posts/gnulinux/photoshop/</guid>
         <description>مقدمه از آنجایی که فتوشاپ یکی از ابزار های قدرتمند ویرایش تصویر هست و افراد زیادی با اون سرو کار دارن و یکی از چیزهایی که بعد از مهاجرت به گنولینوکس باهاش مواجه می شوید نبودن این ابزار برای این سیستم عامل هست اگر چه جایگیزین های خیلی خوب و متن باز مثل Gimp وجود دارند و چه بهتر اگر بتونید از این ابزار ها به جای فتوشاپ در گنو لینوکس استفاده کنید.</description>
-      </item>
-      
-      <item>
-        <title>مخفی کردن داده ها در تصویر و صوت</title>
-        <link>http://gictor.ir/posts/gnulinux/steghide/</link>
-        <pubDate>Fri, 31 Jan 2020 20:30:53 +0330</pubDate>
-        <author>gictorbit@gmail.com (victor)</author>
-        <guid>http://gictor.ir/posts/gnulinux/steghide/</guid>
-        <description>استگانوگرافی یا ‍Steganography یک کلمه یونانی و به معنای پنهان نگاری هست این علم باستانی با ورود به عصر تکنولوژی با وجود پیدایش الگوریتم های رمزنگاری و اهمیت امنیت اطلاعات همچنان توجهات رو به خودش جلب کرد ویژگی جالب اون این هست که بعد از رمز نگاری داده، هنوز داده شما معنا دارد و شما با یک مشت عدد و حروف نا مفهوم روبرو نیستید برای اطلاعات بیشتر اینجا رو کلیک کنید.</description>
       </item>
       
 

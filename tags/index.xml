@@ -9,7 +9,7 @@
     <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
-    <lastBuildDate>Fri, 31 Jan 2020 20:30:53 +0330</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2020 22:15:50 +0330</lastBuildDate>
     
         <atom:link href="http://gictor.ir/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,9 +20,27 @@
       <item>
         <title>steghide</title>
         <link>http://gictor.ir/tags/steghide/</link>
-        <pubDate>Fri, 31 Jan 2020 20:30:53 +0330</pubDate>
+        <pubDate>Fri, 14 Feb 2020 22:15:50 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
         <guid>http://gictor.ir/tags/steghide/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>فتوشاپ cc</title>
+        <link>http://gictor.ir/tags/%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc/</link>
+        <pubDate>Fri, 14 Feb 2020 22:15:50 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/tags/%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>نصب فتوشاپ cc در لینوکس</title>
+        <link>http://gictor.ir/tags/%D9%86%D8%B5%D8%A8-%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc-%D8%AF%D8%B1-%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</link>
+        <pubDate>Fri, 14 Feb 2020 22:15:50 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/tags/%D9%86%D8%B5%D8%A8-%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc-%D8%AF%D8%B1-%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</guid>
         <description></description>
       </item>
       

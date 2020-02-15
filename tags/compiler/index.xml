@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>compiler on gictor.ir</title>
+    <link>http://gictor.ir/tags/compiler/</link>
+    <description>Recent content in compiler on gictor.ir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fa</language>
+    <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
+    <webMaster>gictorbit@gmail.com (victor)</webMaster>
+    <copyright>©{year} | license </copyright>
+    <lastBuildDate>Sat, 15 Feb 2020 11:03:28 +0330</lastBuildDate>
+    
+        <atom:link href="http://gictor.ir/tags/compiler/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>اصول طراحی کامپایلر</title>
+        <link>http://gictor.ir/posts/compiler/introduction/</link>
+        <pubDate>Sat, 15 Feb 2020 11:03:28 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/posts/compiler/introduction/</guid>
+        <description>امروزه زبان های برنامه نویسی یک ابزار برای نمایش محاسبات به انسان و ماشین هستند و همونطور که می دونیم دنیای ما بیش از پیش به زبان های برنامه نویسی وابستگی داره چون دنیا رو کامپیوتر ها اداره میکنند و نرم افزار هایی که روی آنها در حال اجرا هستند با یک زبان برنامه نویسی نوشته شده اند
+تعریف کامپایلر اما قبل از این که یک برنامه بتونه اجرا بشه اول از همه باید به چیزی که کامپیوتر میتونه اجرا کنه ترجمه بشه به نرم افزار سیستمی که این ترجمه رو انجام میده کامپایلر می گویند</description>
+      </item>
+      
+
+    
+  </channel>
+</rss>

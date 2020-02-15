@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>طراحی کامپایلر on gictor.ir</title>
+    <link>http://gictor.ir/tags/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</link>
+    <description>Recent content in طراحی کامپایلر on gictor.ir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fa</language>
+    <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
+    <webMaster>gictorbit@gmail.com (victor)</webMaster>
+    <copyright>©{year} | license </copyright>
+    <lastBuildDate>Sat, 15 Feb 2020 16:51:15 +0330</lastBuildDate>
+    
+        <atom:link href="http://gictor.ir/tags/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Language Processors پردازنده های زبان</title>
+        <link>http://gictor.ir/posts/compiler/language-processors/</link>
+        <pubDate>Sat, 15 Feb 2020 16:51:15 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/posts/compiler/language-processors/</guid>
+        <description>کامپایلر (compiler) به زبان ساده کامپایلر برنامه ای هست که می تونه یک برنامه که به یک زبان نوشته شده رو بخونه (زبان مبدا یا source language) و به یک برنامه معادل به زبان دیگه (زبان هدف یا target language) ترجمه کنه
+به شکل زیر دقت کنید یک نقش مهم کامپایلر این هست که هر اروری که در زبان مبدا، طی فرایند ترجمه شناسایی می شود را گزارش کند</description>
+      </item>
+      
+      <item>
+        <title>اصول طراحی کامپایلر</title>
+        <link>http://gictor.ir/posts/compiler/introduction/</link>
+        <pubDate>Sat, 15 Feb 2020 11:03:28 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <guid>http://gictor.ir/posts/compiler/introduction/</guid>
+        <description>امروزه زبان های برنامه نویسی یک ابزار برای نمایش محاسبات به انسان و ماشین هستند و همونطور که می دونیم دنیای ما بیش از پیش به زبان های برنامه نویسی وابستگی داره چون دنیا رو کامپیوتر ها اداره میکنند و نرم افزار هایی که روی آنها در حال اجرا هستند با یک زبان برنامه نویسی نوشته شده اند
+تعریف کامپایلر اما قبل از این که یک برنامه بتونه اجرا بشه اول از همه باید به چیزی که کامپیوتر میتونه اجرا کنه ترجمه بشه به نرم افزار سیستمی که این ترجمه رو انجام میده کامپایلر می گویند</description>
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
   <channel>
     <title>categories on gictor.ir</title>
     <link>http://gictor.ir/en/categories/</link>
@@ -10,6 +14,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Sun, 26 Jan 2020 19:45:41 +0330</lastBuildDate>
+    <dc:creator>victor</dc:creator>
     
         <atom:link href="http://gictor.ir/en/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,6 +29,13 @@
         <author>gictorbit@gmail.com (victor)</author>
         <guid>http://gictor.ir/en/categories/practical/</guid>
         <description></description>
+        
+        
+        
+        
+        
+        
+        
       </item>
       
 

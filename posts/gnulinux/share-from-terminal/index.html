@@ -1531,7 +1531,7 @@ if (!doNotTrack) {
 </ul>
 <h3 id="آپلود-فایل-با-curl">آپلود فایل با curl</h3>
 <p>یک ابزار معروف برای انتقال دیتا بین سرور و کلاینت با پروتکل های مختلف <code>curl</code> هست میتونیم برای آپلود فایل ازش استفاده کنیم<br />
-<div class="alert alert-warning" role="alert">قبل از هرچیز از نصب بودن <strong>curl</strong> در سیستم عامل خود مطمئن باشید</div>
+<div class="alert alert-warning" role="alert" data-dir="rtl">قبل از هرچیز از نصب بودن <strong>curl</strong> در سیستم عامل خود مطمئن باشید</div>
 </p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1550,7 +1550,7 @@ if (!doNotTrack) {
 </ul>
 <h3 id="تعریف-alias">تعریف alias</h3>
 <p>اما همینطور که واضحه تایپ کردن این هم خودش میتونه وقت گیر باشه و شاید موقع آپلود دستور دقیق برای آپلود فایل یادمون نیاد برای همین میتونیم برای این دستور یک <code>Alias</code> تعریف کنیم که کار مارو خیلی آسان خواهد کرد برای این کار تکه کد زیر رو کپی کنید و در انتهای فایل <code>zshrc.</code> یا <code>bashrc.</code> اضافه کنید<br />
-<div class="alert alert-warning" role="alert">این دو فایل در شاخه <strong>/home/$USER</strong> شما هستند و بسته به اینکه zsh دارید یا bash باید یکی از این فایل ها رو ویرایش کنید</div>
+<div class="alert alert-warning" role="alert" data-dir="rtl">این دو فایل در شاخه <strong>/home/$USER</strong> شما هستند و بسته به اینکه zsh دارید یا bash باید یکی از این فایل ها رو ویرایش کنید</div>
 </p>
 <pre><code>transfer() { if [ $# -eq 0 ]; then echo -e &quot;No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md&quot;; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename &quot;$1&quot; | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file &quot;$1&quot; &quot;https://transfer.sh/$basefile&quot; &gt;&gt; $tmpfile; else curl --progress-bar --upload-file &quot;-&quot; &quot;https://transfer.sh/$1&quot; &gt;&gt; $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }

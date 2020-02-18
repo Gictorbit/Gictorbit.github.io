@@ -438,6 +438,25 @@
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
     
+    var setMetaColor = function(themeColor) {
+      if (themeColor.includes('dark')) {
+        ""
+        ""
+      } else if (themeColor.includes('light')) {
+        ""
+        ""
+      } else if (themeColor.includes('hacker')) {
+        ""
+        ""
+      } else if (themeColor.includes('solarized')) {
+        ""
+        ""
+      } else if (themeColor.includes('kimbie')) {
+        ""
+        ""
+      } 
+    }
+
     if (localTheme) {
       selectThemeItemElem ? 
       selectThemeItemElem.forEach(function (elem) {
@@ -447,6 +466,9 @@
           elem.classList.remove('is-active');
         }
       }) : null;
+      setMetaColor(localTheme);
+    } else {
+      setMetaColor(rootEleme.className);
     }
 
     selectThemeItemElem ? 
@@ -1183,8 +1205,13 @@
 <meta property="twitter:description" content="The victor personal blog">
 
 <meta name="generator" content="Hugo 0.63.2" />
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#d3af86">
+
+<meta name="theme-color" content="#51412c">
+
+<meta name="msapplication-navbutton-color" content="#51412c">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="#51412c">
 <link rel="canonical" href="http://gictor.ir/tags/compiler/">
 <link rel="manifest" href="/manifest.json">
 

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>برچسب ها on gictor.ir</title>
     <link>http://gictor.ir/tags/</link>
@@ -14,7 +15,6 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Sat, 15 Feb 2020 16:51:15 +0330</lastBuildDate>
-    <dc:creator>victor</dc:creator>
     
         <atom:link href="http://gictor.ir/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,9 +27,11 @@
         <link>http://gictor.ir/tags/language-processors/</link>
         <pubDate>Sat, 15 Feb 2020 16:51:15 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/language-processors/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -43,9 +45,11 @@
         <link>http://gictor.ir/tags/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</link>
         <pubDate>Sat, 15 Feb 2020 16:51:15 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -59,9 +63,11 @@
         <link>http://gictor.ir/tags/%D9%BE%D8%B1%D8%AF%D8%A7%D8%B2%D9%86%D8%AF%D9%87-%D9%87%D8%A7%DB%8C-%D8%B2%D8%A8%D8%A7%D9%86/</link>
         <pubDate>Sat, 15 Feb 2020 16:51:15 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%D9%BE%D8%B1%D8%AF%D8%A7%D8%B2%D9%86%D8%AF%D9%87-%D9%87%D8%A7%DB%8C-%D8%B2%D8%A8%D8%A7%D9%86/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -75,9 +81,11 @@
         <link>http://gictor.ir/tags/%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</link>
         <pubDate>Sat, 15 Feb 2020 16:51:15 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -91,9 +99,11 @@
         <link>http://gictor.ir/tags/compiler/</link>
         <pubDate>Sat, 15 Feb 2020 11:03:28 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/compiler/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -107,9 +117,11 @@
         <link>http://gictor.ir/tags/photoshop/</link>
         <pubDate>Fri, 14 Feb 2020 22:15:50 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/photoshop/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -123,9 +135,11 @@
         <link>http://gictor.ir/tags/%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc/</link>
         <pubDate>Fri, 14 Feb 2020 22:15:50 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -139,9 +153,11 @@
         <link>http://gictor.ir/tags/%D9%86%D8%B5%D8%A8-%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc-%D8%AF%D8%B1-%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</link>
         <pubDate>Fri, 14 Feb 2020 22:15:50 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%D9%86%D8%B5%D8%A8-%D9%81%D8%AA%D9%88%D8%B4%D8%A7%D9%BE-cc-%D8%AF%D8%B1-%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -155,9 +171,11 @@
         <link>http://gictor.ir/tags/steghide/</link>
         <pubDate>Fri, 31 Jan 2020 20:30:53 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/steghide/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -171,9 +189,11 @@
         <link>http://gictor.ir/tags/%D8%A7%D8%B3%D8%AA%DA%AF%D8%A7%D9%86%D9%88%DA%AF%D8%B1%D8%A7%D9%81%DB%8C/</link>
         <pubDate>Fri, 31 Jan 2020 20:30:53 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%D8%A7%D8%B3%D8%AA%DA%AF%D8%A7%D9%86%D9%88%DA%AF%D8%B1%D8%A7%D9%81%DB%8C/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -187,9 +207,11 @@
         <link>http://gictor.ir/tags/%D9%85%D8%AE%D9%81%DB%8C-%DA%A9%D8%B1%D8%AF%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D8%AF%D8%B1-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1/</link>
         <pubDate>Fri, 31 Jan 2020 20:30:53 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%D9%85%D8%AE%D9%81%DB%8C-%DA%A9%D8%B1%D8%AF%D9%86-%D8%AF%D8%A7%D8%AF%D9%87-%D8%AF%D8%B1-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -203,9 +225,11 @@
         <link>http://gictor.ir/tags/transfer.sh/</link>
         <pubDate>Fri, 31 Jan 2020 20:13:37 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/transfer.sh/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -219,9 +243,11 @@
         <link>http://gictor.ir/tags/%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C-%D9%81%D8%A7%DB%8C%D9%84-%D9%87%D8%A7/</link>
         <pubDate>Fri, 31 Jan 2020 20:13:37 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C-%D9%81%D8%A7%DB%8C%D9%84-%D9%87%D8%A7/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -235,9 +261,11 @@
         <link>http://gictor.ir/tags/%D8%AE%D8%B7-%D9%81%D8%B1%D9%85%D8%A7%D9%86/</link>
         <pubDate>Fri, 31 Jan 2020 20:13:37 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%D8%AE%D8%B7-%D9%81%D8%B1%D9%85%D8%A7%D9%86/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -251,9 +279,11 @@
         <link>http://gictor.ir/tags/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</link>
         <pubDate>Fri, 31 Jan 2020 20:13:37 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -267,9 +297,11 @@
         <link>http://gictor.ir/tags/python/</link>
         <pubDate>Sun, 26 Jan 2020 19:45:41 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/python/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         
@@ -283,9 +315,11 @@
         <link>http://gictor.ir/tags/%DA%AF%D9%88%DA%AF%D9%84-%D8%AF%D8%B1%D8%A7%DB%8C%D9%88/</link>
         <pubDate>Sun, 26 Jan 2020 19:45:41 +0330</pubDate>
         <author>gictorbit@gmail.com (victor)</author>
+        
         <guid>http://gictor.ir/tags/%DA%AF%D9%88%DA%AF%D9%84-%D8%AF%D8%B1%D8%A7%DB%8C%D9%88/</guid>
         <description></description>
         
+        <dc:creator>victor</dc:creator>
         
         
         

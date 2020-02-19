@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://gictor.ir/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,18 +18,18 @@
   </url>
   
   <url>
-    <loc>http://gictor.ir/tags/language-processors/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+    <loc>http://gictor.ir/tags/structure-of-compiler/</loc>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
   </url>
   
   <url>
     <loc>http://gictor.ir/series/%D8%A7%D8%B5%D9%88%D9%84-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
   </url>
   
   <url>
     <loc>http://gictor.ir/tags/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -44,7 +44,7 @@
   
   <url>
     <loc>http://gictor.ir/categories/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -58,8 +58,18 @@
   </url>
   
   <url>
+    <loc>http://gictor.ir/tags/%D8%B3%D8%A7%D8%AE%D8%AA%D8%A7%D8%B1-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</loc>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/posts/compiler/structure-of-compiler/</loc>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gictor.ir/series/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -74,27 +84,17 @@
   
   <url>
     <loc>http://gictor.ir/tags/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
   </url>
   
   <url>
     <loc>http://gictor.ir/categories/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1-%D9%81%D8%B5%D9%841/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gictor.ir/tags/%D9%BE%D8%B1%D8%AF%D8%A7%D8%B2%D9%86%D8%AF%D9%87-%D9%87%D8%A7%DB%8C-%D8%B2%D8%A8%D8%A7%D9%86/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gictor.ir/posts/compiler/language-processors/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
   </url>
   
   <url>
     <loc>http://gictor.ir/posts/</loc>
-    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -109,6 +109,21 @@
   
   <url>
     <loc>http://gictor.ir/tags/%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</loc>
+    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/language-processors/</loc>
+    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/%D9%BE%D8%B1%D8%AF%D8%A7%D8%B2%D9%86%D8%AF%D9%87-%D9%87%D8%A7%DB%8C-%D8%B2%D8%A8%D8%A7%D9%86/</loc>
+    <lastmod>2020-02-15T16:51:15+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/posts/compiler/language-processors/</loc>
     <lastmod>2020-02-15T16:51:15+03:30</lastmod>
   </url>
   

@@ -14,13 +14,62 @@
     <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
-    <lastBuildDate>Sat, 15 Feb 2020 16:51:15 +0330</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2020 23:16:55 +0330</lastBuildDate>
     
         <atom:link href="http://gictor.ir/tags/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>ساختار کامپایلر | structure of compiler</title>
+        <link>http://gictor.ir/posts/compiler/structure-of-compiler/</link>
+        <pubDate>Sun, 16 Feb 2020 23:16:55 +0330</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        <atom:modified>Sun, 16 Feb 2020 23:16:55 +0330</atom:modified>
+        <guid>http://gictor.ir/posts/compiler/structure-of-compiler/</guid>
+        <description>همینطور که در قسمت های قبل دیدیم اگر کامپایلر رو به یک جعبه تشبیه کنیم که یک برنامه مبدا (source program) رو به یک برنامه معادل با کارکرد یکسان تبدیل میکند اگر کمی این جعبه رو باز کنیم می بینیم که تمام مراحل کامپایلر از دو قسمت کلی تشکیل شده :
+ مراحل تحلیل | analysis مراحل ساخت | synthesis  مراحل تحلیل (analysis) مرحله تحلیل برنامه مبدا رو به اجزاء اصلی تقسیم میکند و ساختار گرامری رو در برنامه مبدا اعمال میکند سپس از روی این ساختار کد میانی (intermediate code) معادل رو تولید میکند در این مرحله کد تحلیل می شود و اگر خطا یا اروری وجود داشته باشد پیام های اخطار رو چاپ میکند تا کاربر کد خودش رو اصلاح بکند.</description>
+        
+        <dc:creator>victor</dc:creator>
+        <media:content url="http://gictor.irimages/post-image/compiler/compilerStructure.svg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        <media:content url="http://gictor.irimages/post-image/compiler/compilerStructure.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>طراحی کامپایلر</category>
+            
+          
+            
+              <category>کامپایلر</category>
+            
+          
+            
+              <category>ساختار کامپایلر</category>
+            
+          
+            
+              <category>structure of compiler</category>
+            
+          
+        
+        
+          
+            
+              <category>طراحی کامپایلر فصل1</category>
+            
+          
+        
+        
+          
+            
+              <category>اصول طراحی کامپایلر</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>پردازنده های زبان | Language Processors</title>

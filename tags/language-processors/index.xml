@@ -15,6 +15,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Sat, 15 Feb 2020 16:51:15 +0330</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/tags/language-processors/index.xml" rel="self" type="application/rss+xml" />
     
@@ -31,7 +32,118 @@
         <guid>http://gictor.ir/posts/compiler/language-processors/</guid>
         <description>کامپایلر (compiler) به زبان ساده کامپایلر برنامه ای هست که می تونه یک برنامه که به یک زبان نوشته شده رو بخونه (زبان مبدا یا source language) و به یک برنامه معادل به زبان دیگه (زبان هدف یا target language) ترجمه کنه
 به شکل زیر دقت کنید یک نقش مهم کامپایلر این هست که هر اروری که در زبان مبدا، طی فرایند ترجمه شناسایی می شود را گزارش کند</description>
-        
+        <content:encoded>&lt;h2 id=&#34;کامپایلر-compiler&#34;&gt;کامپایلر (compiler)&lt;/h2&gt;
+&lt;p&gt;به زبان ساده کامپایلر برنامه ای هست که می تونه یک برنامه که به یک زبان نوشته شده رو بخونه (زبان مبدا یا source language) و به یک برنامه معادل به زبان دیگه (زبان هدف یا target language) ترجمه کنه&lt;br /&gt;
+به شکل زیر دقت کنید یک نقش مهم کامپایلر این هست که هر اروری که در زبان مبدا، طی فرایند ترجمه شناسایی می شود را گزارش کند&lt;/p&gt;
+&lt;p&gt;&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors1.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;300px&#34; height=&#34;300px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;br /&gt;
+اگر برنامه مقصد (target program) یک برنامه زبان ماشین (machine-language) با قابلیت اجرایی (executable) باشه در این صورت می تواند توسط کاربر برای پردازش ورودی ها و تولید خروجی مورد نظر فراخوانی بشه به دیاگرام زیر که اجرای یک target program را نشان می دهد توجه کنید&lt;br /&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors2.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;مفسر-interpreter&#34;&gt;مفسر (interpreter)&lt;/h2&gt;
+&lt;p&gt;یکی دیگه از انواع رایج پردازنده های زبان ( Language Processors ) مفسرها هستند.&lt;br /&gt;
+مفسر به جای تولید target program به عنوان یک برنامه ترجمه شده، بر اساس source program و ورودی های کاربر (input) مستقیما عملیات های مشخص شده رو اجرا می کنه شکل زیر یک مفسر را نشان می دهد&lt;br /&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors3.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;معایب-و-مزایای-compiler-و-interpreter&#34;&gt;معایب و مزایای compiler و interpreter&lt;/h2&gt;
+&lt;p&gt;معمولا کد زبان ماشینی که از برنامه هدف (target program) توسط کامپایلر تولید شده است از مفسری که ورودی ها رو به خروجی نگاشت میکنه سریع تر هست در حالی که یک مفسر در تشخیص دادن ارور ها بهتر عمل میکنه چون source program رو خط به خط تفسیر، و دستور به دستور اجرا می کنه&lt;/p&gt;
+&lt;h2 id=&#34;کامپایلر-های-هیبریدی-hybrid-compiler&#34;&gt;کامپایلر های هیبریدی (hybrid compiler)&lt;/h2&gt;
+&lt;p&gt;برای مثال زبان جاوا با ادغام دو نوع پردازنده زبان مفسری و کامپایلری از یک ماشین مجازی بهره می برد یک برنامه مبدا (source program) جاوا ممکن است اول به یک زبان میانی به نام بایت کد (byte code) کامپایل شود سپس توسط ماشین مجازی (virtual machine) که همان مفسر جاوا هست خط به خط تفسیر می شود&lt;br /&gt;
+فایده این روش این هست که بایت کد هایی که در یک ماشین کامپایل می شوند می توانند در یک ماشین دیگر تفسیر شوند یا شاید در سرار یک شبکه&lt;br /&gt;
+البته برای دستیابی به پردازش سریع تر ورودی ها به خروجی، بعضی از انواع کامپایلر های جاوا به نام just-in-time compilers هستند که قبل از این که برنامه های میانی برای پردازش ورودی ها اجرا بشوند بایت کد را بلافاصله به زبان ماشین (صفر و یک) ترجمه می کنند&lt;br /&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors4.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;پیش-پردازشگر-preprocessor&#34;&gt;پیش پردازشگر preprocessor&lt;/h2&gt;
+&lt;p&gt;برای تولید یک target program علاوه بر کامپایلر ممکن است چندین برنامه دیگر نیاز شوند همچنین  یک source program ممکن هست به ماژول هایی تقسیم بشه که در فایل های جداگانه ذخیره شده اند.&lt;br /&gt;
+برای تولید برنامه مبدا برنامه مستقل دیگری به نام پیش پردازنده یا preprocessor همه ی ماژول ها رو گرد آوری می کند و یک برنامه مبدا به عنوان خروجی تولید می کند&lt;br /&gt;
+علاوه بر گردآوری فایل ها پیش پردازش گر فایل های کتابخانه ای و یا ماکرو ها (macros) رو شناسایی می کند واونا رو به برنامه مبدا اضافه میکند مثلا در کد زبان سی زیر شاید برنامه ما 10 خط باشد ولی بعد از اضافه شدن کتابخانه ها توسط پیش پردازنده ممکن است برنامه مبدا تولید شده حدود 200 خط بشود&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;define PI 3.1415&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;define circleArea(r) (PI*r*r)&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Enter the radius: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;%f&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;circleArea&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Area = %.2f&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;اسمبلر-assembler&#34;&gt;اسمبلر assembler&lt;/h2&gt;
+&lt;p&gt;بعد از اون source program اصلاح شده (modified) که خروجی پیش پردازنده بود به کامپایلر سپرده میشه کامپایلر ممکن هست یک برنامه با زبان اسمبلی &lt;code&gt;assembly&lt;/code&gt; به عنوان خروجی تولید کند چون برای کامپایلر تولید کردن کد اسمبلی به عنوان خروجی و دیباگ کردن آن آسان تر است و بعد از آن زبان اسمبلی توسط برنامه ای به نام اسمبلر &lt;code&gt;assembler&lt;/code&gt; پردازش می شود. اسمبلر برنامه ای است که کد اسمبلی را به کد زبان ماشین یا همان صفر ویک با قابلیت جابجایی یا relocatable (کدی که میتواند در هر کجای حافظه بارگزاری شود) تبدیل میکند&lt;/p&gt;
+&lt;h2 id=&#34;منظور-از-relocateble-چیست&#34;&gt;منظور از relocateble چیست؟&lt;/h2&gt;
+&lt;p&gt;همینطور که خواندیم اسمبلر زبان اسمبلی رو به زبان ماشین قابل حمل تبدیل میکند برای مثال فرض کنید در ویندوز اسمبلر برای ما یک فایل &lt;code&gt;exe.&lt;/code&gt; به عنوان خروجی تولید کند این فایل که در حافظه جانبی(هارد دیسک) قرار داره و میتواند توسط سیستم عامل اجرا بشه هر فایل به صورت بلوک هایی در حافظه جانبی ذخیره شده و آدرس دهی  می شوند و آدرس شروع هر فایل از &lt;code&gt;0&lt;/code&gt; هست هر بلوک که نشان گر یک فایل مثلا exe هست رو فایل زبان ماشین &lt;mark&gt; قابل حمل &lt;/mark&gt; گویند.&lt;/p&gt;
+&lt;p&gt;اما برای اینکه این فایل زبان ماشین اجرا بشه باید به حافظه اصلی یا (ram) منتقل بشه چرا؟ برای اینکه اولا سرعت رم بیشتر هست و ثانیا فاز اجرا و ذخیره سازی باید از هم دیگر جدا باشند تا مقلا در صورت مشکل در فاز اجرا به برنامه اصلی آسیبی وارد نشه&lt;/p&gt;
+&lt;h4 id=&#34;بار-کننده-loader&#34;&gt;بار کننده loader&lt;/h4&gt;
+&lt;p&gt;اجرای برنامه ی زبان ماشین توسط سیستم عامل وظیفه لینکر و لودر هست. loader دو وظیفه دارد:&lt;/p&gt;
+&lt;p&gt;1- &lt;em&gt;تخصیص حافظه:&lt;/em&gt; از آنجایی که بخشی از حافظه توسط سیستم عامل و برنامه های دیگه پر شده لودر باید حافظه اصلی رو بررسی کنه و مکانی از حافظه که فضای کافی برای اجرای برنامه زبان ماشین ما داره رو پیدا کنه&lt;/p&gt;
+&lt;p&gt;2- &lt;em&gt;نگاشت آدرس:&lt;/em&gt; وقتی برنامه در ram لود شد باید آدرس نسبی که از صفر شروع شده بود به آدرس واقعی (فیزیکی) در حافظه اصلی نگاشت بشه برای مثال در تصویر زیر فرض کنید برنامه از خانه 2000 به بعد در حافظه اصلی لود می شود پس خانه صفر بلوک کد ماشین به جای آدرس صفر به آدرس 2001 نگاشت می شود&lt;br /&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors6.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;منظور از کد ماشین قابل حمل این هست که می تواند در هر مکانی از حافظه اصلی لود بشود ( در هر  بار اجرا ممکن است آدرس های فیزیکی نگاشت شده آن متفاوت باشد مثلا دفعه بعد از خانه 3000 حافظه لود بشود)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;فایل-های-غیر-قابل-حمل&#34;&gt;فایل های غیر قابل حمل&lt;/h5&gt;
+&lt;p&gt;فایل زبان ماشینی که آدرس نسبی ندارد و نمیتونه در هر مکان از حافظه لود بشه رو فایل غیر قابل حمل میگویند (در بلوک های آن به جای آدرس نسبی آدرس فیزیکی مشخص شده) برای مثال در ویندوز فایل های با پسوند &lt;code&gt;com.&lt;/code&gt; از این دسته فایل ها هستند&lt;/p&gt;
+&lt;h2 id=&#34;linker&#34;&gt;linker&lt;/h2&gt;
+&lt;p&gt;گاهی اوقات فایل های زبان ماشینی که اجرا می کنیم نیاز دارند که از فایل های دیگری که قبلا در حافظه لود شده اند استفاده کنند شبیه فایل ها وتوابع کتابخانه ای مثلا در ویندوز فایل های &lt;code&gt;DLL&lt;/code&gt; یا (dynamic linked library) از این نوع هستند در صورتی که برنامه ما به این کتابخانه ها نیاز داشته باشد یک برنامه به نام &lt;code&gt;linker&lt;/code&gt; یک لینک بین برنامه ما و فایل مورد نیاز برقرار می کند.&lt;/p&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors5.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;
+&lt;h1 id=&#34;سوالات&#34;&gt;سوالات&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;تفاوت میان کامپایلر و مفسر چیست؟&lt;/li&gt;
+&lt;li&gt;مزایای یک کامپایلر نسبت به مفسر و مزایای یک مفسر نسبت به کامپایلر چیست؟&lt;/li&gt;
+&lt;li&gt;در سیستم پردازش زبان مزایای تولید کد اسمبلی به جای کد ماشین توسط کامپایلر چیست؟&lt;/li&gt;
+&lt;li&gt;به کامپایلری که یک زبان سطح بالا (نزدیک به زبان انسان) را به زبان های سطح بالای دیگر کامپایل می کند مترجم source-to-source گویند. مزایای این که از زبان C به عنوان زبان هدف برای کامپایلر استفاده کنیم چیست؟&lt;/li&gt;
+&lt;li&gt;وظایف اسمبلر را توضیح دهید؟&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/compiler/LangProcessors.svg" medium="image"><media:title type="html">featured image</media:title></media:content>
         

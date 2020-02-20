@@ -15,6 +15,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Sun, 26 Jan 2020 19:45:41 +0330</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/tags/%DA%AF%D9%88%DA%AF%D9%84-%D8%AF%D8%B1%D8%A7%DB%8C%D9%88/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,7 +31,195 @@
         <atom:modified>Sun, 26 Jan 2020 19:45:41 +0330</atom:modified>
         <guid>http://gictor.ir/posts/etc/unlimited-google-drive/</guid>
         <description>مقدمه گوگل درایو یکی دیگر از سرویس های پر کاربرد گوگل هست که با داشتن حساب گوگل می تونید از اون برای ذخیره فایل های خود در اینترنت استفاده کنید اما به صورت پیشفرض هر حساب فقط 15 گیگابایت فضای ذخیره سازی رایگان داره و برای حجم بیشتر باید هزینه پرداخت کنید اما با یک روش جالب میشه این محدودیت رو دور زد در ادامه این روش رو توضیح میدم</description>
-        
+        <content:encoded>&lt;h2 id=&#34;مقدمه&#34;&gt;مقدمه&lt;/h2&gt;
+&lt;p&gt;گوگل درایو یکی دیگر از سرویس های پر کاربرد گوگل هست که با داشتن حساب گوگل می تونید از اون برای ذخیره فایل های خود در اینترنت استفاده کنید اما به صورت پیشفرض هر حساب فقط 15 گیگابایت فضای ذخیره سازی رایگان داره و برای حجم بیشتر باید هزینه پرداخت کنید اما با یک روش جالب میشه این محدودیت رو دور زد در ادامه این روش رو توضیح میدم&lt;/p&gt;
+&lt;h4 id=&#34;uds-unlimited-drive-storage&#34;&gt;UDS (Unlimited Drive Storage)&lt;/h4&gt;
+&lt;p&gt;این روش با استفاده از یک اسکریپت پایتون به نام uds انجام میشه این اسکریپت در واقع فایل های شما رو در قالب داکیومنت یا فایل متنی در سرویس google doc ذخیره میکنه. چیزی که این پست رو جالب میکنه طرز کار این اسکریپت هست که در ادامه میبینیم&lt;/p&gt;
+&lt;h4 id=&#34;امکانات-uds&#34;&gt;امکانات uds&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;آپلود فایل ها در گوگل درایو بدون استفاده از 15‍ گیگابایت فضای حساب&lt;/li&gt;
+&lt;li&gt;دانلود فایل های آپلود شده از حساب&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;منطق&#34;&gt;منطق&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;سرویس گوگل داکیومنت برای فایل های متنی که شما ذخیره میکنید فضایی از گوگل درایو کم نمی کند&lt;/li&gt;
+&lt;li&gt;تجزیه فایل های باینری به فایل های متنی با روش کد گذاری &lt;a href=&#34;https://en.wikipedia.org/wiki/Base64&#34;&gt;base 64&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;حجم فایل های کد گذاری شده همیشه بیشتر از حجم فایل اصلی هست&lt;/li&gt;
+&lt;li&gt;سرویس گوگل داکیومنت میتونه برای هر فایل متنی میلیون ها کاراکتر ذخیره کنه که حدودا معادل 710 کیلو بایت داده کدگذاری شده با &lt;code&gt;base 64‍&lt;/code&gt; هست&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;راه-اندازی-و-احراز-هویت&#34;&gt;راه اندازی و احراز هویت&lt;/h2&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34; data-dir=&#34;rtl&#34;&gt;قبل از اجرای دستورات از نصب بودن &lt;strong&gt;git&lt;/strong&gt; و &lt;strong&gt;python&lt;/strong&gt; در سیستم عامل مطمئن بشید&lt;/div&gt;
+
+&lt;p&gt;خب برای استفاده از این اسکریپت باید این ریپوزیتوری رو با استفاده از دستور زیر از گیت هاب clone کنیم.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/stewartmcgown/uds.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;بعد از اون باید کتابخانه های مورد نیاز رو به کمک فایل &lt;code&gt;requirements.txt&lt;/code&gt; موجود در فولدر برنامه نصب کنیم&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip3 install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;فعال-کردن-api-حساب-گوگل&#34;&gt;فعال کردن api حساب گوگل&lt;/h4&gt;
+&lt;p&gt;برای اینکه برنامه بتونه به گوگل درایو ما دسترسی داشته باشه باید api حساب ما رو داشته باشه برای این کار باید &lt;a href=&#34;https://developers.google.com/drive/api/v3/quickstart/python&#34;&gt; Google&amp;rsquo;s API page&lt;/a&gt; رو باز کنیم&lt;br /&gt;
+و روی &lt;code&gt;Enable the Drive api&lt;/code&gt; کلیک کنید&lt;br /&gt;
+بعد از اون ، باید فایل کانفیگ رو که با فرمت &lt;code&gt;json&lt;/code&gt; هست دانلود کنیم و در فولدر برنامه با نام &lt;code&gt;client_secret.json&lt;/code&gt; ذخیره کنیم&lt;br /&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34; data-dir=&#34;rtl&#34;&gt;چون ما در &lt;strong&gt;ایران&lt;/strong&gt; هستیم و سرویس های گوگل تحریم هستن باید از &lt;strong&gt;vpn‍&lt;/strong&gt; استفاده کنیم&lt;/div&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;راه-اندازی-اولیه&#34;&gt;راه اندازی اولیه&lt;/h4&gt;
+&lt;p&gt;حالا با یکی از دستورات زیر باید برنامه رو برای راه اندازی اولیه اجرا کنیم&lt;br /&gt;
+
+&lt;div id=&#34;7ee5e343d572678b&#34; class=&#34;codetab&#34;&gt;
+  &lt;div class=&#34;codetab__links&#34;&gt;
+    
+      &lt;button class=&#34;codetab__link&#34; aria-label=&#34;Tab link&#34;&gt;bash&lt;/button&gt;
+    
+      &lt;button class=&#34;codetab__link&#34; aria-label=&#34;Tab link&#34;&gt;bash&lt;/button&gt;
+    
+  &lt;/div&gt;
+  
+  
+&lt;div id=&#34;dddbd4cd7653a4dd&#34; class=&#34;codetab__content&#34;&gt;
+  &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./uds.py 
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+  
+&lt;div id=&#34;9a65083d54901656&#34; class=&#34;codetab__content&#34;&gt;
+  &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;python3 uds.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;script&gt;
+  &#39;use strict&#39;;
+
+  var containerId = JSON.parse(&#34;\&#34;7ee5e343d572678b\&#34;&#34;);
+  var containerElem = document.getElementById(containerId);
+  var codetabLinks = null;
+  var codetabContents = null;
+  var ids = [];
+
+  if (containerElem) {
+    codetabLinks = containerElem.querySelectorAll(&#39;.codetab__link&#39;);
+    codetabContents = containerElem.querySelectorAll(&#39;.codetab__content&#39;);
+  }
+
+  for (var i = 0; i &lt; codetabContents.length; i++) {
+    ids = ids.concat(codetabContents[i].getAttribute(&#39;id&#39;));
+    codetabContents[i].style.display = &#39;none&#39;;
+
+    if (0 === parseInt(i, 10) &amp;&amp; !codetabContents[i].classList.contains(&#39;active&#39;)) {
+      codetabContents[i].classList.add(&#39;active&#39;);
+    }
+  }
+
+  for (var i = 0; i &lt; codetabLinks.length; i++) {
+    codetabLinks[i].setAttribute(&#39;id&#39;, ids[i]);
+
+    if (0 === parseInt(i, 10) &amp;&amp; !codetabLinks[i].classList.contains(&#39;active&#39;)) {
+      codetabLinks[i].classList.add(&#39;active&#39;);
+    } else {
+      codetabLinks[i].classList.remove(&#39;active&#39;);
+    }
+  }
+
+  if (codetabContents.length &gt; 0) {
+    codetabContents[0].style.display = &#39;block&#39;;
+  }
+&lt;/script&gt;&lt;/p&gt;
+&lt;h2 id=&#34;دستورات-uds&#34;&gt;دستورات UDS&lt;/h2&gt;
+&lt;p&gt;برای کار با برنامه و ذخیره و دانلود فایل ها باید از آرگومان ها استفاده کنیم&lt;/p&gt;
+&lt;h3 id=&#34;آپلود-فایل&#34;&gt;آپلود فایل&lt;/h3&gt;
+&lt;p&gt;برای آپلود فایل باید از دستور &lt;code&gt;push--&lt;/code&gt; استفاده کنیم برای مثال:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./uds.py --push Ubuntu.Desktop.16.04.iso
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code class=&#34;language-result&#34; data-lang=&#34;result&#34;&gt;Ubuntu.Desktop.16.04.iso will required 543 Docs to store.
+Created parent folder with ID 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+Successfully Uploaded Ubuntu.Desktop.16.04.iso: [██████████████████████████████] 100%
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;لیست-فایل-ها&#34;&gt;لیست فایل ها&lt;/h3&gt;
+&lt;p&gt;برای دیدن لیست فایل های آپلود شده و موجود در درایو باید از دستور &lt;code&gt;list--&lt;/code&gt; استفاده کنیم برای مثال:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./uds.py --list
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code class=&#34;language-result&#34; data-lang=&#34;result&#34;&gt;Name                      Size   Encoded    ID
+------------------------  -----  ---------  ---------------------------------  
+Ubuntu.Desktop.16.04.iso  810 MB  1.1 GB    1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+Ubuntu.Desktop.18.10.iso  1.1 GB  1.3 GB    1RzzVfN9goHMTkM1Hf1FUWUVS_2R3GK7D
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;و برای جستجو در نام فایل ها باید کلمه مورد نظر رو به دستور لیست پاس بدیم:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./uds.py --list &lt;span class=&#34;s2&#34;&gt;&amp;#34;18&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code class=&#34;language-result&#34; data-lang=&#34;result&#34;&gt;Name                      Size   Encoded    ID
+------------------------  -----  ---------  ---------------------------------  
+Ubuntu.Desktop.18.10.iso  1.1 GB  1.3 GB    1RzzVfN9goHMTkM1Hf1FUWUVS_2R3GK7D
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;دانلود-فایل&#34;&gt;دانلود فایل&lt;/h3&gt;
+&lt;p&gt;برای دانلود فایل باید از دستور &lt;code&gt;pull--&lt;/code&gt; استفاده کنیم برای مثال:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./uds.py --pull 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code class=&#34;language-result&#34; data-lang=&#34;result&#34;&gt;Downloaded Ubuntu.Desktop.16.04.iso: [██████████████████████████████] 100%
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;به طور پیشفرض فایل های دانلود شده در فولدر برنامه و دایرکتوری &lt;code&gt;downloads&lt;/code&gt; ذخیره میشن&lt;/p&gt;
+&lt;h3 id=&#34;حذف-فایل&#34;&gt;حذف فایل&lt;/h3&gt;
+&lt;p&gt;برای حذف فایل باید از دستور &lt;code&gt;delete--&lt;/code&gt; استفاده کنیم برای مثال:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./uds.py --delete 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code class=&#34;language-result&#34; data-lang=&#34;result&#34;&gt;Deleted 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;box&#34;&gt;
+منبع:
+&lt;a href=&#34;https://github.com/stewartmcgown/uds&#34;&gt;UDS : Unlimited Drive Storage &lt;/a&gt;
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/2020/unlimited-storage.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         

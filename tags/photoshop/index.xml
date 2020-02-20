@@ -15,6 +15,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Fri, 14 Feb 2020 22:15:50 +0330</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/tags/photoshop/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,7 +31,88 @@
         <atom:modified>Fri, 14 Feb 2020 22:15:50 +0330</atom:modified>
         <guid>http://gictor.ir/posts/gnulinux/photoshop/</guid>
         <description>مقدمه از آنجایی که فتوشاپ یکی از ابزار های قدرتمند ویرایش تصویر هست و افراد زیادی با اون سرو کار دارن و یکی از چیزهایی که بعد از مهاجرت به گنولینوکس باهاش مواجه می شوید نبودن این ابزار برای این سیستم عامل هست اگر چه جایگیزین های خیلی خوب و متن باز مثل Gimp وجود دارند و چه بهتر اگر بتونید از این ابزار ها به جای فتوشاپ در گنو لینوکس استفاده کنید.</description>
-        
+        <content:encoded>&lt;p&gt;&lt;img src=&#34;http://gictor.ir/images/post-image/2020/photoshop.jpg&#34; alt=&#34;photoshop cc on linux&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;مقدمه&#34;&gt;مقدمه&lt;/h2&gt;
+&lt;p&gt;از آنجایی که فتوشاپ یکی از ابزار های قدرتمند ویرایش تصویر هست و افراد زیادی با اون سرو کار دارن و یکی از چیزهایی که بعد از مهاجرت به گنولینوکس باهاش مواجه می شوید نبودن این ابزار برای این سیستم عامل هست اگر چه جایگیزین های خیلی خوب و متن باز مثل &lt;a href=&#34;https://www.gimp.org/&#34;&gt;Gimp&lt;/a&gt; وجود دارند و چه بهتر اگر بتونید از این ابزار ها به جای فتوشاپ در گنو لینوکس استفاده کنید.&lt;br /&gt;
+اما برای افرادی مثل من که قبلا فتوشاپ رو یاد گرفتیم شاید یکم یاد گرفتن گیمپ زمان بر و خسته کننده تر باشه همچنین قدرتمند بودن فتوشاپ و وجود آموزش های زیاد تر و رابط کاربری دلچسبش از دلایل دیگری هست که نمیتونید ازش دل بکنید.&lt;br /&gt;
+برای همین تصمیم گرفتم داخل لینوکس نصبش کنم و بعد از کلی آزمون خطا و نصب برنامه های پیش نیاز در کنار &lt;a href=&#34;https://www.winehq.org/&#34;&gt;wine&lt;/a&gt; به نتیجه مطلوب و قابل قبولی رسیدم و برای اینکه روند کار و کانفیگ واین رو سریع تر کنم یک &lt;a href=&#34;https://github.com/Gictorbit/photoshopCClinux&#34;&gt;بش اسکریپت&lt;/a&gt; نوشتم که این کار رو اتوماتیک برای شما می کنه و درگیر کانفیگ واین و نصب نیازمندی ها نمیشید در ادامه روش نصب با اسکریپت رو مرور می کنیم&lt;/p&gt;
+&lt;h2 id=&#34;معرفی-wine&#34;&gt;معرفی Wine&lt;/h2&gt;
+&lt;p&gt;خب چون فتوشاپ نسخه لینوکس نداره ما مجبوریم نسخه ویندوز رو در لینوکس با یکم جینگولک بازی نصب کنیم و برای این کار از ابزاری به نام واین یا &lt;a href=&#34;https://www.winehq.org/&#34;&gt;wine&lt;/a&gt; استفاده میکنیم این ابزار یک ویندوز رو داخل لینوکس شبیه سازی میکنه و ما میتونیم فایل exe فتوشاپ رو داخلش نصب کنیم من برای کارایی بهتر فتوشاپ در کنارش dll های مورد نیاز رو قرار میدادم خوشبختانه شما هیچ نیازی به فایل فتوشاپ و یا dll ها ندارید اسکریپت در صورت نیاز همه اجزا رو دانلود میکنه قبل از نصب میتونید wine رو از مدیر بسته توزیع خودتون نصب کنید برای مثال در آرچ لینوکس:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo pacman -Syy wine
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;قابلیت-ها&#34;&gt;قابلیت ها&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;نصب نسخه photoshop cc v19&lt;/li&gt;
+&lt;li&gt;به حداقل رساندن لگ و کندی با استفاده از نصب dll ها و برنامه های پیش نیاز مثل (&lt;code&gt;msxml&lt;/code&gt;,&lt;code&gt;vcrun&lt;/code&gt;,&lt;code&gt;atmlib&lt;/code&gt;,&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;پشتیبانی از برند های مختلف کارت گرافیک مثل (&lt;code&gt;intel&lt;/code&gt;,&lt;code&gt;Nvidia&lt;/code&gt;,&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;نصب نسخه اکتیو شده دائم بدون نیاز به شماره سریال و فعال ساز&lt;/li&gt;
+&lt;li&gt;دانلود خودکار فایل فتوشاپ و نرم افزار های مورد نیاز&lt;/li&gt;
+&lt;li&gt;ساختن آیکون دسکتاپ برای لانچر&lt;/li&gt;
+&lt;li&gt;کانفیگ واین به صورت خودکار و پشتیبانی از دارک مود&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;نصب-فتوشاپ&#34;&gt;نصب فتوشاپ&lt;/h2&gt;
+&lt;p&gt;برای نصب اول از همه باید اسکریپت رو از گیت هاب کلون کنیم با دستور زیر:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/Gictorbit/photoshopCClinux.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;بعد از کلون کردن ریپوزیتوری وارد دایرکتوری میشیم و به اسکریپت قابلیت اجرایی میدیم:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; photoshopCClinux
+chmod +x PhotoshopSetup.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;قبل از اجرای اسکریپت از نصب بودن دانلود منیجر &lt;code&gt;aria2&lt;/code&gt; در توزیع خود مطمئن بشید چون اسکریپت برای دانلود فایل ها از این برنامه در پشت صحنه استفاده میکنه مثلا برای نصب از مدیر بسته در آرچ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo pacman -S aria2
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;اجرای-اسکریپت&#34;&gt;اجرای اسکریپت&lt;/h3&gt;
+&lt;p&gt;برای اجرای اسکریپت بعد از انجام قدم های بالا فقط کافیه دستور زیر رو در فولدر ریپوزیتوری بزنید و اسکریپت &lt;code&gt;PhotoshopSetup.sh&lt;/code&gt; رو اجرا کنید&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./PhotoshopSetup.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;بعد از اجرا، اسکریپت داده های مورد نیاز رو دانلود و در مسیر &lt;code&gt;/home/$USER/.photoshopCCV19/&lt;/code&gt; نصب می کنه هم چنین فایل های دانلود شده در کش شما ذخیره می شوند تا برای نصب دوباره نیازی به دانلود دوباره نداشته باشید همچنین می تونید از فایل های موجود در مسیر &lt;code&gt;/home/$USER/.cache/photoshopCCV19/&lt;/code&gt; بکاپ بگیرید و دفعات بعدی برای نصب از آنها استفاده کنید&lt;/p&gt;
+&lt;h2 id=&#34;حذف-فتوشاپ&#34;&gt;حذف فتوشاپ&lt;/h2&gt;
+&lt;p&gt;برای حذف فتوشاپ فقط کافیه اسکریپت &lt;code&gt;uninstaller.sh&lt;/code&gt; رو با دستورات زیر اجرا کنید&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;chmod +x uninstaller.sh
+./uninstaller.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;box&#34;&gt;
+برای اطلاعات بیشتر به صفحه &lt;a href=&#34;https://github.com/Gictorbit/photoshopCClinux&#34;&gt;ریپوزیتوری&lt;/a&gt; در گیتهاب مراجعه کنید
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/2020/photoshop.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         

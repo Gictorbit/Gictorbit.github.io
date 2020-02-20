@@ -15,6 +15,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Sun, 26 Jan 2020 19:45:41 +0330</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/en/tags/unlimited-storage/index.xml" rel="self" type="application/rss+xml" />
     
@@ -31,7 +32,271 @@
         <guid>http://gictor.ir/en/posts/etc/unlimited-google-drive/</guid>
         <description>Store files in Google Docs without counting against your quota.
 Features  Upload files to Google Drive without using storage space Download any stored files to your computer  Logic  Google Docs take up 0 bytes of quota in your Google Drive Split up binary files into Google Docs, with base64 encoded text Size of the encoded file is always larger than the original. Base64 encodes binary data to a ratio of about 4:3.</description>
-        
+        <content:encoded>&lt;p&gt;Store files in Google Docs without counting against your quota.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Upload files to Google Drive without using storage space&lt;/li&gt;
+&lt;li&gt;Download any stored files to your computer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;logic&#34;&gt;Logic&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Docs take up 0 bytes of quota in your Google Drive&lt;/li&gt;
+&lt;li&gt;Split up binary files into Google Docs, with base64 encoded text&lt;/li&gt;
+&lt;li&gt;Size of the encoded file is always larger than the original. Base64 encodes binary data to a ratio of about 4:3.&lt;/li&gt;
+&lt;li&gt;A single google doc can store about a million characters. This is around 710KB of base64 encoded data.&lt;/li&gt;
+&lt;li&gt;Some experiments with multi-threading the uploads, but there was no significant performance increase.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setup--authentication&#34;&gt;Setup &amp;amp; Authentication&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone the Repository and setup the requirements &lt;code&gt;pip3 install -r requirements.txt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Head to &lt;a href=&#34;https://developers.google.com/drive/api/v3/quickstart/python&#34;&gt;Google&amp;rsquo;s API page&lt;/a&gt; and enable the Drive API&lt;/li&gt;
+&lt;li&gt;Download the configuration file as &amp;lsquo;client_secret.json&amp;rsquo; to the UDS directory&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;python3 uds.py&lt;/code&gt; or &lt;code&gt;./uds.py&lt;/code&gt; for initial set up&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;uds-core&#34;&gt;UDS Core&lt;/h2&gt;
+&lt;h3 id=&#34;upload&#34;&gt;Upload&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; ./uds.py --push Ubuntu.Desktop.16.04.iso
+Ubuntu.Desktop.16.04.iso will required &lt;span class=&#34;m&#34;&gt;543&lt;/span&gt; Docs to store.
+Created parent folder with ID 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+Successfully Uploaded Ubuntu.Desktop.16.04.iso: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;██████████████████████████████&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 100%
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --push argument
+
+argument: Path_to_file+file_name
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list&#34;&gt;List&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; ./uds.py --list
+Name                      Size   Encoded    ID
+------------------------  -----  ---------  ---------------------------------  
+Ubuntu.Desktop.16.04.iso  &lt;span class=&#34;m&#34;&gt;810&lt;/span&gt; MB  1.1 GB    1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+Ubuntu.Desktop.18.10.iso  1.1 GB  1.3 GB    1RzzVfN9goHMTkM1Hf1FUWUVS_2R3GK7D
+
+Also supports searching with a query!
+
+&amp;gt; ./uds.py --list &lt;span class=&#34;s2&#34;&gt;&amp;#34;18&amp;#34;&lt;/span&gt;
+Name                      Size   Encoded    ID
+------------------------  -----  ---------  ---------------------------------  
+Ubuntu.Desktop.18.10.iso  1.1 GB  1.3 GB    1RzzVfN9goHMTkM1Hf1FUWUVS_2R3GK7D
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --list
+
+arguments: query
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;download&#34;&gt;Download&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; ./uds.py --pull 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+Downloaded Ubuntu.Desktop.16.04.iso: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;██████████████████████████████&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 100%
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --pull argument
+
+argument: id_of_file
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;delete&#34;&gt;Delete&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; ./uds.py --delete 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+Deleted 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --delete argument
+
+argument: id_of_file
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;alpha-extensions&#34;&gt;Alpha Extensions&lt;/h2&gt;
+&lt;h3 id=&#34;grab&#34;&gt;Grab&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; ./uds.py --grab test.7z
+Update Successful!
+Downloaded test.7z: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;██████████████████████████████&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 100%
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --grab argument
+
+argument: name_of_file
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;erase&#34;&gt;Erase&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt;./uds.py --erase test2.7z
+Update Successful!
+Deleted test2.7z
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --erase argument
+
+argument: name_of_file
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;update&#34;&gt;Update&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; ./uds.py --update
+
+Name       Encoded   Size 
+---------  --------  -----
+file_name  1.1 GB    &lt;span class=&#34;m&#34;&gt;810&lt;/span&gt; MB 
+
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;User.txt&amp;#34;&lt;/span&gt;
+Name       Encoded   Size 
+---------  --------  -----
+file_name  1.1 GB    &lt;span class=&#34;m&#34;&gt;810&lt;/span&gt; MB 
+
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;data.txt&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;s2&#34;&gt;&amp;#34;file0&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms8&amp;#34;&lt;/span&gt;
+   &lt;span class=&#34;s2&#34;&gt;&amp;#34;file2&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;1fc6JGpX6vUWiwflL1jBxM1YpuMHFAms9&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --update
+
+arguments: None
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;bulk-extensions&#34;&gt;Bulk Extensions&lt;/h2&gt;
+&lt;h3 id=&#34;bunch&#34;&gt;Bunch&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; ./uds.py --bunch &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+test.7z.1 will require &lt;span class=&#34;m&#34;&gt;1337&lt;/span&gt; Docs to store.
+Created parent folder with ID 1fc6JGpX6vUWiwflL1jBxM1YpuMHFAm12
+Successfully Uploaded test.7z.1: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;██████████████████████████████&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 100%
+test.7z.2 will require &lt;span class=&#34;m&#34;&gt;1337&lt;/span&gt; Docs to store.
+Created parent folder with ID 1fc6JGpX6vUWiwflL1jBxM1YpuQQFAm12
+Successfully Uploaded test.7z.2: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;██████████████████████████████&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 100%
+test.7z.3 will require &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; Docs to store.
+Created parent folder with ID 1fc6JGpX6vTOiwflL1jBxM1YpuQQFAm12
+Successfully Uploaded test.7z.3: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;██████████████████████████████&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 100%
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --bunch argument[1] argument[2]
+
+argument[1]: name_in_files, or wildcard &amp;quot;?&amp;quot; without quotes
+argument[2]: directory, default is current directory of UDS
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;batch&#34;&gt;Batch&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; ./uds.py --batch file_name
+Update Successful!
+Downloaded file_name.7z.1: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;██████████████████████████████&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 100%
+Downloaded file_name.7z.2: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;██████████████████████████████&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 100%
+Downloaded file_name.7z.3: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;██████████████████████████████&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 100%
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --batch argument
+
+arguments: name_in_files, or wildcard &amp;quot;?&amp;quot; without quotes
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;wipe&#34;&gt;Wipe&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; ./uds.py --wipe file
+Update Successful!
+Deleted file.7z.1
+Deleted file.7z.2
+Deleted file.7z.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Layout]
+./uds.py --wipe argument
+
+arguments: name_in_files, or wildcard &amp;quot;?&amp;quot; without quotes
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Only Compatible with Python 3.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;box&#34;&gt;
+source in github:
+&lt;a href=&#34;https://github.com/stewartmcgown/uds&#34;&gt;UDS : Unlimited Drive Storage &lt;/a&gt;
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/2020/unlimited-storage.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         

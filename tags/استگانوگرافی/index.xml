@@ -15,6 +15,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Fri, 31 Jan 2020 20:30:53 +0330</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/tags/%D8%A7%D8%B3%D8%AA%DA%AF%D8%A7%D9%86%D9%88%DA%AF%D8%B1%D8%A7%D9%81%DB%8C/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,7 +31,184 @@
         <atom:modified>Fri, 31 Jan 2020 20:30:53 +0330</atom:modified>
         <guid>http://gictor.ir/posts/gnulinux/steghide/</guid>
         <description>استگانوگرافی یا ‍Steganography یک کلمه یونانی و به معنای پنهان نگاری هست این علم باستانی با ورود به عصر تکنولوژی با وجود پیدایش الگوریتم های رمزنگاری و اهمیت امنیت اطلاعات همچنان توجهات رو به خودش جلب کرد ویژگی جالب اون این هست که بعد از رمز نگاری داده، هنوز داده شما معنا دارد و شما با یک مشت عدد و حروف نا مفهوم روبرو نیستید برای اطلاعات بیشتر اینجا رو کلیک کنید.</description>
-        
+        <content:encoded>&lt;p&gt;&lt;img src=&#34;http://gictor.ir/images/post-image/2020/steghide.jpg&#34; alt=&#34;header image&#34; /&gt;&lt;br /&gt;
+استگانوگرافی یا ‍&lt;code&gt;Steganography&lt;/code&gt; یک کلمه یونانی و به معنای پنهان نگاری هست این علم باستانی با ورود به عصر تکنولوژی با وجود پیدایش الگوریتم های رمزنگاری و اهمیت امنیت اطلاعات همچنان توجهات رو به خودش جلب کرد ویژگی جالب اون این هست که بعد از رمز نگاری داده، هنوز داده شما معنا دارد و شما با یک مشت عدد و حروف نا مفهوم روبرو نیستید برای اطلاعات بیشتر &lt;a href=&#34;https://en.wikipedia.org/wiki/Steganography&#34;&gt;اینجا&lt;/a&gt; رو کلیک کنید.&lt;/p&gt;
+&lt;h2 id=&#34;steghide&#34;&gt;steghide&lt;/h2&gt;
+&lt;p&gt;در سال 2003 یک ابزار اوپن سورس با لایسنس GPL بر پایه همین ایده ارائه شد این ابزار می تونه دیتای شما رو داخل پیکسل های یک تصویر یا داخل یک فایل صوتی ذخیره کنه دقت کنید اینجا منظور متا دیتا نیست!&lt;br /&gt;
+فرض کنید شما در حال دیدن تصویری هستید که حاوی اطلاعات رمز شده هست یا صدایی رو می شنوید که حاوی پسوردهای شماست مبحث جالبی هستش :)&lt;/p&gt;
+&lt;p&gt;اما چطور از این ابزار استفاده کنیم؟ من این ابزار رو داخل توزیع های گنو/لینوکسی تست کردم و در این پست هم روی آرچ لینوکس از اون استفاده می کنیم برای اطلاعات بیشتر به این لینک مراجعه کنید &lt;a href=&#34;http://steghide.sourceforge.net&#34;&gt;http://steghide.sourceforge.net&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;نصب-و-راه-اندازی&#34;&gt;نصب و راه اندازی&lt;/h2&gt;
+&lt;p&gt;برای نصب steghide روی گنو لینوکس می تونیم پکیجش رو از مخازن رسمی دانلود کنیم بسته به توزیعی که استفاده می کنیم دستور نصب میتونه متفاوت باشه در آرچ لینوکس با دستور زیر بسته رو نصب می کنیم&lt;br /&gt;
+
+&lt;div id=&#34;bc36b374320d1717&#34; class=&#34;codetab&#34;&gt;
+  &lt;div class=&#34;codetab__links&#34;&gt;
+    
+      &lt;button class=&#34;codetab__link&#34; aria-label=&#34;Tab link&#34;&gt;Arch&lt;/button&gt;
+    
+      &lt;button class=&#34;codetab__link&#34; aria-label=&#34;Tab link&#34;&gt;debian&lt;/button&gt;
+    
+  &lt;/div&gt;
+  
+  
+&lt;div id=&#34;73cd2ff80c85d416&#34; class=&#34;codetab__content&#34;&gt;
+  &lt;pre&gt;&lt;code class=&#34;language-Arch&#34; data-lang=&#34;Arch&#34;&gt;sudo pacman -S steghide  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+  
+&lt;div id=&#34;2caf4705cd6198db&#34; class=&#34;codetab__content&#34;&gt;
+  &lt;pre&gt;&lt;code class=&#34;language-debian&#34; data-lang=&#34;debian&#34;&gt;sudo apt-get install steghide
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;script&gt;
+  &#39;use strict&#39;;
+
+  var containerId = JSON.parse(&#34;\&#34;bc36b374320d1717\&#34;&#34;);
+  var containerElem = document.getElementById(containerId);
+  var codetabLinks = null;
+  var codetabContents = null;
+  var ids = [];
+
+  if (containerElem) {
+    codetabLinks = containerElem.querySelectorAll(&#39;.codetab__link&#39;);
+    codetabContents = containerElem.querySelectorAll(&#39;.codetab__content&#39;);
+  }
+
+  for (var i = 0; i &lt; codetabContents.length; i++) {
+    ids = ids.concat(codetabContents[i].getAttribute(&#39;id&#39;));
+    codetabContents[i].style.display = &#39;none&#39;;
+
+    if (0 === parseInt(i, 10) &amp;&amp; !codetabContents[i].classList.contains(&#39;active&#39;)) {
+      codetabContents[i].classList.add(&#39;active&#39;);
+    }
+  }
+
+  for (var i = 0; i &lt; codetabLinks.length; i++) {
+    codetabLinks[i].setAttribute(&#39;id&#39;, ids[i]);
+
+    if (0 === parseInt(i, 10) &amp;&amp; !codetabLinks[i].classList.contains(&#39;active&#39;)) {
+      codetabLinks[i].classList.add(&#39;active&#39;);
+    } else {
+      codetabLinks[i].classList.remove(&#39;active&#39;);
+    }
+  }
+
+  if (codetabContents.length &gt; 0) {
+    codetabContents[0].style.display = &#39;block&#39;;
+  }
+&lt;/script&gt;&lt;br /&gt;
+برای دانلود سورس کد یا پکیج برنامه روی download کلیک کنید، همچنین اگر کاربر ویندوز هستید میتونید نسخه &lt;code&gt;GUI&lt;/code&gt; برنامه رو نصب کنید&lt;br /&gt;
+&lt;a href=&#34;http://steghide.sourceforge.net/download.php&#34; class=&#34;button&#34; style=&#34;width: 100px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
+  &lt;span class=&#34;button__text&#34;&gt;
+    download
+  &lt;/span&gt;
+&lt;/a&gt; &lt;a href=&#34;http://sourceforge.net/projects/steghideui&#34; class=&#34;button&#34; style=&#34;width: 100px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
+  &lt;span class=&#34;button__text&#34;&gt;
+    steghideui
+  &lt;/span&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;منطق&#34;&gt;منطق&lt;/h3&gt;
+&lt;p&gt;نرم افزار steghide اول از همه فایل ها رو فشرده می کند و بعد از رمزنگاری با الگوریتم &lt;code&gt;AES&lt;/code&gt; که یک الگوریتم رمزنگاری متقارن هست (برای رمزنگاری و رمزگشایی از یک کلید استفاده میکند) درستی مراحل رو چک می کند ولی این نرم افزار محدودیت هایی هم داره که در ادامه اشاره می کنم&lt;/p&gt;
+&lt;h2 id=&#34;محدودیت-ها&#34;&gt;محدودیت ها&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;شما می تونید انواع فرمت های فایل رو مخفی کنید اما فایلی که برای پوشش اطلاعات استفاده میکنید (cover file) محدودیت دارد و باید یکی از فرمت های زیر باشه&lt;br /&gt;
+[&lt;code&gt;JPEG&lt;/code&gt;,&lt;code&gt;BMP&lt;/code&gt;,&lt;code&gt;AU&lt;/code&gt;,&lt;code&gt;WAV&lt;/code&gt;]&lt;/li&gt;
+&lt;li&gt;حجم فایل پوششی باید بزرگتر از فایلی باشه که میخواهید مخفی کنید و باید واقعی باشه (صرفا یک فایل خام با حجم زیاد نباشه)&lt;/li&gt;
+&lt;li&gt;ما نمی تونیم یک فایل بزرگ مثلا 200 مگابایتی رو در یک عکس مخفی کنیم و ایده خوبی نیست شما کجا یک عکس با حجم 200 مگابایت دیدید؟ اگرچه فایل های &lt;code&gt;WAV&lt;/code&gt; می توانند حجم های بزرگی داشته باشند بنابراین برای فایل های بزرگتر گزینه مناسب تری هستند&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;دستورات-steghide&#34;&gt;دستورات steghide&lt;/h2&gt;
+&lt;p&gt;برای مخفی کردن و آشکار کردن اطلاعات ما از دو دسته دستورات&lt;code&gt;embed&lt;/code&gt; و &lt;code&gt;extract&lt;/code&gt; استفاده میکنیم&lt;/p&gt;
+&lt;h3 id=&#34;مخفی-کردن-داده-ها-embed&#34;&gt;مخفی کردن داده ها (embed)&lt;/h3&gt;
+&lt;p&gt;فرض کنید من یک فایل &lt;code&gt;password.txt&lt;/code&gt; دارم و میخوام اون رو در یک فایل صوتی با پسوند &lt;code&gt;WAV&lt;/code&gt; پنهان کنم (همانطور که قبلا گفتم فرمت فایل جاساز هرچیزی میتونه باشه)&lt;br /&gt;
+برای این کار از دستور زیر استفاده می کنیم&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;steghide embed -ef password.txt -cf music.wav
+
+Enter passphrase: 
+Re-Enter passphrase: 
+embedding &lt;span class=&#34;s2&#34;&gt;&amp;#34;avatar.jpg&amp;#34;&lt;/span&gt; in &lt;span class=&#34;s2&#34;&gt;&amp;#34;IMG_2020.jpg&amp;#34;&lt;/span&gt;... &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;پارامتر &lt;code&gt;cf-&lt;/code&gt; مختصر فایل پوششی (cover file) است&lt;/li&gt;
+&lt;li&gt;پارامتر &lt;code&gt;ef-&lt;/code&gt; مختصر فایل جاسازی شده (embed file) است&lt;br /&gt;
+&lt;div class=&#34;box&#34;&gt;
+
+بعد از اجرای دستور بالا باید پسورد دلخواه رو وارد کنید و در نهایت فایل پوششی شما پنهان نگاری و فایل password.txt در فایل wav مخفی خواهد شد
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;notices warning&#34; &gt;
+  باید مسیر فایل های خودتون رو به عنوان آرگومان به پارامتر ها پاس بدید بنابراین از معتبر بودن مسیر فایل ها مطمئن بشید
+&lt;/div&gt;
+&lt;h4 id=&#34;مثال&#34;&gt;مثال:&lt;/h4&gt;
+&lt;p&gt;مخفی کردن فایل متنی در فایل تصویری&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;steghide embed -ef password.txt -cf Manic.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;مخفی کردن فایل تصویری در فایل تصویری دیگر&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;steghide embed -ef avatar.png -cf Manic.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr /&gt;
+&lt;h3 id=&#34;آشکار-سازی-داده-پنهان-شده-extract&#34;&gt;آشکار سازی داده پنهان شده (extract)&lt;/h3&gt;
+&lt;p&gt;حال فرض کنید ما یک فایل تصویری پنهان نگاری شده &lt;code&gt;Manic.jpg&lt;/code&gt; داریم و میخواهیم فایل اصلی که ‍‍&lt;code&gt;password.txt&lt;/code&gt; هست رو استخراج کنیم برای این کار باید از دستور زیر استفاده کنیم&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;steghide extract -sf Manic.jpg
+
+Enter passphrase: 
+wrote extracted data to &lt;span class=&#34;s2&#34;&gt;&amp;#34;password.txt&amp;#34;&lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;بعد از اجرای دستور باید پسوردی که قبلا برای مخفی کردن فایل استفاده کردیم رو وارد کنیم و بعد از اون فایل مخفی شده استخراج میشه و در دایرکتوری فعلی نوشته میشه&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id=&#34;چک-کردن-فایل&#34;&gt;چک کردن فایل&lt;/h3&gt;
+&lt;p&gt;برای بررسی کردن این که آیا یک فایل پنهان نگاری شده یا نه می تونیم از دستور زیر استفاده کنیم&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;steghide info Manic.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;تا اینجا تقریبا همه دستورات مهم رو دیدیم برای این که مطلب طولانی نشه از توضیح دادن پارامتر های دیگر این ابزار صرف نظر میکنم اما شما می تونید برای استفاده از قابلیت های دیگر از طریق دستور زیر به راهنمای این ابزار دسترسی داشته باشید&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;man steghide
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/2020/hide.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         

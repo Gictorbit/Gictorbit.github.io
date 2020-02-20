@@ -15,6 +15,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Sun, 16 Feb 2020 23:16:55 +0330</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/series/%D8%A7%D8%B5%D9%88%D9%84-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/index.xml" rel="self" type="application/rss+xml" />
     
@@ -31,7 +32,150 @@
         <guid>http://gictor.ir/posts/compiler/structure-of-compiler/</guid>
         <description>همینطور که در قسمت های قبل دیدیم اگر کامپایلر رو به یک جعبه تشبیه کنیم که یک برنامه مبدا (source program) رو به یک برنامه معادل با کارکرد یکسان تبدیل میکند اگر کمی این جعبه رو باز کنیم می بینیم که تمام مراحل کامپایلر از دو قسمت کلی تشکیل شده :
  مراحل تحلیل | analysis مراحل ساخت | synthesis  مراحل تحلیل (analysis) مرحله تحلیل برنامه مبدا رو به اجزاء اصلی تقسیم میکند و ساختار گرامری رو در برنامه مبدا اعمال میکند سپس از روی این ساختار کد میانی (intermediate code) معادل رو تولید میکند در این مرحله کد تحلیل می شود و اگر خطا یا اروری وجود داشته باشد پیام های اخطار رو چاپ میکند تا کاربر کد خودش رو اصلاح بکند.</description>
-        
+        <content:encoded>&lt;p&gt;همینطور که در قسمت های قبل دیدیم اگر کامپایلر رو به یک جعبه تشبیه کنیم که یک برنامه مبدا (source program) رو به یک برنامه معادل با کارکرد یکسان تبدیل میکند اگر کمی این جعبه رو باز کنیم می بینیم که تمام مراحل کامپایلر از دو قسمت کلی تشکیل شده :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;مراحل تحلیل | analysis&lt;/li&gt;
+&lt;li&gt;مراحل ساخت |  synthesis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;مراحل-تحلیل-analysis&#34;&gt;مراحل تحلیل (analysis)&lt;/h2&gt;
+&lt;p&gt;مرحله تحلیل برنامه مبدا رو به اجزاء اصلی تقسیم میکند و ساختار گرامری رو در برنامه مبدا اعمال میکند سپس از روی این ساختار کد میانی (intermediate code) معادل رو تولید میکند در این مرحله کد تحلیل می شود و اگر خطا یا اروری وجود داشته باشد پیام های اخطار رو چاپ میکند تا کاربر کد خودش رو اصلاح بکند.&lt;br /&gt;
+هم چنین در مرحله تحلیل اطلاعاتی درباره برنامه مبدا استخراج میشود و در یک ساختمان داده ای به نام جدول نماد &lt;code&gt;symbol table&lt;/code&gt; ذخیره می شود که به همراه &lt;em&gt;کد میانی&lt;/em&gt; تولید شده به مرحله ساخت پاس داده می شوند&lt;/p&gt;
+&lt;h2 id=&#34;مراحل-ساخت-synthesis&#34;&gt;مراحل ساخت (synthesis)&lt;/h2&gt;
+&lt;p&gt;در بخش ساخت، از کد میانی که مرحله قبل تولید شده به همراه اطلاعات جدول نماد که خروجی مراحل تحلیل هستند یک برنامه نهایی (target program) ایجاد میشود.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;به مراحل تحلیل اغلب &lt;code&gt; Front End&lt;/code&gt; یا بخش جلویی کامپایلر گفته میشود&lt;br /&gt;
+و به مراحل ساخت &lt;code&gt;Back end&lt;/code&gt; یا عقب کامپایلر می گویند&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;اگر فرایند کامپایل رو دقیق تر بررسی کنیم می بینیم که این فرایند از فاز های پشت سرهم تشکیل شده و هر فاز کد مبدا رو بررسی میکند و به فاز بعد ارائه میکند برای مثال یک نمونه از تجزیه فاز های کامپایلر رو در شکل زیر می بینید&lt;/p&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure1.png&#34; alt=&#34;فاز های کامپایلر&#34; data-caption=&#34;Phases of a compiler&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+  &lt;figcaption style=&#34;text-align: center;&#34;&gt;
+    &lt;strong&gt;فاز های کامپایلر&lt;/strong&gt;:
+    
+    Phases of a compiler
+    
+      
+      
+    
+  &lt;/figcaption&gt;
+  
+&lt;/figure&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34; data-dir=&#34;rtl&#34;&gt;جدول علائم یا همان  &lt;em&gt;symbol table&lt;/em&gt; که اطلاعاتی درباره کل برنامه مبدا رو ذخیره میکند توسط همه ی فاز های کامپایل استفاده میشود و همه فاز ها به آن دسترسی دارند&lt;/div&gt;
+&lt;br /&gt;
+در کنار جدول علائم یک بخش دیگر به نام کنترل کننده خطا یا  &lt;code&gt;error handler&lt;/code&gt; هم وجود دارد و فاز ها از آن استفاده می کنند&lt;br /&gt;
+هم چنین بعضی از کامپایلر ها یک فاز بهینه سازی بین backend و frontend دارند که کد میانی تولید شده رو بهینه سازی میکند و این به backend کمک میکند تا برنامه نهایی بهینه تر باشد&lt;/p&gt;
+&lt;h2 id=&#34;تحلیل-گر-لغوی-lexical-analyser&#34;&gt;تحلیل گر لغوی (Lexical Analyser)&lt;/h2&gt;
+&lt;p&gt;به اولین فاز کامپایلر تحلیل لغوی یا اسکن &lt;code&gt;scanning&lt;/code&gt; میگویند تحلیلگر لغت، تمام کاراکتر های برنامه منبع را می خواند و به صورت رشته های معنادار گروه بندی می کند به این رشته ها &lt;code&gt;lexeme&lt;/code&gt; می گویند برای هر lexeme تحلیل گر لغت یک توکن &lt;code&gt;Token&lt;/code&gt; به فرم زیر تولید می کند که این توکن به فاز بعدی یعنی تحلیلگر نحوی تحویل داده خواهد شد.&lt;br /&gt;
+&lt;div class=&#34;box&#34;&gt;
+&lt;li&gt;(token name , attribute value)&lt;/li&gt;
+&lt;li&gt;(مقدار توکن ،  نام توکن)&lt;/li&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;h3 id=&#34;انواع-توکن--token&#34;&gt;انواع توکن | Token&lt;/h3&gt;
+&lt;p&gt;اولین جزء توکن &lt;code&gt;token name&lt;/code&gt; یک نماد هست که به نوع توکن اشاره می کند و در &lt;code&gt;analysis syntax&lt;/code&gt; یا تحلیلگر نحوی استفاده می شود. برای توضیح انواع توکن تکه کد زیر رو بررسی میکنیم و توکن های اون رو شناسایی می کنیم&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Error&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;1- &lt;mark&gt;⠀key word⠀&lt;/mark&gt;&lt;br /&gt;
+تمام دستورات برنامه نویسی که توسط زبان رزرو شده اند جزء این دسته قرار می گیرند&lt;br /&gt;
+[ &lt;code&gt;if&lt;/code&gt; , &lt;code&gt;int&lt;/code&gt; , &lt;code&gt;else&lt;/code&gt; ,  &lt;code&gt;printf&lt;/code&gt; , &lt;code&gt;return&lt;/code&gt;]&lt;/p&gt;
+&lt;p&gt;2- &lt;mark&gt;⠀Identifier | id⠀&lt;/mark&gt;&lt;br /&gt;
+هر اسمی که توسط برنامه نویس تعریف بشود مثل اسم متغیر ، اسم تابع، اسم کلاس ، نام ماکرو ، اسم یک ساختمان داده ، اسم آرایه و &amp;hellip;&lt;br /&gt;
+[ &lt;code&gt;number&lt;/code&gt; , &lt;code&gt;result&lt;/code&gt; , &lt;code&gt;main&lt;/code&gt;]&lt;/p&gt;
+&lt;p&gt;3- &lt;mark&gt;‎‎‏‏‎‎⠀operator⠀&lt;/mark&gt;&lt;br /&gt;
+عملگرها نوع دیگر توکن هستند که شامل عملگر های زبان برنامه نویسی مثل عملگر های ریاضی و انتساب می شود.&lt;br /&gt;
+[ &lt;code&gt;*&lt;/code&gt; , &lt;code&gt;&amp;gt;&lt;/code&gt; , &lt;code&gt;=&lt;/code&gt; ]&lt;/p&gt;
+&lt;p&gt;4- &lt;mark&gt;⠀Number⠀&lt;/mark&gt;&lt;br /&gt;
+مقادیر عددی که در برنامه های خود مینویسیم هم نوع دیگر توکن به حساب میاد&lt;br /&gt;
+[ &lt;code&gt;5&lt;/code&gt; , &lt;code&gt;10&lt;/code&gt; , &lt;code&gt;60&lt;/code&gt; , &lt;code&gt;0&lt;/code&gt; ]&lt;/p&gt;
+&lt;p&gt;5- &lt;mark&gt;⠀symbol⠀&lt;/mark&gt;&lt;br /&gt;
+همچنین علائم جز جدا نشدنی برنامه های ما هستن مثل &lt;code&gt;;&lt;/code&gt; یا پرانتزها و کرلی براکت و.. که در مثال بالا علائم ما مقادیر زیر هستند.&lt;br /&gt;
+[ &lt;code&gt;;&lt;/code&gt; , &lt;code&gt;{&lt;/code&gt; , &lt;code&gt;}&lt;/code&gt; , &lt;code&gt;(&lt;/code&gt; , &lt;code&gt;)&lt;/code&gt; ]&lt;/p&gt;
+&lt;p&gt;6-&lt;mark&gt;⠀string⠀&lt;/mark&gt;&lt;br /&gt;
+آخرین نوع توکن رشته ها یا آرایه ای از کاراکترها هستند که معمولا بین دو &lt;code&gt;&amp;quot;&lt;/code&gt; قرار میگیرند&lt;br /&gt;
+[ &lt;code&gt;&amp;quot;Error&amp;quot;&lt;/code&gt;  ]&lt;/p&gt;
+&lt;h5 id=&#34;تشخیص-token&#34;&gt;تشخیص Token&lt;/h5&gt;
+&lt;p&gt;برای تشخیص دادن الگوی توکن های موجود در برنامه مبدا، از علم نظریه زبان ها و زبان های منظم در کامپایلر استفاده می شود&lt;/p&gt;
+&lt;p&gt;جزء دوم توکن &lt;code&gt;attribute-value&lt;/code&gt; هست که به موجودی برای این توکن در جدول علائم یا symbol table اشاره می کند همچنین برای semantic analysis یا تحلیل معنایی و تولید کد اسمبلی به اطلاعاتی که در symbol table ذخیره شده اند نیاز داریم برای مثال فرض کنید در برنامه مبدا دستور زیر وجود دارد مراحل کامپایل این دستور رو مرور می کنیم&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;position = initial + rate * 60
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;همینطور که مشخص هست این دستور شامل 7 گروه کاراکتر معنا دار یا 7 &lt;code&gt;lexeme&lt;/code&gt; هست هر کدام رو به صورت جداگانه بررسی می کنیم&lt;br /&gt;
+1- متغیر &lt;code&gt;position&lt;/code&gt; به عنوان یک lexeme توسط کامپایلر شناسایی می شود و از آنجا که یک توکن از نوع identifier هست به توکن &lt;code&gt; &amp;lt; 1 , id &amp;gt;&lt;/code&gt; نگاشت میشود. id اشاره به نوع توکن دارد و &lt;code&gt;1&lt;/code&gt; اشاره به ردیف اول symbol table دارد که اطلاعات مربوط این lexeme مثل اسم متغیر و نوع و&amp;hellip; در آن ذخیره شده است.&lt;/p&gt;
+&lt;p&gt;2- نماد مساوی  &lt;code&gt;=&lt;/code&gt; هم کاراکتر معنا دار و lexeme دوم در دستور بالا هست و به توکن  &lt;code&gt;&amp;lt; = &amp;gt;&lt;/code&gt;  نگاشت می شود اما از آنجا که نوع توکن عملگر هست نیازی به attribute  ندارد. همچنین میتوانیم برای عملگر مساوی از نام &lt;code&gt;assign&lt;/code&gt; استفاده کنیم ولی برای راحتی کار، از خود کاراکتر مساوری به عنوان نام توکن استفاده می کنیم.&lt;/p&gt;
+&lt;p&gt;3- همینطور &lt;code&gt;initial&lt;/code&gt; یه عنوان یک lexeme به توکن &lt;code&gt;&amp;lt; 2 , id &amp;gt;&lt;/code&gt; نگاشت می شود و &lt;code&gt;2&lt;/code&gt; به موجود دوم symbol table اشاره می کند که اطلاعات متغیر initial رو ذخیره کرده است.&lt;/p&gt;
+&lt;p&gt;4- عملگر &lt;code&gt;+&lt;/code&gt; هم یک lexeme بعدی هست و به توکن  &lt;code&gt;&amp;lt; + &amp;gt;&lt;/code&gt; نگاشت می شود.&lt;/p&gt;
+&lt;p&gt;5- متغیر &lt;code&gt;rate&lt;/code&gt; هم به عنوان  lexeme پنجم به توکن &lt;code&gt;&amp;lt; 3 , id &amp;gt;&lt;/code&gt; نگاشت می شود و &lt;code&gt;3&lt;/code&gt; به خانه سوم symbol table اشاره می کند که اطلاعات متغیر rate در آن ذخیره شده است.&lt;/p&gt;
+&lt;p&gt;6- عملگر &lt;code&gt;*&lt;/code&gt; هم به عنوان یک lexeme به توکن &lt;code&gt;&amp;lt; * &amp;gt;&lt;/code&gt; map (نگاشت) می شود.&lt;/p&gt;
+&lt;p&gt;7- عدد &lt;code&gt;60&lt;/code&gt; آخرین lexeme دستور بالا به توکن &lt;code&gt;&amp;lt;60&amp;gt;&lt;/code&gt; نگاشت می شود.&lt;/p&gt;
+&lt;p&gt;کاراکتر های خالی که بین lexeme ها فاصله ایجاد کرده اند توسط تحلیلگر لغوی نادیده گرفته می شوند دستور انتساب یا (assignment statement) بالا بعد از تحلیل لغوی به ترتیبی از توکن ها تبدیل می شود&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;id,1&amp;gt;  &amp;lt; = &amp;gt;  &amp;lt;id,2&amp;gt;  &amp;lt; + &amp;gt;  &amp;lt;id,3&amp;gt;  &amp;lt; * &amp;gt;  &amp;lt;60&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;در مثال ما نام های = و + و* برای راحتی در توکن ها به عنوان نام های معادل assignment و addition و multiplication استفاده شده اند.&lt;br /&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure2.png&#34; alt=&#34;کامپایل دستور انتساب&#34; data-caption=&#34;translation of an assignment statement&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+  &lt;figcaption style=&#34;text-align: center;&#34;&gt;
+    &lt;strong&gt;کامپایل یک دستور انتساب&lt;/strong&gt;:
+    
+    translation of an assignment statement
+    
+      
+      
+    
+  &lt;/figcaption&gt;
+  
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;تحلیل-گر-نحوی-syntax-analyser&#34;&gt;تحلیل گر نحوی (Syntax analyser)&lt;/h2&gt;
+&lt;p&gt;فاز دوم کامپایلر syntax analyzer یا پارس &lt;code&gt;parsing&lt;/code&gt; نام دارد. پارسر &lt;code&gt;parser&lt;/code&gt; از اولین جزء توکن که توسط تحلیلگر لغوی تولید شده استفاده می کند و یک درخت از ترتیب قرار گیری توکن ها می سازد به این درخت &lt;code&gt;syntax tree&lt;/code&gt; می گویند. این درخت ساختار گرامری یک دستور رو بر اساس توکن ها نشون میده در واقع در این درخت برگ ها عملوند هستند و راس های آن ها عملگر هستند که اولویت عملگر ها رو هم نشان می دهد  طبق درخت تولید شده در مثال ما اول باید عدد 60 در توکن &amp;lt;3 , id&amp;gt; که همان متغیر rate  هست ضرب شود و نتیجه آن با توکن &amp;lt; 2 , id &amp;gt; که همان initial هست جمع شود و سپس در توکن  &amp;lt; 1 , id &amp;gt; که همان position هست ریخته شود تحلیل گر نحوی چک میکند که ترتیب قرار گیری توکن ها درست باشد به عبارتی دیگر دستور ما طبق الگوی از قبل تعریف شده باشد و سپس درخت سینتکس رو به عنوان خروجی به فاز بعدی یعنی تحلیلگر معنایی یا semantic تحویل می دهد. این کار با استفاده از زبان های مستقل از متن انجام می شود&lt;/p&gt;
+&lt;h2 id=&#34;تحلیلگر-معنایی-semantic-analysis&#34;&gt;تحلیلگر معنایی (Semantic Analysis)&lt;/h2&gt;
+&lt;p&gt;تحلیلگر معنایی از درخت سینتکس که در مرحله قبل تولید شد و اطلاعات symbol table استفاده می کند تا برنامه مبدا رو از نظر معنایی بررسی کند و اطلاعاتی رو در جدول نماد و درخت ذخیره میکند تا در مرحله بعد از آن برای تولید کد میانی استفاده شود&lt;/p&gt;
+&lt;h4 id=&#34;type-checking&#34;&gt;type checking&lt;/h4&gt;
+&lt;p&gt;یکی از قسمت های مهم تحلیلگر معنایی&lt;code&gt;type checking&lt;/code&gt; هست کامپایلر چک می کند که آیا هر عملگر عملوند مناسب داشته باشد برای مثال هر زبان برنامه نویسی چک میکند که اندیس آرایه از نوع int یا عدد صحیح باشد و اگر عدد اعشاری برای اندیس آرایه استفاده شده باشد خطایی نمایش می دهد گاهی اوقات کامپایلر اجازه میدهد که نوع بعضی متغیر ها به دیگری تبدیل شود مثلا در دستوری که دیدیم فرض کنید  position و initial و rate به عنوان متغیر عدد اعشاری تعریف شده باشند از آنجا که عدد 60 از نوع  int هست &lt;code&gt;type checker&lt;/code&gt; بعد از دیدن عملگر &lt;code&gt;*&lt;/code&gt; و بررسی عملوند ها می فهمد که باید یک عدد صحیح (rate) در یک عدد اعشاری ضرب شود در این حالت ممکن است عدد صحیح به عدد اعشاری تبدیل شود در شکل بالا توجه کنید که خروجی تحلیلگر معنایی یک node اضافی برای عملگر &lt;code&gt;inttofloat&lt;/code&gt; دارد که مستقیما عدد صحیح یا int رو به عدد اعشاری یا float تبدیل می کند.&lt;/p&gt;
+&lt;h2 id=&#34;تولید-کننده-کد-میانی-intermediate-code-generation&#34;&gt;تولید کننده کد میانی (Intermediate Code Generation)&lt;/h2&gt;
+&lt;p&gt;در فرایند ترجمه یک برنامه مبدا (source program) به برنامه مقصد (target code) کامپایلر ممکن هست چندین بار یک کد میانی با اشکال مختلف بسازد. درخت سینتکس (syntax tree) در واقع بیان گر کد میانی هست.&lt;br /&gt;
+بیشتر کامپایلر ها بعد از تحلیل  نحوی و معنایی کد مبدا، یک کد سطح پایین یا کد ماشین شبیه به کد اسمبلی تولید میکنند این کد دو ویژگی مهم باید داشته باشد&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;باید تولید آن آسان باشد&lt;/li&gt;
+&lt;li&gt;باید به راحتی به کد ماشین نهایی ترجمه شود&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;کد-های-سه-آدرسی-three-address-code&#34;&gt;کد های سه آدرسی (three-address code)&lt;/h4&gt;
+&lt;p&gt;یک مدل کدمیانی که بررسی خواهیم کرد کد های سه آدرسه و شبیه اسمبلی هستند که هر دستور العمل آنها شامل سه عملوند می باشد هر عملوند می تواند نقش یک رجیستر رو بازی کند. برای مثال خروجی یک تولید کننده کد میانی ( intermediate code generator ) شامل دستورات سه آدرسه در زیر آمده است.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;t1 = inttofloat(60)
+t2 = id3 * t1
+t3 = id2 + t2
+id1 = t3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;کد سه آدرسه بالا در هر دستور العمل انتساب (assignment) یا (دستور العملی که مقداری رو در یک متغیر ذخیره میکند) حداقل یک عملگر وجود دارد . طبق اولویت عملگر ها در مثال ما دستورات کد میانی از بالا به پایین مرتب می شوند مثلا چون عملگر ضرب اولویت بیشتری نسبت به جمع داره زودتر اجرا میشه در این مرحله کامپایلر نام های موقتی برای نگه داشتن مقادیر حساب شده توسط کد های سه آدرسه تولید می کند همانطور که مشخص هست دستورات اول و آخر کمتر از سه عملوند (operand) دارند&lt;/p&gt;
+&lt;h2 id=&#34;بهینه-سازی-کد-code-optimization&#34;&gt;بهینه سازی کد (code optimization)&lt;/h2&gt;
+&lt;p&gt;فاز بهینه ساز کد (code optimizer) تلاش میکند تا کد میانی تولید شده رو بهینه تر کند تا کد ماشین در نهایت نتیجه بهتری داشته باشد برای مثال درصورت تشخیص بهینه ساز ممکن است ترد (thread) جدید برای اجرا به برنامه اضافه کند تا سرعت اجرا بالاتر برود یا مثلا بهینه ساز میفهمد که دستور &lt;code&gt;inttofloat&lt;/code&gt; برای تبدیل عدد صحیح به اعشاری جواب یکسان دارد پس برای جلوگیری از اجرای آن در هر بار این عدد رو با 60.0 در زمان کامپایل تعویض میکند در نتیجه محاسبه عدد اعشاری در زمان اجرا انجام نمی شود همینطور بهینه ساز تشخیص میدهد که  &lt;code&gt;t3&lt;/code&gt; فقط یکبار استفاده شده تا مقدار خودش رو در &lt;code&gt;id1&lt;/code&gt; بریزد و کد میانی تولید شده میتواند کوتاه تر باشد در نتیجه کد بالا میتواند به شکل زیر کوتاه تر شود&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;t1 = id3 * 60.0
+id1 = id2 + t1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;البته این یک مثال ساده هست برای فهم این موضوع واضح هست که کامپایلر ها در بهینه سازی اعمالی که انجام میدهند ممکن هست متفاوت و پیچیده تر باشد&lt;/p&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/compiler/compilerStructure.svg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
@@ -80,7 +224,118 @@
         <guid>http://gictor.ir/posts/compiler/language-processors/</guid>
         <description>کامپایلر (compiler) به زبان ساده کامپایلر برنامه ای هست که می تونه یک برنامه که به یک زبان نوشته شده رو بخونه (زبان مبدا یا source language) و به یک برنامه معادل به زبان دیگه (زبان هدف یا target language) ترجمه کنه
 به شکل زیر دقت کنید یک نقش مهم کامپایلر این هست که هر اروری که در زبان مبدا، طی فرایند ترجمه شناسایی می شود را گزارش کند</description>
-        
+        <content:encoded>&lt;h2 id=&#34;کامپایلر-compiler&#34;&gt;کامپایلر (compiler)&lt;/h2&gt;
+&lt;p&gt;به زبان ساده کامپایلر برنامه ای هست که می تونه یک برنامه که به یک زبان نوشته شده رو بخونه (زبان مبدا یا source language) و به یک برنامه معادل به زبان دیگه (زبان هدف یا target language) ترجمه کنه&lt;br /&gt;
+به شکل زیر دقت کنید یک نقش مهم کامپایلر این هست که هر اروری که در زبان مبدا، طی فرایند ترجمه شناسایی می شود را گزارش کند&lt;/p&gt;
+&lt;p&gt;&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors1.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;300px&#34; height=&#34;300px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;br /&gt;
+اگر برنامه مقصد (target program) یک برنامه زبان ماشین (machine-language) با قابلیت اجرایی (executable) باشه در این صورت می تواند توسط کاربر برای پردازش ورودی ها و تولید خروجی مورد نظر فراخوانی بشه به دیاگرام زیر که اجرای یک target program را نشان می دهد توجه کنید&lt;br /&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors2.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;مفسر-interpreter&#34;&gt;مفسر (interpreter)&lt;/h2&gt;
+&lt;p&gt;یکی دیگه از انواع رایج پردازنده های زبان ( Language Processors ) مفسرها هستند.&lt;br /&gt;
+مفسر به جای تولید target program به عنوان یک برنامه ترجمه شده، بر اساس source program و ورودی های کاربر (input) مستقیما عملیات های مشخص شده رو اجرا می کنه شکل زیر یک مفسر را نشان می دهد&lt;br /&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors3.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;معایب-و-مزایای-compiler-و-interpreter&#34;&gt;معایب و مزایای compiler و interpreter&lt;/h2&gt;
+&lt;p&gt;معمولا کد زبان ماشینی که از برنامه هدف (target program) توسط کامپایلر تولید شده است از مفسری که ورودی ها رو به خروجی نگاشت میکنه سریع تر هست در حالی که یک مفسر در تشخیص دادن ارور ها بهتر عمل میکنه چون source program رو خط به خط تفسیر، و دستور به دستور اجرا می کنه&lt;/p&gt;
+&lt;h2 id=&#34;کامپایلر-های-هیبریدی-hybrid-compiler&#34;&gt;کامپایلر های هیبریدی (hybrid compiler)&lt;/h2&gt;
+&lt;p&gt;برای مثال زبان جاوا با ادغام دو نوع پردازنده زبان مفسری و کامپایلری از یک ماشین مجازی بهره می برد یک برنامه مبدا (source program) جاوا ممکن است اول به یک زبان میانی به نام بایت کد (byte code) کامپایل شود سپس توسط ماشین مجازی (virtual machine) که همان مفسر جاوا هست خط به خط تفسیر می شود&lt;br /&gt;
+فایده این روش این هست که بایت کد هایی که در یک ماشین کامپایل می شوند می توانند در یک ماشین دیگر تفسیر شوند یا شاید در سرار یک شبکه&lt;br /&gt;
+البته برای دستیابی به پردازش سریع تر ورودی ها به خروجی، بعضی از انواع کامپایلر های جاوا به نام just-in-time compilers هستند که قبل از این که برنامه های میانی برای پردازش ورودی ها اجرا بشوند بایت کد را بلافاصله به زبان ماشین (صفر و یک) ترجمه می کنند&lt;br /&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors4.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;پیش-پردازشگر-preprocessor&#34;&gt;پیش پردازشگر preprocessor&lt;/h2&gt;
+&lt;p&gt;برای تولید یک target program علاوه بر کامپایلر ممکن است چندین برنامه دیگر نیاز شوند همچنین  یک source program ممکن هست به ماژول هایی تقسیم بشه که در فایل های جداگانه ذخیره شده اند.&lt;br /&gt;
+برای تولید برنامه مبدا برنامه مستقل دیگری به نام پیش پردازنده یا preprocessor همه ی ماژول ها رو گرد آوری می کند و یک برنامه مبدا به عنوان خروجی تولید می کند&lt;br /&gt;
+علاوه بر گردآوری فایل ها پیش پردازش گر فایل های کتابخانه ای و یا ماکرو ها (macros) رو شناسایی می کند واونا رو به برنامه مبدا اضافه میکند مثلا در کد زبان سی زیر شاید برنامه ما 10 خط باشد ولی بعد از اضافه شدن کتابخانه ها توسط پیش پردازنده ممکن است برنامه مبدا تولید شده حدود 200 خط بشود&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;define PI 3.1415&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;define circleArea(r) (PI*r*r)&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Enter the radius: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;%f&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;circleArea&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Area = %.2f&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;اسمبلر-assembler&#34;&gt;اسمبلر assembler&lt;/h2&gt;
+&lt;p&gt;بعد از اون source program اصلاح شده (modified) که خروجی پیش پردازنده بود به کامپایلر سپرده میشه کامپایلر ممکن هست یک برنامه با زبان اسمبلی &lt;code&gt;assembly&lt;/code&gt; به عنوان خروجی تولید کند چون برای کامپایلر تولید کردن کد اسمبلی به عنوان خروجی و دیباگ کردن آن آسان تر است و بعد از آن زبان اسمبلی توسط برنامه ای به نام اسمبلر &lt;code&gt;assembler&lt;/code&gt; پردازش می شود. اسمبلر برنامه ای است که کد اسمبلی را به کد زبان ماشین یا همان صفر ویک با قابلیت جابجایی یا relocatable (کدی که میتواند در هر کجای حافظه بارگزاری شود) تبدیل میکند&lt;/p&gt;
+&lt;h2 id=&#34;منظور-از-relocateble-چیست&#34;&gt;منظور از relocateble چیست؟&lt;/h2&gt;
+&lt;p&gt;همینطور که خواندیم اسمبلر زبان اسمبلی رو به زبان ماشین قابل حمل تبدیل میکند برای مثال فرض کنید در ویندوز اسمبلر برای ما یک فایل &lt;code&gt;exe.&lt;/code&gt; به عنوان خروجی تولید کند این فایل که در حافظه جانبی(هارد دیسک) قرار داره و میتواند توسط سیستم عامل اجرا بشه هر فایل به صورت بلوک هایی در حافظه جانبی ذخیره شده و آدرس دهی  می شوند و آدرس شروع هر فایل از &lt;code&gt;0&lt;/code&gt; هست هر بلوک که نشان گر یک فایل مثلا exe هست رو فایل زبان ماشین &lt;mark&gt; قابل حمل &lt;/mark&gt; گویند.&lt;/p&gt;
+&lt;p&gt;اما برای اینکه این فایل زبان ماشین اجرا بشه باید به حافظه اصلی یا (ram) منتقل بشه چرا؟ برای اینکه اولا سرعت رم بیشتر هست و ثانیا فاز اجرا و ذخیره سازی باید از هم دیگر جدا باشند تا مقلا در صورت مشکل در فاز اجرا به برنامه اصلی آسیبی وارد نشه&lt;/p&gt;
+&lt;h4 id=&#34;بار-کننده-loader&#34;&gt;بار کننده loader&lt;/h4&gt;
+&lt;p&gt;اجرای برنامه ی زبان ماشین توسط سیستم عامل وظیفه لینکر و لودر هست. loader دو وظیفه دارد:&lt;/p&gt;
+&lt;p&gt;1- &lt;em&gt;تخصیص حافظه:&lt;/em&gt; از آنجایی که بخشی از حافظه توسط سیستم عامل و برنامه های دیگه پر شده لودر باید حافظه اصلی رو بررسی کنه و مکانی از حافظه که فضای کافی برای اجرای برنامه زبان ماشین ما داره رو پیدا کنه&lt;/p&gt;
+&lt;p&gt;2- &lt;em&gt;نگاشت آدرس:&lt;/em&gt; وقتی برنامه در ram لود شد باید آدرس نسبی که از صفر شروع شده بود به آدرس واقعی (فیزیکی) در حافظه اصلی نگاشت بشه برای مثال در تصویر زیر فرض کنید برنامه از خانه 2000 به بعد در حافظه اصلی لود می شود پس خانه صفر بلوک کد ماشین به جای آدرس صفر به آدرس 2001 نگاشت می شود&lt;br /&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors6.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;منظور از کد ماشین قابل حمل این هست که می تواند در هر مکانی از حافظه اصلی لود بشود ( در هر  بار اجرا ممکن است آدرس های فیزیکی نگاشت شده آن متفاوت باشد مثلا دفعه بعد از خانه 3000 حافظه لود بشود)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;فایل-های-غیر-قابل-حمل&#34;&gt;فایل های غیر قابل حمل&lt;/h5&gt;
+&lt;p&gt;فایل زبان ماشینی که آدرس نسبی ندارد و نمیتونه در هر مکان از حافظه لود بشه رو فایل غیر قابل حمل میگویند (در بلوک های آن به جای آدرس نسبی آدرس فیزیکی مشخص شده) برای مثال در ویندوز فایل های با پسوند &lt;code&gt;com.&lt;/code&gt; از این دسته فایل ها هستند&lt;/p&gt;
+&lt;h2 id=&#34;linker&#34;&gt;linker&lt;/h2&gt;
+&lt;p&gt;گاهی اوقات فایل های زبان ماشینی که اجرا می کنیم نیاز دارند که از فایل های دیگری که قبلا در حافظه لود شده اند استفاده کنند شبیه فایل ها وتوابع کتابخانه ای مثلا در ویندوز فایل های &lt;code&gt;DLL&lt;/code&gt; یا (dynamic linked library) از این نوع هستند در صورتی که برنامه ما به این کتابخانه ها نیاز داشته باشد یک برنامه به نام &lt;code&gt;linker&lt;/code&gt; یک لینک بین برنامه ما و فایل مورد نیاز برقرار می کند.&lt;/p&gt;
+&lt;figure &gt;
+  
+    
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors5.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    
+  
+&lt;/figure&gt;
+&lt;h1 id=&#34;سوالات&#34;&gt;سوالات&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;تفاوت میان کامپایلر و مفسر چیست؟&lt;/li&gt;
+&lt;li&gt;مزایای یک کامپایلر نسبت به مفسر و مزایای یک مفسر نسبت به کامپایلر چیست؟&lt;/li&gt;
+&lt;li&gt;در سیستم پردازش زبان مزایای تولید کد اسمبلی به جای کد ماشین توسط کامپایلر چیست؟&lt;/li&gt;
+&lt;li&gt;به کامپایلری که یک زبان سطح بالا (نزدیک به زبان انسان) را به زبان های سطح بالای دیگر کامپایل می کند مترجم source-to-source گویند. مزایای این که از زبان C به عنوان زبان هدف برای کامپایلر استفاده کنیم چیست؟&lt;/li&gt;
+&lt;li&gt;وظایف اسمبلر را توضیح دهید؟&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/compiler/LangProcessors.svg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
@@ -129,7 +384,26 @@
         <guid>http://gictor.ir/posts/compiler/introduction/</guid>
         <description>امروزه زبان های برنامه نویسی یک ابزار برای نمایش محاسبات به انسان و ماشین هستند و همونطور که می دونیم دنیای ما بیش از پیش به زبان های برنامه نویسی وابستگی داره چون دنیا رو کامپیوتر ها اداره میکنند و نرم افزار هایی که روی آنها در حال اجرا هستند با یک زبان برنامه نویسی نوشته شده اند
 تعریف کامپایلر اما قبل از این که یک برنامه بتونه اجرا بشه اول از همه باید به چیزی که کامپیوتر میتونه اجرا کنه ترجمه بشه به نرم افزار سیستمی که این ترجمه رو انجام میده کامپایلر می گویند</description>
-        
+        <content:encoded>&lt;p&gt;امروزه زبان های برنامه نویسی یک ابزار برای نمایش محاسبات به انسان و ماشین هستند و همونطور که می دونیم دنیای ما بیش از پیش به زبان های برنامه نویسی وابستگی داره چون دنیا رو کامپیوتر ها اداره میکنند و نرم افزار هایی که روی آنها در حال اجرا هستند با یک زبان برنامه نویسی نوشته شده اند&lt;/p&gt;
+&lt;h3 id=&#34;تعریف-کامپایلر&#34;&gt;تعریف کامپایلر&lt;/h3&gt;
+&lt;p&gt;اما قبل از این که یک برنامه بتونه اجرا بشه اول از همه باید به چیزی که کامپیوتر میتونه اجرا کنه ترجمه بشه به نرم افزار سیستمی که این ترجمه رو انجام میده کامپایلر می گویند&lt;/p&gt;
+&lt;p&gt;در این سری به چگونگی ساختن یک کامپایلر و طراحی اون به طور خلاصه می پردازیم و مفاهیم پایه و ایده هایی که در ساختن یک مترجم برای زبان ها و ماشین های مختلف استفاده میشه رو یاد خواهیم گرفت&lt;/p&gt;
+&lt;h3 id=&#34;فواید-دانستن-این-علم&#34;&gt;فواید دانستن این علم&lt;/h3&gt;
+&lt;p&gt;علاوه بر کامپایلرها، اصول و تکنیک های طراحی کامپایلر در زمینه های دیگر علوم کامپیوتر قابل استفاده هست و یک دانشمند کامپیوتر یا برنامه نویس ممکن است در حرفه خود چندین بار از این مفاهیم استفاده کند&lt;/p&gt;
+&lt;h3 id=&#34;پیش-نیازها&#34;&gt;پیش نیازها&lt;/h3&gt;
+&lt;p&gt;همچنین یادگیری نوشتن کامپایلر علوم مختلفی رو در بر میگیره که از مهم ترین آنها میتوان به موارد زیر اشاره کرد&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;آشنایی با زبان های برنامه نویسی&lt;/li&gt;
+&lt;li&gt;معماری کامپیوتر و ماشین ها&lt;/li&gt;
+&lt;li&gt;نظریه زبان ها&lt;/li&gt;
+&lt;li&gt;الگوریتم ها&lt;/li&gt;
+&lt;li&gt;مهندسی نرم افزار&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;مباحث-فصل-اول&#34;&gt;مباحث فصل اول&lt;/h3&gt;
+&lt;p&gt;در این فصل مقدماتی شکل های مختلف مترجم های زبان (language translators) معرفی می شوند و یک مرور کلی بر یک نمونه کامپایلر خواهیم داشت و درباره مباحث ترند زبان های برنامه نویسی و روند آنها و معماری کامپیوتر و ماشین که کامپایلر ها رو در بر گرفتند بحث خواهیم کرد همچنین نگاهی بر رابطه بین طراحی کامپایلر و علوم کامپیوتر خواهیم داشت&lt;br /&gt;
+کامپایلر ها فرا تر از کامپایل یک برنامه کاربرد های دیگری هم دارند که در ادامه به طور خلاصه بررسی می کنیم.&lt;br /&gt;
+در پایان فصل، مفاهیم مهم زبان های برنامه نویسی که برای مطالعه کامپایلر ها نیاز داریم رو به طور خلاصه یاد میگیرم&lt;/p&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/compiler/compiler.svg" medium="image"><media:title type="html">featured image</media:title></media:content>
         

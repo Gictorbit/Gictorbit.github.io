@@ -15,6 +15,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Tue, 28 Jan 2020 16:43:24 +0330</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/en/showcase/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,7 +31,7 @@
         <atom:modified>Tue, 28 Jan 2020 16:49:45 +0330</atom:modified>
         <guid>http://gictor.ir/en/showcase/projects/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>victor</dc:creator>
         
         

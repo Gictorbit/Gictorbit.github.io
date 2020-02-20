@@ -15,6 +15,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Fri, 31 Jan 2020 20:13:37 +0330</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/tags/%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C-%D9%81%D8%A7%DB%8C%D9%84-%D9%87%D8%A7/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,7 +31,70 @@
         <atom:modified>Fri, 31 Jan 2020 20:13:37 +0330</atom:modified>
         <guid>http://gictor.ir/posts/gnulinux/share-from-terminal/</guid>
         <description>شاید برای شما هم اتفاق افتاده باشه که وسط کار کردن در ترمینال خودتون به فایلی برخورد کنید و بخواهید اون رو با دیگران به اشتراک بذارید یک روش مرسوم این هست که مرورگر رو باز کنید و با استفاده از یک سایت اشتراک گذاری فایل یا سرویس های معروف مثل دراپ باکس یا گوگل درایو و&amp;hellip; فایل خودتون رو آپلود کنید یا در کم دردسر ترین حالت با شبکه های اجتماعی اون فایل رو به اشتراک بگذارید اما یک روش ساده تر و سریع تر هم وجود داره که در ادامه اون رو بررسی میکنیم</description>
-        
+        <content:encoded>&lt;p&gt;&lt;img src=&#34;http://gictor.ir/images/post-image/2020/transfer.jpg&#34; alt=&#34;share files with transfer.sh&#34; /&gt;&lt;br /&gt;
+شاید برای شما هم اتفاق افتاده باشه که وسط کار کردن در ترمینال خودتون به فایلی برخورد کنید و بخواهید اون رو با دیگران به اشتراک بذارید یک روش مرسوم این هست که مرورگر رو باز کنید و با استفاده از یک سایت اشتراک گذاری فایل یا سرویس های معروف مثل دراپ باکس یا گوگل درایو و&amp;hellip; فایل خودتون رو آپلود کنید یا در کم دردسر ترین حالت با شبکه های اجتماعی اون فایل رو به اشتراک بگذارید اما یک روش ساده تر و سریع تر هم وجود داره که در ادامه اون رو بررسی میکنیم&lt;/p&gt;
+&lt;h2 id=&#34;transfersh&#34;&gt;transfer.sh&lt;/h2&gt;
+&lt;p&gt;این راه حل سریع و ساده برای اشتراک گذاری فایل ها از کامند لاین یا ترمینال استفاده از  &lt;a href=&#34;https://transfer.sh&#34;&gt;transfer.sh&lt;/a&gt; هست فقط کافیه فایلی که میخواهید رو با دستورات زیر آپلود کنید و در نتیجه لینک اشتراک گذاری فایل به عنوان خروجی چاپ میشه&lt;/p&gt;
+&lt;h3 id=&#34;قابلیت-ها&#34;&gt;قابلیت ها&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;دسترسی از خط فرمان&lt;/li&gt;
+&lt;li&gt;رایگان بودن&lt;/li&gt;
+&lt;li&gt;آپلود فایل تا حجم 10GB&lt;/li&gt;
+&lt;li&gt;ذخیره فایل ها تا 14 روز&lt;/li&gt;
+&lt;li&gt;رمزنگاری فایل ها&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;آپلود-فایل-با-curl&#34;&gt;آپلود فایل با curl&lt;/h3&gt;
+&lt;p&gt;یک ابزار معروف برای انتقال دیتا بین سرور و کلاینت با پروتکل های مختلف &lt;code&gt;curl&lt;/code&gt; هست میتونیم برای آپلود فایل ازش استفاده کنیم&lt;br /&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34; data-dir=&#34;rtl&#34;&gt;قبل از هرچیز از نصب بودن &lt;strong&gt;curl&lt;/strong&gt; در سیستم عامل خود مطمئن باشید&lt;/div&gt;
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&amp;gt; curl --upload-file ./hello.txt https://transfer.sh/hello.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;&lt;code class=&#34;language-result&#34; data-lang=&#34;result&#34;&gt;https://transfer.sh/66nb8/hello.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;با اجرای دستور بالا در صورت موفقیت آمیز بودن لینک دانلود به عنوان خروجی دستور نمایش داده میشه&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;پارامتر &lt;code&gt;upload-file--&lt;/code&gt; برای آپلود فایل در curl استفاده میشه&lt;/li&gt;
+&lt;li&gt;آرگومان &lt;code&gt;hello.txt/.&lt;/code&gt; در واقع مسیر فایلی هست که قصد اشتراک گذاری اون رو داریم و باید حتما وجود داشته باشه&lt;/li&gt;
+&lt;li&gt;آرگومان سوم لینک سروری هست که میخواهیم فایل رو داخلش آپلود کنیم که در مثال ما &lt;code&gt;https://transfer.sh&lt;/code&gt; هست اما باید در ادامه اسم فایل رو که &lt;code&gt;hello.txt&lt;/code&gt; هست اضافه کنیم&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;تعریف-alias&#34;&gt;تعریف alias&lt;/h3&gt;
+&lt;p&gt;اما همینطور که واضحه تایپ کردن این هم خودش میتونه وقت گیر باشه و شاید موقع آپلود دستور دقیق برای آپلود فایل یادمون نیاد برای همین میتونیم برای این دستور یک &lt;code&gt;Alias&lt;/code&gt; تعریف کنیم که کار مارو خیلی آسان خواهد کرد برای این کار تکه کد زیر رو کپی کنید و در انتهای فایل &lt;code&gt;zshrc.&lt;/code&gt; یا &lt;code&gt;bashrc.&lt;/code&gt; اضافه کنید&lt;br /&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34; data-dir=&#34;rtl&#34;&gt;این دو فایل در شاخه &lt;strong&gt;/home/$USER&lt;/strong&gt; شما هستند و بسته به اینکه zsh دارید یا bash باید یکی از این فایل ها رو ویرایش کنید&lt;/div&gt;
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;transfer() { if [ $# -eq 0 ]; then echo -e &amp;quot;No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md&amp;quot;; return 1; fi
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename &amp;quot;$1&amp;quot; | sed -e &#39;s/[^a-zA-Z0-9._-]/-/g&#39;); curl --progress-bar --upload-file &amp;quot;$1&amp;quot; &amp;quot;https://transfer.sh/$basefile&amp;quot; &amp;gt;&amp;gt; $tmpfile; else curl --progress-bar --upload-file &amp;quot;-&amp;quot; &amp;quot;https://transfer.sh/$1&amp;quot; &amp;gt;&amp;gt; $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;بعد از اضافه کردن قطعه کد بالا می تونید با دستور &lt;code&gt;transfer&lt;/code&gt; فایل های خودتون رو به سادگی آپلود کنید برای مثال:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;transfer hello.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;دانلود-فایل-ها&#34;&gt;دانلود فایل ها&lt;/h3&gt;
+&lt;p&gt;برای دانلود فایل در ترمینال هم می تونید با دستور زیر از &lt;code&gt;curl&lt;/code&gt; استفاده کنید :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl https://transfer.sh/66nb8/hello.txt -o hello.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;آرگومان اول لینک اشتراک گذاری فایل آپلود شده هست&lt;/li&gt;
+&lt;li&gt;پارامتر &lt;code&gt;o-&lt;/code&gt;مختصر output است و باید اسم فایل خروجی رو برای دانلود و ذخیره به اون پاس بدیم که در مثال ما &lt;code&gt;hello.txt&lt;/code&gt; هست&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;box&#34;&gt;
+برای دیدن مثال ها و اطلاعات بیشتر به وبسایت &lt;a href=&#34;https://transfer.sh&#34;&gt;transfer.sh&lt;/a&gt; مراجعه کنید
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/2020/share.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         

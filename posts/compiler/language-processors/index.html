@@ -213,9 +213,9 @@
     var notAllowedTitleIds = null;
 
     
-    var tocFolding = JSON.parse("null");
+    var tocFolding = JSON.parse("false");
     
-    var tocLevels = JSON.parse("null");
+    var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
     
     if (tocLevels) {
       tocLevels = tocLevels.toString();
@@ -1328,7 +1328,7 @@ if (!doNotTrack) {
 </div>
 
         <div class="wrapper" data-type="posts" data-kind="page">
-            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="rtl">
+            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
     <a href="/" title="خانه" rel="home" class="navbar__logo-link">
@@ -1442,15 +1442,7 @@ if (!doNotTrack) {
       
       
       
-        <a href="/posts" class="navbar__menu-item navbar__slide-down active" dir="rtl" data-ani="true">پست ها</a>
-      
-    
-      
-      
-      
-      
-      
-        <a href="/archive" class="navbar__menu-item navbar__slide-down " dir="rtl" data-ani="true">آرشیو</a>
+        <a href="/about" class="navbar__menu-item navbar__slide-down " dir="rtl" data-ani="true">درباره</a>
       
     
       
@@ -1466,7 +1458,7 @@ if (!doNotTrack) {
       
       
       
-        <a href="/about" class="navbar__menu-item navbar__slide-down " dir="rtl" data-ani="true">درباره</a>
+        <a href="/showcase" class="navbar__menu-item navbar__slide-down " dir="rtl" data-ani="true">پروژه ها</a>
       
     
       
@@ -1482,7 +1474,15 @@ if (!doNotTrack) {
       
       
       
-        <a href="/showcase" class="navbar__menu-item navbar__slide-down " dir="rtl" data-ani="true">پروژه ها</a>
+        <a href="/archive" class="navbar__menu-item navbar__slide-down " dir="rtl" data-ani="true">آرشیو</a>
+      
+    
+      
+      
+      
+      
+      
+        <a href="/posts" class="navbar__menu-item navbar__slide-down active" dir="rtl" data-ani="true">پست ها</a>
       
     
   </div>
@@ -2429,7 +2429,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var hideToc = JSON.parse("false");
     var tocFlexbox = document.querySelector('.toc__flexbox');
     var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
-    var tocFolding = JSON.parse("null");
+    var tocFolding = JSON.parse("false");
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
@@ -3070,6 +3070,10 @@ document.addEventListener('DOMContentLoaded', function () {
     <hr />
 
     <div class="basicflex">
+        
+            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+        
+            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
         
     </div>
 

@@ -15,6 +15,7 @@
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
     <lastBuildDate>Sun, 16 Feb 2020 23:16:55 +0330</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,7 +31,7 @@
         
         <guid>http://gictor.ir/categories/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1-%D9%81%D8%B5%D9%841/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>victor</dc:creator>
         
         
@@ -48,7 +49,7 @@
         
         <guid>http://gictor.ir/categories/%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%DB%8C/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>victor</dc:creator>
         
         
@@ -66,7 +67,7 @@
         
         <guid>http://gictor.ir/categories/%DA%AF%D9%86%D9%88/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>victor</dc:creator>
         
         

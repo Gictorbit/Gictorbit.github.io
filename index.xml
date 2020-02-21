@@ -195,7 +195,28 @@ id1 = t3
 &lt;p&gt;فاز بهینه ساز کد (code optimizer) تلاش میکند تا کد میانی تولید شده رو بهینه تر کند تا کد ماشین در نهایت نتیجه بهتری داشته باشد برای مثال درصورت تشخیص بهینه ساز ممکن است ترد (thread) جدید برای اجرا به برنامه اضافه کند تا سرعت اجرا بالاتر برود یا مثلا بهینه ساز میفهمد که دستور &lt;code&gt;inttofloat&lt;/code&gt; برای تبدیل عدد صحیح به اعشاری جواب یکسان دارد پس برای جلوگیری از اجرای آن در هر بار این عدد رو با 60.0 در زمان کامپایل تعویض میکند در نتیجه محاسبه عدد اعشاری در زمان اجرا انجام نمی شود همینطور بهینه ساز تشخیص میدهد که  &lt;code&gt;t3&lt;/code&gt; فقط یکبار استفاده شده تا مقدار خودش رو در &lt;code&gt;id1&lt;/code&gt; بریزد و کد میانی تولید شده میتواند کوتاه تر باشد در نتیجه کد بالا میتواند به شکل زیر کوتاه تر شود&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;t1 = id3 * 60.0
 id1 = id2 + t1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;البته این یک مثال ساده هست برای فهم این موضوع واضح هست که کامپایلر ها در بهینه سازی اعمالی که انجام میدهند ممکن هست متفاوت و پیچیده تر باشد&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;البته این یک مثال ساده هست برای فهم این موضوع ، واضح هست که کامپایلر ها در بهینه سازی اعمالی که انجام می دهند ممکن هست متفاوت و پیچیده تر باشد&lt;/p&gt;
+&lt;h2 id=&#34;تولید-کننده-کد-code-generator&#34;&gt;تولید کننده کد (Code generator)&lt;/h2&gt;
+&lt;p&gt;تولید کننده کد به عنوان ورودی کد میانی که توسط برنامه مبداء تولید شده رو تحویل میگیرد و به زبان مقصد نگاشت می کند اگر زبان مقصد زبان ماشین باشد رجیستر ها و خانه های حافظه توسط متغیر های برنامه انتخاب می شوند سپس دستورالعمل های میانی هرکدام ممکن است به چندین دستوالعمل زبان ماشین ترجمه بشوند یکی از مهم ترین وظایف این فاز تخصیص دادن رجیستر ها برای نگهداری متغیر ها هست برای مثال استفاده از رجیستر های R1 و R2 ، در این مرحله کد میانی بهینه شده که از فاز قبلی تحویل گرفته شده به کد اسمبلی زیر تبدیل می شود&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;nf&#34;&gt;LDF&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;R2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;id3&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;MULF&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;R2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;R2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;	&lt;span class=&#34;c&#34;&gt;#60.0
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;LDF&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;R1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;id2&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;ADDF&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;R1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;R1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;R2&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;STF&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;id1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;	&lt;span class=&#34;no&#34;&gt;R1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;اولین عملوند یا &lt;code&gt;operand&lt;/code&gt; هر دستور نشان دهنده مقصد است (یعنی نتیجه این دستور در رجیستری که مشخص شده ریخته میشود مثلا در دستور اول عملوند اول R2 هست یعنی id3 در R2 بارگزاری میشود) حرف &lt;code&gt;F&lt;/code&gt; در هر دستور به ما میگوید که نوع متغیر یک عدد &lt;code&gt;float&lt;/code&gt; یا اعشاری هست.&lt;/p&gt;
+&lt;h5 id=&#34;توضیح-کد-اسمبلی-بالا&#34;&gt;توضیح کد اسمبلی بالا&lt;/h5&gt;
+&lt;p&gt;کد بالا اول محتوای آدرس &lt;code&gt;id3&lt;/code&gt; رو در رجیستر &lt;code&gt;R2&lt;/code&gt; بارگزاری (load)  میکند سپس محتوای رجیستر R2 رو با عدد اعشاری ثابت &lt;code&gt;60.0&lt;/code&gt; ضرب می کند و نتیجه رو دوباره در رجیستر R2 می ریزد علامت &lt;code&gt;#&lt;/code&gt; بیانگر این هست که عدد 60 ثابت هست. سومین دستور متغیر &lt;code&gt;id2&lt;/code&gt; رو در رجیستر &lt;code&gt;R1&lt;/code&gt; بارگزاری می کند و چهارمین دستور رجیستر R1 و R2 (که نتیجه ضرب 60.0 و id3 داخلش هست) رو با هم جمع می کند و نتیجه رو در رجیستر R1 می ریزد و در نهایت مقداری که در رجیستر &lt;code&gt;R1&lt;/code&gt; هست در آدرس &lt;code&gt;id1&lt;/code&gt; ذخیره می شود و میبینید که دستور سطح بالای ما چگونه طی فاز های مختلفی به دستور زبان ماشین و سطح پایینی تبدیل شد البته در این بحث مسائل مهم تخصیص حافظه یا ( storage allocation ) برای متغیر ها نادیده گرفته شده اگر در آینده مبحث رو جلو بردیم می بینیم که سازماندهی حافظه در زمان اجرا بستگی به زبانی که کامپایل شده  دارد و همچنین تصمیمات تخصیص دادن حافظه در حین تولید کد میانی یا کد نهایی گرفته می شود&lt;/p&gt;
 </content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/compiler/compilerStructure.svg" medium="image"><media:title type="html">featured image</media:title></media:content>

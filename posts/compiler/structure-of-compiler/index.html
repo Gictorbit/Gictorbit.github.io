@@ -1226,7 +1226,7 @@
 <meta property="twitter:title" content="ساختار کامپایلر | structure of compiler">
 <meta property="twitter:description" content="اصول طراحی کامپایلر فصل اول: ساختار کامپایلر (structure of compiler)">
 
-<meta name="generator" content="Hugo 0.63.2" />
+<meta name="generator" content="Hugo 0.65.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1325,12 +1325,6 @@ if (!doNotTrack) {
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }
-        
-        function resetHeight() {
-            document.body.style.height = window.innerHeight + "px";
-        }
-        window.addEventListener("resize", resetHeight);
-        resetHeight();
     </script>
     <div id="container">
         
@@ -1699,12 +1693,12 @@ if (!doNotTrack) {
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
     <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">number</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">)</span><span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">number</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">){</span>
         <span class="n">result</span><span class="o">=</span><span class="n">number</span><span class="o">*</span><span class="mi">60</span><span class="p">;</span>
     <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-	<span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;</span><span class="s">Error</span><span class="s">&#34;</span><span class="p">)</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Error&#34;</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>

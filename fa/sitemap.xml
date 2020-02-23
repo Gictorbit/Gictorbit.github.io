@@ -3,21 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://gictor.ir/</loc>
-    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://gictor.ir/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://gictor.ir/"
-                />
-  </url>
-  
-  <url>
     <loc>http://gictor.ir/tags/structure-of-compiler/</loc>
     <lastmod>2020-02-16T23:16:55+03:30</lastmod>
   </url>
@@ -28,36 +13,6 @@
   </url>
   
   <url>
-    <loc>http://gictor.ir/tags/</loc>
-    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://gictor.ir/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://gictor.ir/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://gictor.ir/categories/</loc>
-    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://gictor.ir/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://gictor.ir/categories/"
-                />
-  </url>
-  
-  <url>
     <loc>http://gictor.ir/tags/%D8%B3%D8%A7%D8%AE%D8%AA%D8%A7%D8%B1-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1/</loc>
     <lastmod>2020-02-16T23:16:55+03:30</lastmod>
   </url>
@@ -65,21 +20,6 @@
   <url>
     <loc>http://gictor.ir/posts/compiler/structure-of-compiler/</loc>
     <lastmod>2020-02-16T23:16:55+03:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gictor.ir/series/</loc>
-    <lastmod>2020-02-16T23:16:55+03:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://gictor.ir/en/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://gictor.ir/series/"
-                />
   </url>
   
   <url>
@@ -163,11 +103,6 @@
   </url>
   
   <url>
-    <loc>http://gictor.ir/categories/%DA%AF%D9%86%D9%88/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</loc>
-    <lastmod>2020-02-14T22:15:50+03:30</lastmod>
-  </url>
-  
-  <url>
     <loc>http://gictor.ir/tags/steghide/</loc>
     <lastmod>2020-01-31T20:30:53+03:30</lastmod>
   </url>
@@ -210,6 +145,21 @@
   <url>
     <loc>http://gictor.ir/tags/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</loc>
     <lastmod>2020-01-31T20:13:37+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/series/</loc>
+    <lastmod>2020-01-28T21:10:17+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/series/"
+                />
   </url>
   
   <url>
@@ -308,6 +258,21 @@
   </url>
   
   <url>
+    <loc>http://gictor.ir/</loc>
+    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/"
+                />
+  </url>
+  
+  <url>
     <loc>http://gictor.ir/about/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -320,6 +285,54 @@
                 hreflang="fa"
                 href="http://gictor.ir/about/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/</loc>
+    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/categories/</loc>
+    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/tags/index/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://gictor.ir/en/tags/index/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://gictor.ir/tags/index/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://gictor.ir/categories/%DA%AF%D9%86%D9%88/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3/</loc>
   </url>
   
 </urlset>

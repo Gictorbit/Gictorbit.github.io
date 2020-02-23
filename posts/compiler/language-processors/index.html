@@ -1226,7 +1226,7 @@
 <meta property="twitter:title" content="پردازنده های زبان | Language Processors">
 <meta property="twitter:description" content="اصول طراحی کامپایلر فصل اول: بررسی پردازنده های زبان (Language Processors)">
 
-<meta name="generator" content="Hugo 0.63.2" />
+<meta name="generator" content="Hugo 0.65.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1325,12 +1325,6 @@ if (!doNotTrack) {
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }
-        
-        function resetHeight() {
-            document.body.style.height = window.innerHeight + "px";
-        }
-        window.addEventListener("resize", resetHeight);
-        resetHeight();
     </script>
     <div id="container">
         
@@ -1702,15 +1696,15 @@ if (!doNotTrack) {
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#</span><span class="cp">include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span><span class="cp"></span><span class="cp">#</span><span class="cp">define PI 3.1415</span><span class="cp">
-</span><span class="cp"></span><span class="cp">#</span><span class="cp">define circleArea(r) (PI*r*r)</span><span class="cp">
-</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#define PI 3.1415
+</span><span class="cp">#define circleArea(r) (PI*r*r)
+</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kt">float</span> <span class="n">radius</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;</span><span class="s">Enter the radius: </span><span class="s">&#34;</span><span class="p">)</span><span class="p">;</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;</span><span class="s">%f</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">radius</span><span class="p">)</span><span class="p">;</span>
-    <span class="n">area</span> <span class="o">=</span> <span class="n">circleArea</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;</span><span class="s">Area = %.2f</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Enter the radius: &#34;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%f&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">radius</span><span class="p">);</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">circleArea</span><span class="p">(</span><span class="n">radius</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Area = %.2f&#34;</span><span class="p">,</span> <span class="n">area</span><span class="p">);</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>

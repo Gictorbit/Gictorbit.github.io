@@ -14,7 +14,7 @@
     <managingEditor>gictorbit@gmail.com (victor)</managingEditor>
     <webMaster>gictorbit@gmail.com (victor)</webMaster>
     <copyright>©{year} | license </copyright>
-    <lastBuildDate>Sun, 26 Jan 2020 19:45:41 +0330</lastBuildDate>
+    <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="http://gictor.ir/en/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -66,6 +66,24 @@
         <author>gictorbit@gmail.com (victor)</author>
         
         <guid>http://gictor.ir/en/tags/unlimited-storage/</guid>
+        <description></description>
+        <content:encoded></content:encoded>
+        <dc:creator>victor</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>index</title>
+        <link>http://gictor.ir/en/tags/index/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>gictorbit@gmail.com (victor)</author>
+        
+        <guid>http://gictor.ir/en/tags/index/</guid>
         <description></description>
         <content:encoded></content:encoded>
         <dc:creator>victor</dc:creator>

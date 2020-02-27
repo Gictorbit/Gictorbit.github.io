@@ -227,14 +227,14 @@ chmod +x PhotoshopSetup.sh
     codetabContents[0].style.display = &#39;block&#39;;
   }
 &lt;/script&gt;&lt;br /&gt;
-برای دانلود سورس کد یا پکیج برنامه روی download کلیک کنید، همچنین اگر کاربر ویندوز هستید میتونید نسخه &lt;code&gt;GUI&lt;/code&gt; برنامه رو نصب کنید&lt;br /&gt;
-&lt;a href=&#34;http://steghide.sourceforge.net/download.php&#34; class=&#34;button&#34; style=&#34;width: 100px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
+برای دانلود سورس کد یا پکیج برنامه روی download کلیک کنید، همچنین اگر کاربر ویندوز هستید میتونید نسخه &lt;code&gt;GUI&lt;/code&gt; برنامه رو نصب کنید&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://steghide.sourceforge.net/download.php&#34; class=&#34;button&#34; style=&#34;width: 150px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
   &lt;span class=&#34;button__text&#34;&gt;
-    download
+    Download
   &lt;/span&gt;
-&lt;/a&gt; &lt;a href=&#34;http://sourceforge.net/projects/steghideui&#34; class=&#34;button&#34; style=&#34;width: 100px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
+&lt;/a&gt; &lt;a href=&#34;http://sourceforge.net/projects/steghideui&#34; class=&#34;button&#34; style=&#34;width: 150px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
   &lt;span class=&#34;button__text&#34;&gt;
-    steghideui
+    SteghideGui
   &lt;/span&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;منطق&#34;&gt;منطق&lt;/h3&gt;
@@ -335,7 +335,8 @@ wrote extracted data to &lt;span class=&#34;s2&#34;&gt;&amp;#34;password.txt&amp
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;man steghide
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content:encoded>
+&lt;/div&gt;&lt;p&gt;200&lt;/p&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/2020/hide.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         

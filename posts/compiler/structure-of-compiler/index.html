@@ -1416,49 +1416,73 @@ if (!doNotTrack) {
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/about">درباره</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/about">درباره</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/tutorial">آموزش</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/tutorial">آموزش</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/showcase">پروژه ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/showcase">پروژه ها</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/categories">دسته بندی ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/categories">دسته بندی ها</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/archive">آرشیو</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/archive">آرشیو</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item active">
-        <a href="/posts">پست ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item active">
+          <a href="/posts">پست ها</a>
+        </li>
+      
+      
     
 
     
@@ -1601,11 +1625,10 @@ if (!doNotTrack) {
   
 </nav>
   
-  <noscript>
-    لطفا برای نمایش محتوا اجرای جاوا اسکریپت را فعال کنید
-  </noscript>
-  <div class="single hide">
-    <script>document.querySelector('.single').classList.remove('hide')</script>
+  
+  <div class="single ">
+    <div class="single__nojs">لطفا برای نمایش محتوا اجرای جاوا اسکریپت را فعال کنید</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="true">ساختار کامپایلر | structure of compiler</h2>
     <div class="single__meta">
       
@@ -1653,13 +1676,14 @@ if (!doNotTrack) {
 و به مراحل ساخت <code>Back end</code> یا عقب کامپایلر می گویند</p>
 </blockquote>
 <p>اگر فرایند کامپایل رو دقیق تر بررسی کنیم می بینیم که این فرایند از فاز های پشت سرهم تشکیل شده و هر فاز کد مبدا رو بررسی میکند و به فاز بعد ارائه میکند برای مثال یک نمونه از تجزیه فاز های کامپایلر رو در شکل زیر می بینید</p>
+
+
 <figure >
   
-    
-    <img data-src="/images/post-image/compiler/compilerStructure1.png" alt="فاز های کامپایلر" data-caption="Phases of a compiler" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" width="500px" height="500px"/>
+    <img data-src="/images/post-image/compiler/compilerStructure1.png" alt="فاز های کامپایلر" data-caption="Phases of a compiler" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='500px' height='500px' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:500px;height:500px;"/>
     
   
-  <figcaption style="text-align: center;">
+    <figcaption style="text-align: center;">
     <strong>فاز های کامپایلر</strong>:
     
     Phases of a compiler
@@ -1670,6 +1694,7 @@ if (!doNotTrack) {
   </figcaption>
   
 </figure>
+
 <p><div class="alert alert-info" role="alert" data-dir="rtl">جدول علائم یا همان  <em>symbol table</em> که اطلاعاتی درباره کل برنامه مبدا رو ذخیره میکند توسط همه ی فاز های کامپایل استفاده میشود و همه فاز ها به آن دسترسی دارند</div>
 <br />
 در کنار جدول علائم یک بخش دیگر به نام کنترل کننده خطا یا  <code>error handler</code> هم وجود دارد و فاز ها از آن استفاده می کنند<br />
@@ -1739,13 +1764,14 @@ if (!doNotTrack) {
 <p>کاراکتر های خالی که بین lexeme ها فاصله ایجاد کرده اند توسط تحلیلگر لغوی نادیده گرفته می شوند دستور انتساب یا (assignment statement) بالا بعد از تحلیل لغوی به ترتیبی از توکن ها تبدیل می شود</p>
 <pre><code>&lt;id,1&gt;  &lt; = &gt;  &lt;id,2&gt;  &lt; + &gt;  &lt;id,3&gt;  &lt; * &gt;  &lt;60&gt;
 </code></pre><p>در مثال ما نام های = و + و* برای راحتی در توکن ها به عنوان نام های معادل assignment و addition و multiplication استفاده شده اند.<br />
+
+
 <figure >
   
-    
-    <img data-src="/images/post-image/compiler/compilerStructure2.png" alt="کامپایل دستور انتساب" data-caption="translation of an assignment statement" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" width="500px" height="500px"/>
+    <img data-src="/images/post-image/compiler/compilerStructure2.png" alt="کامپایل دستور انتساب" data-caption="translation of an assignment statement" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='500px' height='500px' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:500px;height:500px;"/>
     
   
-  <figcaption style="text-align: center;">
+    <figcaption style="text-align: center;">
     <strong>کامپایل یک دستور انتساب</strong>:
     
     translation of an assignment statement
@@ -1755,7 +1781,8 @@ if (!doNotTrack) {
     
   </figcaption>
   
-</figure></p>
+</figure>
+</p>
 <h2 id="تحلیل-گر-نحوی-syntax-analyser">تحلیل گر نحوی (Syntax analyser)</h2>
 <p>فاز دوم کامپایلر syntax analyzer یا پارس <code>parsing</code> نام دارد. پارسر <code>parser</code> از اولین جزء توکن که توسط تحلیلگر لغوی تولید شده استفاده می کند و یک درخت از ترتیب قرار گیری توکن ها می سازد به این درخت <code>syntax tree</code> می گویند. این درخت ساختار گرامری یک دستور رو بر اساس توکن ها نشون میده در واقع در این درخت برگ ها عملوند هستند و راس های آن ها عملگر هستند که اولویت عملگر ها رو هم نشان می دهد  طبق درخت تولید شده در مثال ما اول باید عدد 60 در توکن &lt;3 , id&gt; که همان متغیر rate  هست ضرب شود و نتیجه آن با توکن &lt; 2 , id &gt; که همان initial هست جمع شود و سپس در توکن  &lt; 1 , id &gt; که همان position هست ریخته شود تحلیل گر نحوی چک میکند که ترتیب قرار گیری توکن ها درست باشد به عبارتی دیگر دستور ما طبق الگوی از قبل تعریف شده باشد و سپس درخت سینتکس رو به عنوان خروجی به فاز بعدی یعنی تحلیلگر معنایی یا semantic تحویل می دهد. این کار با استفاده از زبان های مستقل از متن انجام می شود</p>
 <h2 id="تحلیلگر-معنایی-semantic-analysis">تحلیلگر معنایی (Semantic Analysis)</h2>
@@ -1811,6 +1838,7 @@ id1 = id2 + t1
 همچنین می توانیم برای ماشین های مختلف چندین back-end رو با front-end یک زبان ترکیب کنیم و کامپایلری بسازیم که برای ماشین های مختلف زبان ماشین قابل اجرا تولید کند.</p>
 
     </article>
+    
     <script>
   'use strict';
   

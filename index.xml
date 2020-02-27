@@ -68,13 +68,14 @@
 و به مراحل ساخت &lt;code&gt;Back end&lt;/code&gt; یا عقب کامپایلر می گویند&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;اگر فرایند کامپایل رو دقیق تر بررسی کنیم می بینیم که این فرایند از فاز های پشت سرهم تشکیل شده و هر فاز کد مبدا رو بررسی میکند و به فاز بعد ارائه میکند برای مثال یک نمونه از تجزیه فاز های کامپایلر رو در شکل زیر می بینید&lt;/p&gt;
+
+
 &lt;figure &gt;
   
-    
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure1.png&#34; alt=&#34;فاز های کامپایلر&#34; data-caption=&#34;Phases of a compiler&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure1.png&#34; alt=&#34;فاز های کامپایلر&#34; data-caption=&#34;Phases of a compiler&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;500px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:500px;&#34;/&gt;
     
   
-  &lt;figcaption style=&#34;text-align: center;&#34;&gt;
+    &lt;figcaption style=&#34;text-align: center;&#34;&gt;
     &lt;strong&gt;فاز های کامپایلر&lt;/strong&gt;:
     
     Phases of a compiler
@@ -85,6 +86,7 @@
   &lt;/figcaption&gt;
   
 &lt;/figure&gt;
+
 &lt;p&gt;&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34; data-dir=&#34;rtl&#34;&gt;جدول علائم یا همان  &lt;em&gt;symbol table&lt;/em&gt; که اطلاعاتی درباره کل برنامه مبدا رو ذخیره میکند توسط همه ی فاز های کامپایل استفاده میشود و همه فاز ها به آن دسترسی دارند&lt;/div&gt;
 &lt;br /&gt;
 در کنار جدول علائم یک بخش دیگر به نام کنترل کننده خطا یا  &lt;code&gt;error handler&lt;/code&gt; هم وجود دارد و فاز ها از آن استفاده می کنند&lt;br /&gt;
@@ -154,13 +156,14 @@
 &lt;p&gt;کاراکتر های خالی که بین lexeme ها فاصله ایجاد کرده اند توسط تحلیلگر لغوی نادیده گرفته می شوند دستور انتساب یا (assignment statement) بالا بعد از تحلیل لغوی به ترتیبی از توکن ها تبدیل می شود&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;id,1&amp;gt;  &amp;lt; = &amp;gt;  &amp;lt;id,2&amp;gt;  &amp;lt; + &amp;gt;  &amp;lt;id,3&amp;gt;  &amp;lt; * &amp;gt;  &amp;lt;60&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;در مثال ما نام های = و + و* برای راحتی در توکن ها به عنوان نام های معادل assignment و addition و multiplication استفاده شده اند.&lt;br /&gt;
+
+
 &lt;figure &gt;
   
-    
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure2.png&#34; alt=&#34;کامپایل دستور انتساب&#34; data-caption=&#34;translation of an assignment statement&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure2.png&#34; alt=&#34;کامپایل دستور انتساب&#34; data-caption=&#34;translation of an assignment statement&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;500px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:500px;&#34;/&gt;
     
   
-  &lt;figcaption style=&#34;text-align: center;&#34;&gt;
+    &lt;figcaption style=&#34;text-align: center;&#34;&gt;
     &lt;strong&gt;کامپایل یک دستور انتساب&lt;/strong&gt;:
     
     translation of an assignment statement
@@ -170,7 +173,8 @@
     
   &lt;/figcaption&gt;
   
-&lt;/figure&gt;&lt;/p&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;تحلیل-گر-نحوی-syntax-analyser&#34;&gt;تحلیل گر نحوی (Syntax analyser)&lt;/h2&gt;
 &lt;p&gt;فاز دوم کامپایلر syntax analyzer یا پارس &lt;code&gt;parsing&lt;/code&gt; نام دارد. پارسر &lt;code&gt;parser&lt;/code&gt; از اولین جزء توکن که توسط تحلیلگر لغوی تولید شده استفاده می کند و یک درخت از ترتیب قرار گیری توکن ها می سازد به این درخت &lt;code&gt;syntax tree&lt;/code&gt; می گویند. این درخت ساختار گرامری یک دستور رو بر اساس توکن ها نشون میده در واقع در این درخت برگ ها عملوند هستند و راس های آن ها عملگر هستند که اولویت عملگر ها رو هم نشان می دهد  طبق درخت تولید شده در مثال ما اول باید عدد 60 در توکن &amp;lt;3 , id&amp;gt; که همان متغیر rate  هست ضرب شود و نتیجه آن با توکن &amp;lt; 2 , id &amp;gt; که همان initial هست جمع شود و سپس در توکن  &amp;lt; 1 , id &amp;gt; که همان position هست ریخته شود تحلیل گر نحوی چک میکند که ترتیب قرار گیری توکن ها درست باشد به عبارتی دیگر دستور ما طبق الگوی از قبل تعریف شده باشد و سپس درخت سینتکس رو به عنوان خروجی به فاز بعدی یعنی تحلیلگر معنایی یا semantic تحویل می دهد. این کار با استفاده از زبان های مستقل از متن انجام می شود&lt;/p&gt;
 &lt;h2 id=&#34;تحلیلگر-معنایی-semantic-analysis&#34;&gt;تحلیلگر معنایی (Semantic Analysis)&lt;/h2&gt;
@@ -272,48 +276,57 @@ id1 = id2 + t1
         <atom:modified>Sat, 15 Feb 2020 16:51:15 +0330</atom:modified>
         <guid>http://gictor.ir/posts/compiler/language-processors/</guid>
         <description>کامپایلر (compiler) به زبان ساده کامپایلر برنامه ای هست که می تونه یک برنامه که به یک زبان نوشته شده رو بخونه (زبان مبدا یا source language) و به یک برنامه معادل به زبان دیگه (زبان هدف یا target language) ترجمه کنه
-به شکل زیر دقت کنید یک نقش مهم کامپایلر این هست که هر اروری که در زبان مبدا، طی فرایند ترجمه شناسایی می شود را گزارش کند</description>
+به شکل زیر دقت کنید یک نقش مهم کامپایلر این هست که هر اروری که در زبان مبدا، طی فرایند ترجمه شناسایی می شود را گزارش کند
+  اگر برنامه مقصد (target program) یک برنامه زبان ماشین (machine-language) با قابلیت اجرایی (executable) باشه در این صورت می تواند توسط کاربر برای پردازش ورودی ها و تولید خروجی مورد نظر فراخوانی بشه به دیاگرام زیر که اجرای یک target program را نشان می دهد توجه کنید</description>
         <content:encoded>&lt;h2 id=&#34;کامپایلر-compiler&#34;&gt;کامپایلر (compiler)&lt;/h2&gt;
 &lt;p&gt;به زبان ساده کامپایلر برنامه ای هست که می تونه یک برنامه که به یک زبان نوشته شده رو بخونه (زبان مبدا یا source language) و به یک برنامه معادل به زبان دیگه (زبان هدف یا target language) ترجمه کنه&lt;br /&gt;
 به شکل زیر دقت کنید یک نقش مهم کامپایلر این هست که هر اروری که در زبان مبدا، طی فرایند ترجمه شناسایی می شود را گزارش کند&lt;/p&gt;
-&lt;p&gt;&lt;figure &gt;
-  
-    
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors1.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;300px&#34; height=&#34;300px&#34;/&gt;
-    
-  
-&lt;/figure&gt;&lt;br /&gt;
-اگر برنامه مقصد (target program) یک برنامه زبان ماشین (machine-language) با قابلیت اجرایی (executable) باشه در این صورت می تواند توسط کاربر برای پردازش ورودی ها و تولید خروجی مورد نظر فراخوانی بشه به دیاگرام زیر که اجرای یک target program را نشان می دهد توجه کنید&lt;br /&gt;
+&lt;p&gt;
+
 &lt;figure &gt;
   
-    
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors2.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors1.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;300px&#39; height=&#39;300px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:300px;height:300px;&#34;/&gt;
     
   
-&lt;/figure&gt;&lt;/p&gt;
+&lt;/figure&gt;
+&lt;br /&gt;
+اگر برنامه مقصد (target program) یک برنامه زبان ماشین (machine-language) با قابلیت اجرایی (executable) باشه در این صورت می تواند توسط کاربر برای پردازش ورودی ها و تولید خروجی مورد نظر فراخوانی بشه به دیاگرام زیر که اجرای یک target program را نشان می دهد توجه کنید&lt;br /&gt;
+
+
+&lt;figure &gt;
+  
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors2.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;500px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:500px;&#34;/&gt;
+    
+  
+&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;مفسر-interpreter&#34;&gt;مفسر (interpreter)&lt;/h2&gt;
 &lt;p&gt;یکی دیگه از انواع رایج پردازنده های زبان ( Language Processors ) مفسرها هستند.&lt;br /&gt;
 مفسر به جای تولید target program به عنوان یک برنامه ترجمه شده، بر اساس source program و ورودی های کاربر (input) مستقیما عملیات های مشخص شده رو اجرا می کنه شکل زیر یک مفسر را نشان می دهد&lt;br /&gt;
+
+
 &lt;figure &gt;
   
-    
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors3.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors3.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;500px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:500px;&#34;/&gt;
     
   
-&lt;/figure&gt;&lt;/p&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;معایب-و-مزایای-compiler-و-interpreter&#34;&gt;معایب و مزایای compiler و interpreter&lt;/h2&gt;
 &lt;p&gt;معمولا کد زبان ماشینی که از برنامه هدف (target program) توسط کامپایلر تولید شده است از مفسری که ورودی ها رو به خروجی نگاشت میکنه سریع تر هست در حالی که یک مفسر در تشخیص دادن ارور ها بهتر عمل میکنه چون source program رو خط به خط تفسیر، و دستور به دستور اجرا می کنه&lt;/p&gt;
 &lt;h2 id=&#34;کامپایلر-های-هیبریدی-hybrid-compiler&#34;&gt;کامپایلر های هیبریدی (hybrid compiler)&lt;/h2&gt;
 &lt;p&gt;برای مثال زبان جاوا با ادغام دو نوع پردازنده زبان مفسری و کامپایلری از یک ماشین مجازی بهره می برد یک برنامه مبدا (source program) جاوا ممکن است اول به یک زبان میانی به نام بایت کد (byte code) کامپایل شود سپس توسط ماشین مجازی (virtual machine) که همان مفسر جاوا هست خط به خط تفسیر می شود&lt;br /&gt;
 فایده این روش این هست که بایت کد هایی که در یک ماشین کامپایل می شوند می توانند در یک ماشین دیگر تفسیر شوند یا شاید در سرار یک شبکه&lt;br /&gt;
 البته برای دستیابی به پردازش سریع تر ورودی ها به خروجی، بعضی از انواع کامپایلر های جاوا به نام just-in-time compilers هستند که قبل از این که برنامه های میانی برای پردازش ورودی ها اجرا بشوند بایت کد را بلافاصله به زبان ماشین (صفر و یک) ترجمه می کنند&lt;br /&gt;
+
+
 &lt;figure &gt;
   
-    
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors4.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors4.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;500px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:500px;&#34;/&gt;
     
   
-&lt;/figure&gt;&lt;/p&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;پیش-پردازشگر-preprocessor&#34;&gt;پیش پردازشگر preprocessor&lt;/h2&gt;
 &lt;p&gt;برای تولید یک target program علاوه بر کامپایلر ممکن است چندین برنامه دیگر نیاز شوند همچنین  یک source program ممکن هست به ماژول هایی تقسیم بشه که در فایل های جداگانه ذخیره شده اند.&lt;br /&gt;
 برای تولید برنامه مبدا برنامه مستقل دیگری به نام پیش پردازنده یا preprocessor همه ی ماژول ها رو گرد آوری می کند و یک برنامه مبدا به عنوان خروجی تولید می کند&lt;br /&gt;
@@ -355,13 +368,15 @@ id1 = id2 + t1
 &lt;p&gt;اجرای برنامه ی زبان ماشین توسط سیستم عامل وظیفه لینکر و لودر هست. loader دو وظیفه دارد:&lt;/p&gt;
 &lt;p&gt;1- &lt;em&gt;تخصیص حافظه:&lt;/em&gt; از آنجایی که بخشی از حافظه توسط سیستم عامل و برنامه های دیگه پر شده لودر باید حافظه اصلی رو بررسی کنه و مکانی از حافظه که فضای کافی برای اجرای برنامه زبان ماشین ما داره رو پیدا کنه&lt;/p&gt;
 &lt;p&gt;2- &lt;em&gt;نگاشت آدرس:&lt;/em&gt; وقتی برنامه در ram لود شد باید آدرس نسبی که از صفر شروع شده بود به آدرس واقعی (فیزیکی) در حافظه اصلی نگاشت بشه برای مثال در تصویر زیر فرض کنید برنامه از خانه 2000 به بعد در حافظه اصلی لود می شود پس خانه صفر بلوک کد ماشین به جای آدرس صفر به آدرس 2001 نگاشت می شود&lt;br /&gt;
+
+
 &lt;figure &gt;
   
-    
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors6.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors6.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;500px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:500px;&#34;/&gt;
     
   
-&lt;/figure&gt;&lt;/p&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;منظور از کد ماشین قابل حمل این هست که می تواند در هر مکانی از حافظه اصلی لود بشود ( در هر  بار اجرا ممکن است آدرس های فیزیکی نگاشت شده آن متفاوت باشد مثلا دفعه بعد از خانه 3000 حافظه لود بشود)&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -369,13 +384,15 @@ id1 = id2 + t1
 &lt;p&gt;فایل زبان ماشینی که آدرس نسبی ندارد و نمیتونه در هر مکان از حافظه لود بشه رو فایل غیر قابل حمل میگویند (در بلوک های آن به جای آدرس نسبی آدرس فیزیکی مشخص شده) برای مثال در ویندوز فایل های با پسوند &lt;code&gt;com.&lt;/code&gt; از این دسته فایل ها هستند&lt;/p&gt;
 &lt;h2 id=&#34;linker&#34;&gt;linker&lt;/h2&gt;
 &lt;p&gt;گاهی اوقات فایل های زبان ماشینی که اجرا می کنیم نیاز دارند که از فایل های دیگری که قبلا در حافظه لود شده اند استفاده کنند شبیه فایل ها وتوابع کتابخانه ای مثلا در ویندوز فایل های &lt;code&gt;DLL&lt;/code&gt; یا (dynamic linked library) از این نوع هستند در صورتی که برنامه ما به این کتابخانه ها نیاز داشته باشد یک برنامه به نام &lt;code&gt;linker&lt;/code&gt; یک لینک بین برنامه ما و فایل مورد نیاز برقرار می کند.&lt;/p&gt;
+
+
 &lt;figure &gt;
   
-    
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors5.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;24&#39; height=&#39;24&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; width=&#34;500px&#34; height=&#34;500px&#34;/&gt;
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/languageprocessors5.png&#34;  data-caption=&#34;&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;500px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:500px;&#34;/&gt;
     
   
 &lt;/figure&gt;
+
 &lt;h1 id=&#34;سوالات&#34;&gt;سوالات&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;تفاوت میان کامپایلر و مفسر چیست؟&lt;/li&gt;
@@ -692,14 +709,14 @@ chmod +x PhotoshopSetup.sh
     codetabContents[0].style.display = &#39;block&#39;;
   }
 &lt;/script&gt;&lt;br /&gt;
-برای دانلود سورس کد یا پکیج برنامه روی download کلیک کنید، همچنین اگر کاربر ویندوز هستید میتونید نسخه &lt;code&gt;GUI&lt;/code&gt; برنامه رو نصب کنید&lt;br /&gt;
-&lt;a href=&#34;http://steghide.sourceforge.net/download.php&#34; class=&#34;button&#34; style=&#34;width: 100px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
+برای دانلود سورس کد یا پکیج برنامه روی download کلیک کنید، همچنین اگر کاربر ویندوز هستید میتونید نسخه &lt;code&gt;GUI&lt;/code&gt; برنامه رو نصب کنید&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://steghide.sourceforge.net/download.php&#34; class=&#34;button&#34; style=&#34;width: 150px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
   &lt;span class=&#34;button__text&#34;&gt;
-    download
+    Download
   &lt;/span&gt;
-&lt;/a&gt; &lt;a href=&#34;http://sourceforge.net/projects/steghideui&#34; class=&#34;button&#34; style=&#34;width: 100px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
+&lt;/a&gt; &lt;a href=&#34;http://sourceforge.net/projects/steghideui&#34; class=&#34;button&#34; style=&#34;width: 150px; height: 30px;&#34; data-color=&#34;default&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;
   &lt;span class=&#34;button__text&#34;&gt;
-    steghideui
+    SteghideGui
   &lt;/span&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;منطق&#34;&gt;منطق&lt;/h3&gt;
@@ -800,7 +817,8 @@ wrote extracted data to &lt;span class=&#34;s2&#34;&gt;&amp;#34;password.txt&amp
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;man steghide
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content:encoded>
+&lt;/div&gt;&lt;p&gt;200&lt;/p&gt;
+</content:encoded>
         <dc:creator>victor</dc:creator>
         <media:content url="http://gictor.irimages/post-image/2020/hide.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         

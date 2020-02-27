@@ -1416,49 +1416,73 @@ if (!doNotTrack) {
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/about">درباره</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/about">درباره</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/tutorial">آموزش</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/tutorial">آموزش</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/showcase">پروژه ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/showcase">پروژه ها</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/categories">دسته بندی ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/categories">دسته بندی ها</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/archive">آرشیو</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/archive">آرشیو</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item active">
-        <a href="/posts">پست ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item active">
+          <a href="/posts">پست ها</a>
+        </li>
+      
+      
     
 
     
@@ -1601,11 +1625,10 @@ if (!doNotTrack) {
   
 </nav>
   
-  <noscript>
-    لطفا برای نمایش محتوا اجرای جاوا اسکریپت را فعال کنید
-  </noscript>
-  <div class="single hide">
-    <script>document.querySelector('.single').classList.remove('hide')</script>
+  
+  <div class="single ">
+    <div class="single__nojs">لطفا برای نمایش محتوا اجرای جاوا اسکریپت را فعال کنید</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="true">مخفی کردن داده ها در تصویر و صوت</h2>
     <div class="single__meta">
       
@@ -1704,14 +1727,14 @@ if (!doNotTrack) {
     codetabContents[0].style.display = 'block';
   }
 </script><br />
-برای دانلود سورس کد یا پکیج برنامه روی download کلیک کنید، همچنین اگر کاربر ویندوز هستید میتونید نسخه <code>GUI</code> برنامه رو نصب کنید<br />
-<a href="http://steghide.sourceforge.net/download.php" class="button" style="width: 100px; height: 30px;" data-color="default" target="_blank" rel="noreferrer">
+برای دانلود سورس کد یا پکیج برنامه روی download کلیک کنید، همچنین اگر کاربر ویندوز هستید میتونید نسخه <code>GUI</code> برنامه رو نصب کنید</p>
+<p><a href="http://steghide.sourceforge.net/download.php" class="button" style="width: 150px; height: 30px;" data-color="default" target="_blank" rel="noreferrer">
   <span class="button__text">
-    download
+    Download
   </span>
-</a> <a href="http://sourceforge.net/projects/steghideui" class="button" style="width: 100px; height: 30px;" data-color="default" target="_blank" rel="noreferrer">
+</a> <a href="http://sourceforge.net/projects/steghideui" class="button" style="width: 150px; height: 30px;" data-color="default" target="_blank" rel="noreferrer">
   <span class="button__text">
-    steghideui
+    SteghideGui
   </span>
 </a></p>
 <h3 id="منطق">منطق</h3>
@@ -1812,8 +1835,10 @@ wrote extracted data to <span class="s2">&#34;password.txt&#34;</span>.
 <pre class="chroma"><code class="language-bash" data-lang="bash">man steghide
 </code></pre></td></tr></table>
 </div>
-</div>
+</div><p>200</p>
+
     </article>
+    
     <script>
   'use strict';
   

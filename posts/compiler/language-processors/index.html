@@ -1416,49 +1416,73 @@ if (!doNotTrack) {
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/about">درباره</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/about">درباره</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/tutorial">آموزش</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/tutorial">آموزش</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/showcase">پروژه ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/showcase">پروژه ها</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/categories">دسته بندی ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/categories">دسته بندی ها</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/archive">آرشیو</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/archive">آرشیو</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item active">
-        <a href="/posts">پست ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item active">
+          <a href="/posts">پست ها</a>
+        </li>
+      
+      
     
 
     
@@ -1601,11 +1625,10 @@ if (!doNotTrack) {
   
 </nav>
   
-  <noscript>
-    لطفا برای نمایش محتوا اجرای جاوا اسکریپت را فعال کنید
-  </noscript>
-  <div class="single hide">
-    <script>document.querySelector('.single').classList.remove('hide')</script>
+  
+  <div class="single ">
+    <div class="single__nojs">لطفا برای نمایش محتوا اجرای جاوا اسکریپت را فعال کنید</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="true">پردازنده های زبان | Language Processors</h2>
     <div class="single__meta">
       
@@ -1641,44 +1664,52 @@ if (!doNotTrack) {
       <h2 id="کامپایلر-compiler">کامپایلر (compiler)</h2>
 <p>به زبان ساده کامپایلر برنامه ای هست که می تونه یک برنامه که به یک زبان نوشته شده رو بخونه (زبان مبدا یا source language) و به یک برنامه معادل به زبان دیگه (زبان هدف یا target language) ترجمه کنه<br />
 به شکل زیر دقت کنید یک نقش مهم کامپایلر این هست که هر اروری که در زبان مبدا، طی فرایند ترجمه شناسایی می شود را گزارش کند</p>
-<p><figure >
-  
-    
-    <img data-src="/images/post-image/compiler/languageprocessors1.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" width="300px" height="300px"/>
-    
-  
-</figure><br />
-اگر برنامه مقصد (target program) یک برنامه زبان ماشین (machine-language) با قابلیت اجرایی (executable) باشه در این صورت می تواند توسط کاربر برای پردازش ورودی ها و تولید خروجی مورد نظر فراخوانی بشه به دیاگرام زیر که اجرای یک target program را نشان می دهد توجه کنید<br />
+<p>
+
 <figure >
   
-    
-    <img data-src="/images/post-image/compiler/languageprocessors2.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" width="500px" height="500px"/>
+    <img data-src="/images/post-image/compiler/languageprocessors1.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='300px' height='300px' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:300px;height:300px;"/>
     
   
-</figure></p>
+</figure>
+<br />
+اگر برنامه مقصد (target program) یک برنامه زبان ماشین (machine-language) با قابلیت اجرایی (executable) باشه در این صورت می تواند توسط کاربر برای پردازش ورودی ها و تولید خروجی مورد نظر فراخوانی بشه به دیاگرام زیر که اجرای یک target program را نشان می دهد توجه کنید<br />
+
+
+<figure >
+  
+    <img data-src="/images/post-image/compiler/languageprocessors2.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='500px' height='500px' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:500px;height:500px;"/>
+    
+  
+</figure>
+</p>
 <h2 id="مفسر-interpreter">مفسر (interpreter)</h2>
 <p>یکی دیگه از انواع رایج پردازنده های زبان ( Language Processors ) مفسرها هستند.<br />
 مفسر به جای تولید target program به عنوان یک برنامه ترجمه شده، بر اساس source program و ورودی های کاربر (input) مستقیما عملیات های مشخص شده رو اجرا می کنه شکل زیر یک مفسر را نشان می دهد<br />
+
+
 <figure >
   
-    
-    <img data-src="/images/post-image/compiler/languageprocessors3.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" width="500px" height="500px"/>
+    <img data-src="/images/post-image/compiler/languageprocessors3.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='500px' height='500px' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:500px;height:500px;"/>
     
   
-</figure></p>
+</figure>
+</p>
 <h2 id="معایب-و-مزایای-compiler-و-interpreter">معایب و مزایای compiler و interpreter</h2>
 <p>معمولا کد زبان ماشینی که از برنامه هدف (target program) توسط کامپایلر تولید شده است از مفسری که ورودی ها رو به خروجی نگاشت میکنه سریع تر هست در حالی که یک مفسر در تشخیص دادن ارور ها بهتر عمل میکنه چون source program رو خط به خط تفسیر، و دستور به دستور اجرا می کنه</p>
 <h2 id="کامپایلر-های-هیبریدی-hybrid-compiler">کامپایلر های هیبریدی (hybrid compiler)</h2>
 <p>برای مثال زبان جاوا با ادغام دو نوع پردازنده زبان مفسری و کامپایلری از یک ماشین مجازی بهره می برد یک برنامه مبدا (source program) جاوا ممکن است اول به یک زبان میانی به نام بایت کد (byte code) کامپایل شود سپس توسط ماشین مجازی (virtual machine) که همان مفسر جاوا هست خط به خط تفسیر می شود<br />
 فایده این روش این هست که بایت کد هایی که در یک ماشین کامپایل می شوند می توانند در یک ماشین دیگر تفسیر شوند یا شاید در سرار یک شبکه<br />
 البته برای دستیابی به پردازش سریع تر ورودی ها به خروجی، بعضی از انواع کامپایلر های جاوا به نام just-in-time compilers هستند که قبل از این که برنامه های میانی برای پردازش ورودی ها اجرا بشوند بایت کد را بلافاصله به زبان ماشین (صفر و یک) ترجمه می کنند<br />
+
+
 <figure >
   
-    
-    <img data-src="/images/post-image/compiler/languageprocessors4.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" width="500px" height="500px"/>
+    <img data-src="/images/post-image/compiler/languageprocessors4.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='500px' height='500px' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:500px;height:500px;"/>
     
   
-</figure></p>
+</figure>
+</p>
 <h2 id="پیش-پردازشگر-preprocessor">پیش پردازشگر preprocessor</h2>
 <p>برای تولید یک target program علاوه بر کامپایلر ممکن است چندین برنامه دیگر نیاز شوند همچنین  یک source program ممکن هست به ماژول هایی تقسیم بشه که در فایل های جداگانه ذخیره شده اند.<br />
 برای تولید برنامه مبدا برنامه مستقل دیگری به نام پیش پردازنده یا preprocessor همه ی ماژول ها رو گرد آوری می کند و یک برنامه مبدا به عنوان خروجی تولید می کند<br />
@@ -1720,13 +1751,15 @@ if (!doNotTrack) {
 <p>اجرای برنامه ی زبان ماشین توسط سیستم عامل وظیفه لینکر و لودر هست. loader دو وظیفه دارد:</p>
 <p>1- <em>تخصیص حافظه:</em> از آنجایی که بخشی از حافظه توسط سیستم عامل و برنامه های دیگه پر شده لودر باید حافظه اصلی رو بررسی کنه و مکانی از حافظه که فضای کافی برای اجرای برنامه زبان ماشین ما داره رو پیدا کنه</p>
 <p>2- <em>نگاشت آدرس:</em> وقتی برنامه در ram لود شد باید آدرس نسبی که از صفر شروع شده بود به آدرس واقعی (فیزیکی) در حافظه اصلی نگاشت بشه برای مثال در تصویر زیر فرض کنید برنامه از خانه 2000 به بعد در حافظه اصلی لود می شود پس خانه صفر بلوک کد ماشین به جای آدرس صفر به آدرس 2001 نگاشت می شود<br />
+
+
 <figure >
   
-    
-    <img data-src="/images/post-image/compiler/languageprocessors6.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" width="500px" height="500px"/>
+    <img data-src="/images/post-image/compiler/languageprocessors6.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='500px' height='500px' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:500px;height:500px;"/>
     
   
-</figure></p>
+</figure>
+</p>
 <blockquote>
 <p>منظور از کد ماشین قابل حمل این هست که می تواند در هر مکانی از حافظه اصلی لود بشود ( در هر  بار اجرا ممکن است آدرس های فیزیکی نگاشت شده آن متفاوت باشد مثلا دفعه بعد از خانه 3000 حافظه لود بشود)</p>
 </blockquote>
@@ -1734,13 +1767,15 @@ if (!doNotTrack) {
 <p>فایل زبان ماشینی که آدرس نسبی ندارد و نمیتونه در هر مکان از حافظه لود بشه رو فایل غیر قابل حمل میگویند (در بلوک های آن به جای آدرس نسبی آدرس فیزیکی مشخص شده) برای مثال در ویندوز فایل های با پسوند <code>com.</code> از این دسته فایل ها هستند</p>
 <h2 id="linker">linker</h2>
 <p>گاهی اوقات فایل های زبان ماشینی که اجرا می کنیم نیاز دارند که از فایل های دیگری که قبلا در حافظه لود شده اند استفاده کنند شبیه فایل ها وتوابع کتابخانه ای مثلا در ویندوز فایل های <code>DLL</code> یا (dynamic linked library) از این نوع هستند در صورتی که برنامه ما به این کتابخانه ها نیاز داشته باشد یک برنامه به نام <code>linker</code> یک لینک بین برنامه ما و فایل مورد نیاز برقرار می کند.</p>
+
+
 <figure >
   
-    
-    <img data-src="/images/post-image/compiler/languageprocessors5.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" width="500px" height="500px"/>
+    <img data-src="/images/post-image/compiler/languageprocessors5.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='500px' height='500px' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:500px;height:500px;"/>
     
   
 </figure>
+
 <h1 id="سوالات">سوالات</h1>
 <ul>
 <li>تفاوت میان کامپایلر و مفسر چیست؟</li>
@@ -1751,6 +1786,7 @@ if (!doNotTrack) {
 </ul>
 
     </article>
+    
     <script>
   'use strict';
   

@@ -1416,49 +1416,73 @@ if (!doNotTrack) {
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/about">درباره</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/about">درباره</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/tutorial">آموزش</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/tutorial">آموزش</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/showcase">پروژه ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/showcase">پروژه ها</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/categories">دسته بندی ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/categories">دسته بندی ها</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/archive">آرشیو</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/archive">آرشیو</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item active">
-        <a href="/posts">پست ها</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item active">
+          <a href="/posts">پست ها</a>
+        </li>
+      
+      
     
 
     
@@ -1601,11 +1625,10 @@ if (!doNotTrack) {
   
 </nav>
   
-  <noscript>
-    لطفا برای نمایش محتوا اجرای جاوا اسکریپت را فعال کنید
-  </noscript>
-  <div class="single hide">
-    <script>document.querySelector('.single').classList.remove('hide')</script>
+  
+  <div class="single ">
+    <div class="single__nojs">لطفا برای نمایش محتوا اجرای جاوا اسکریپت را فعال کنید</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="true">اشتراک گذاری فایل ها در ترمینال</h2>
     <div class="single__meta">
       
@@ -1703,6 +1726,7 @@ tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename &quot;$1
 </div>
 
     </article>
+    
     <script>
   'use strict';
   

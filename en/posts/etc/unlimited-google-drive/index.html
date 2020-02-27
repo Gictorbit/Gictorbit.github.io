@@ -1411,49 +1411,73 @@ if (!doNotTrack) {
       
       
       
-      <li class="navbarm__menu--item active">
-        <a href="/en/posts">posts</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item active">
+          <a href="/en/posts">posts</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/en/archive">archive</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/en/archive">archive</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/en/tutorial">Tutorial</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/en/tutorial">Tutorial</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/en/about">about</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/en/about">about</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/en/categories">Categories</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/en/categories">Categories</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/en/showcase">Showcase</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/en/showcase">Showcase</a>
+        </li>
+      
+      
     
 
     
@@ -1596,11 +1620,10 @@ if (!doNotTrack) {
   
 </nav>
   
-  <noscript>
-    Please enable Javascript to view the contents
-  </noscript>
-  <div class="single hide">
-    <script>document.querySelector('.single').classList.remove('hide')</script>
+  
+  <div class="single ">
+    <div class="single__nojs">This page looks best with JavaScript enabled</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="true">Unlimited Drive Storage</h2>
     <div class="single__meta">
       
@@ -1900,6 +1923,7 @@ source in github:
 </div>
 
     </article>
+    
     <script>
   'use strict';
   

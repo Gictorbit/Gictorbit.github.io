@@ -51,7 +51,7 @@
 
 &lt;figure &gt;
   
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure1.png&#34; alt=&#34;فاز های کامپایلر&#34; data-caption=&#34;Phases of a compiler&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;500px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:500px;&#34;/&gt;
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure1.png&#34; alt=&#34;فاز های کامپایلر&#34; data-caption=&#34;Phases of a compiler&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;450px&#39; height=&#39;450px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:450px;height:450px;&#34;/&gt;
     
   
     &lt;figcaption style=&#34;text-align: center;&#34;&gt;
@@ -139,7 +139,7 @@
 
 &lt;figure &gt;
   
-    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure2.png&#34; alt=&#34;کامپایل دستور انتساب&#34; data-caption=&#34;translation of an assignment statement&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;500px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:500px;&#34;/&gt;
+    &lt;img data-src=&#34;http://gictor.ir/images/post-image/compiler/compilerStructure2.png&#34; alt=&#34;کامپایل دستور انتساب&#34; data-caption=&#34;translation of an assignment statement&#34; src=&#34;data:image/svg+xml,%0A%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;500px&#39; height=&#39;600px&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;none&#39; d=&#39;M0 0h24v24H0V0z&#39;/%3E%3Cpath fill=&#39;%23aaa&#39; d=&#39;M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z&#39;/%3E%3C/svg%3E&#34; class=&#34;lazyload&#34; style=&#34;width:500px;height:600px;&#34;/&gt;
     
   
     &lt;figcaption style=&#34;text-align: center;&#34;&gt;

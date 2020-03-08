@@ -1620,7 +1620,7 @@ if (!doNotTrack) {
             <h5 class="list__header--title capitalize h5">آموزش ها</h5>
         </header>
 
-        <div class="list__header--desc p2">
+        <div class="list__header--desc single__contents p2">
             
         </div>
 
@@ -2051,6 +2051,7 @@ if (!doNotTrack) {
         gridSmall = 'r';
         gridBig = 'lm'
     }
+
     enquire.register("screen and (max-width: 769px)", {
         match: function () {
             if (enableSidebar) {
@@ -2068,6 +2069,7 @@ if (!doNotTrack) {
                     listSideElem.classList.add('hide');
                 }
             }
+
         },
         unmatch: function () {
             if (enableSidebar) {
@@ -2093,14 +2095,19 @@ if (!doNotTrack) {
                 navCollapse.style.maxHeight = 0;
                 navCollapseBtn.classList.remove('is-active');
             }
-            document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-            document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
         },
         setup: function () { },
         deferSetup: true,
         destroy: function () { },
     });
 </script>
+
 
 
             
